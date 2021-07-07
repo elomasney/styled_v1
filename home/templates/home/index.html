@@ -1,6 +1,77 @@
 {% extends "base.html"%}
 {% load static %}
 
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
-<h1 class="display-4 text-success">It works!</h1>
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-7 col-md-6 my-auto">
+            <div id="carouselDarkHome" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselDarkHome" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselDarkHome" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselDarkHome" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="..." class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="display-4 text-center text-black logo-font">
+                            Online Personal Stylist
+                        </h1>
+                        <h4>
+                            <a href="" class="get-styled-button btn btn-large rounded-0 text-uppercase py-3">
+                                Let's Get Styled!
+                            </a>
+                        </h4>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="..." class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="display-4 text-center text-black logo-font">
+                            Online Personal Stylist
+                        </h1>
+                        <h4>
+                            <a href="" class="get-styled-button btn btn-large rounded-0 text-uppercase py-3">
+                                Let's Get Styled!
+                            </a>
+                        </h4>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="display-4 text-center text-black logo-font">
+                            Online Personal Stylist
+                        </h1>
+                        <h4>
+                            <a href="" class="get-styled-button btn btn-large rounded-0 text-uppercase py-3">
+                                Let's Get Styled!
+                            </a>
+                        </h4>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselDarkHome" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselDarkHome" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
