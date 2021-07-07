@@ -6,6 +6,16 @@ body{
     height: calc(100vh - 164px);
     color: #000000;
     font-family: 'Roboto Slab', serif;
+    font-size: 1.2rem;
+}
+
+hr{
+    opacity: unset;
+    padding: 2px;
+}
+
+header{
+    background-color: white;
 }
 
 /* from Bulma */
@@ -20,11 +30,19 @@ body{
 .logo-font {
     text-transform: uppercase;
     font-family: 'Brygada 1918', serif;
-    font-size: 50px;
 }
 
 .main-logo-link {
     width: fit-content;
+    margin-left: 30px;
+}
+
+.nav-link{
+    font-size: 15px;
+}
+
+h2.logo-font{
+    font-size: 50px;
 }
 
 .get-styled-button {
@@ -36,6 +54,7 @@ body{
 .btn-black {
     background: black;
     color: white;
+    padding: 15px 10px;
 }
 
 .get-styled-button:hover,
@@ -48,12 +67,20 @@ body{
     color: white;
 }
 
-.text-dark {
+.text-black {
     color: #000 !important;
+}
+
+.text-orange{
+    color: coral;
 }
 
 .border-black {
     border: 1px solid black !important;
+}
+
+#clients{
+    background-color: coral;
 }
 
 /* -------------------------------- Media Queries */
