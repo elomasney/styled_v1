@@ -1,0 +1,235 @@
+[
+    {
+        "pk": 1,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "Discuss current style & future style goals",
+            "product": [1,3,4,5 ]
+	}
+    },
+    {
+        "pk": 2,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "Guidance on clothes that best suit your body shape",
+            "product": [1,3,4]
+	}
+    },
+    {
+        "pk": 3,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "Advice on the colour palette best suited to your skin tone",
+            "product": [1,3,4]
+	}
+    },
+    {
+        "pk": 4,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "Develop a shop efficient strategy for your lifestyle and budget",
+            "product": [1,3,4]
+	}
+    },
+    {
+        "pk": 5,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "Style & Beauty Advice",
+            "product": [1,4,5]
+	}
+    },
+    {
+        "pk": 6,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "2 Style boards with hand picked items and shopping links provided",
+            "product": [1,4]
+	}
+    },
+    {
+        "pk": 7,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "100% tailored to your body shape and style",
+            "product": [1,3,4]
+	}
+    },
+    {
+        "pk": 8,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "Online - delivered via video conferencing from the comfort of your own home.",
+            "product": [1,2,3,4,5]
+	}
+    },
+    {
+        "pk": 9,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "Questionnaire detailing your goals for the session, completed 48 hours before consultation.",
+            "product": [1,4]
+	}
+    },
+    {
+        "pk": 10,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "30 minute image consultation",
+            "product": [1,2]
+	}
+    },
+    {
+        "pk": 11,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "5 Style boards with hand picked items and shopping links provided",
+            "product": [3,4]
+	}
+    },
+    {
+        "pk": 12,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "1:1 chat with your stylist",
+            "product": [1,3,4,5]
+	}
+    },
+    {
+        "pk": 13,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "3 hours tailored shopping experience",
+            "product": [3]
+	}
+    },
+    {
+        "pk": 14,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "2.5 hours tailored online shopping experience",
+            "product": [3]
+	}
+    },
+    {
+        "pk": 15,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "Advice on shopping effectively and efficiently for your style and budget.",
+            "product": [3,4]
+	}
+    },
+    {
+        "pk": 16,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "Follow up emails with suggested purchases.",
+            "product": [3,4]
+	}
+    },
+    {
+        "pk": 17,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "5 outfits curated for your specific shape and unique style.",
+            "product": [1,4]
+	}
+    },
+    {
+        "pk": 18,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "Source collection of 10 items to create multiple outfits",
+            "product": [3]
+	}
+    },
+    {
+        "pk": 19,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "Expert guidance on items to fit, suit and reflect who you are.",
+            "product": [1,3,4]
+	}
+    },
+    {
+        "pk": 20,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "Personalised collection of items perfectly suited to the occasion/event.",
+            "product": []
+	}
+    },
+    {
+        "pk": 21,
+        "model": "products.productfeature",
+        "fields": {
+            "name": "Follow up call with your stylist",
+            "product": [3,4]
+	}
+    },
+    {
+        "pk": 22,
+        "model": "products.productfeature",
+        "fields": {
+            "name": " A list of suggestions for you, to steer you towards your desired style.",
+            "product": [3,4]
+	}
+    },
+    {
+        "pk": 23,
+        "model": "products.productfeature",
+        "fields": {
+            "name": " Outfit Creation & Styling your existing clothes.",
+            "product": [5]
+	}
+    },
+    {
+        "pk": 24,
+        "model": "products.productfeature",
+        "fields": {
+            "name": " Personal Branding through style.",
+            "product": [3,4]
+	}
+    },
+    {
+        "pk": 25,
+        "model": "products.productfeature",
+        "fields": {
+            "name": " Guidance on trends, colours & silhouettes that flatter your body shape.",
+            "product": [1,2,3]
+	}
+    },
+    {
+        "pk": 26,
+        "model": "products.productfeature",
+        "fields": {
+            "name": " Style advise & outfit ideas to suit your personality and lifestyle.",
+            "product": [4]
+	}
+    },
+    {
+        "pk": 27,
+        "model": "products.productfeature",
+        "fields": {
+            "name": " Pick up insider tips on how to improve shopping habits and dress sustainably.",
+            "product": [3]
+	}
+    },
+    {
+        "pk": 28,
+        "model": "products.productfeature",
+        "fields": {
+            "name": " New ideas on how to update your last season’s clothes & maximize your wardrobe.",
+            "product": [5]
+	}
+    },
+    {
+        "pk": 29,
+        "model": "products.productfeature",
+        "fields": {
+            "name": " Consult with your stylist about your style and wardrobe needs or an image consulting topic of your choice.",
+            "product": []
+	}
+    }
+
+]

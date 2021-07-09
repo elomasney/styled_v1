@@ -1,0 +1,26 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "style_services",
+            "friendly_name": "Style Services"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "add_ons",
+            "friendly_name": "Add Ons"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "gift_vouchers",
+            "friendly_name": "Gift Vouchers"
+        }
+    }
+]

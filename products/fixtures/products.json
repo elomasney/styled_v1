@@ -1,0 +1,67 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "name": "1:1 Image Consultation",
+            "description": "Bored of your look? Looking to change up your style? This personal image consultation will provide you with expert advice and guidance on achieving your goals, tailored to your style and shape.",
+	        "category": 1,
+	        "online_price":215.00,
+            "price": 235.00,
+            "image_url": "https://www.herlifemagazine.com/wp-content/uploads/2015/07/bigstock-Beautiful-young-stylist-near-r-52396669-660x400.jpg",
+            "image": "image_consultation.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "name": "Body Analysis",
+            "description": "Understanding your body shape and complexion type will change the way you dress and shop forever.This styling service is less about clothes shopping, but more about understanding what works and what doesn’t for your shape & complexion. Your style guide will empower you with a lifetime knowledge of how to build an impactful outfit, dress for your shape and look like the best version of yourself.",
+	        "category":1,
+	        "online_price": 55.00,
+            "price": 75.00,
+            "image_url": "https://www.spotebi.com/wp-content/uploads/2020/01/my-rules-workout-motivation-spotebi.jpg",
+            "image": "body_analysis.jpg"
+        }
+    },
+   {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "name": "Personal Shopping Experience",
+            "description": "Our exclusive shopping experience is bespoke, discreet and will help you find out the colours and shapes that work for you, how to put outfits together. Expert advice on how to shop smart, saving you time and money and you will come away with a fresh wardrobe and timeless staples. This is a 1:1 appointment, either in person or online via video conferencing.",
+	        "category": 1,
+	        "online_price":250.00,
+            "price":350.00 ,
+            "image_url": "https://bjwilsonandcompany.com/wp-content/uploads/2018/08/women-shopping.jpg",
+            "image": "personal_shopping.jpg"
+        }
+    },
+   {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "name": "Full Style Overhaul",
+            "description": "Sometimes life sneaks up on you, and an unexpected change leaves you feeling a little lost in the fashion stakes. Cue the Style Overhaul. Think of it as pressing the reset button on your sense of self. Ideal if you recently experienced a change in your life, want to refresh or change your look or looking for a fresh set of eyes to help define your style. You’ll walk away with a detailed plan of the attack to step towards a more stylish self. ",
+	        "category": 1,
+	        "online_price":390.00,
+            "price":590.00,
+            "image_url": "https://fustany.com/images/en/content/header_image_Fustany-celebrity-style-saudi-fashion-bloggers-summer-outfits-mainimage.jpg",
+            "image": "style_overhaul.jpg"
+        }
+    },  
+   {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "name": "Closet Clearout",
+            "description": "How many times have you stood in front of a wardrobe full of clothes with nothing to wear? Make the most out of what you already own and prioritise what you can add to boost your style and will eliminate the dreaded staring into your wardrobe time or “what do I wear” predicament. An expert stylist reviews your clothing selection and evaluates the best plan for you to achieve your dream wardrobe. The service will maximize your existing clothes and create a capsule wardrobe.",
+	        "category": 1,
+	        "online_price": 220.00,
+            "price":290.00,
+            "image_url": "https://img.rasset.ie/00145147-1600.jpg",
+            "image": "closet_clearout.jpg"
+        }
+    }
+]
