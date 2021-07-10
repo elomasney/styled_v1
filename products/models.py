@@ -34,7 +34,7 @@ class Product(models.Model):
 class ProductFeature(models.Model):
     name = models.CharField(max_length=254)
     product = models.ManyToManyField(
-        'Product', on_delete=models.SET_NULL)
+        'Product')
 
     def __str__(self):
         return self.name
