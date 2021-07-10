@@ -18,6 +18,7 @@ header{
     background-color: white;
 }
 
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -72,7 +73,7 @@ h2.logo-font{
 }
 
 .text-orange{
-    color: coral;
+    color:  rgb(255,153,102);
 }
 
 .border-black {
@@ -91,12 +92,24 @@ h2.logo-font{
 }
 
 #clients{
-    background-color: coral;
+    background-color:  rgb(255,153,102, .85);
 }
 
 .client-img{
     width: 200px;
     height: 200px;
+}
+
+#all-products-link,
+#about-link,
+#contact-link,
+#outfit-link,
+#gift-link{
+    font-size: 20px;
+}
+
+.price{
+    font-size: 1rem;
 }
 
 /* -------------------------------- Media Queries */
