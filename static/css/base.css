@@ -100,6 +100,12 @@ h2.logo-font{
     height: 200px;
 }
 
+.service-img{
+    width: 50%;
+    height: 50%;
+    border: 1px solid #000;
+}
+
 #all-products-link,
 #about-link,
 #contact-link,
@@ -152,5 +158,16 @@ select#id_product_option.form-control{
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }

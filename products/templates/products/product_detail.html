@@ -59,7 +59,7 @@
                                     </span>
                                     <span class="text-uppercase fw-bold">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn bg-orange rounded-0 text-uppercase mt-5 w-50 fw-bold" value="Add to Bag">
+                                <input type="submit" class="btn bg-orange rounded-0 text-uppercase mt-5 w-30 fw-bold" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
@@ -67,9 +67,9 @@
                 </div>
                     </div>
                 </div>
-            <hr class="text-black mb-5">
+            <hr class="text-black mb-5 mt-5">
             <div class="row">
-                <div class="col-md-6 offset-md-3 text-center text-black logo-font">
+                <div class="col-md-8 offset-md-2 text-center text-black logo-font">
                         <img class="text-justify mb-0 img-fluid h-10" src="{% get_media_prefix %}logo_small.jpg" alt="Styled Logo">
                     <h3 class="logo-font text-center text-black mb-4 mt-3">Session Includes:</h3>
                     
@@ -80,6 +80,7 @@
                     {% endfor %}
                 </div>
             </div>
+            {% include 'includes/footer.html' %}
     </div>
 {% endblock %}
 
