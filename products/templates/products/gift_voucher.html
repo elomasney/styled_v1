@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid h-100">
+        <div class="row">
+            <div class="col text-center">
+                <hr class="text-orange">
+                <h3 class="logo-font display-6 mb-3 mt-3 fst-italic">Gift Vouchers</h3>
+                <hr class="text-orange">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-1">
+                <div class="image-container my-auto mt-5 mx-auto">
+                            <img class="card-img-top img-fluid mt-3 mb-3" src="{% get_media_prefix %}gift-card-image.jpg" alt="Thank you image">
+                </div>
+            </div>
+        
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-1">
+                <div class="gift-voucher-container mb-5 mt-md-5">
+                    <h3 class="mb-0 logo-font"> A Styled Surprise</h3>
+                    <p class="lead logo-font mt-3 text-orange">€50.00 - €300.00 </p>
+                    <p class="text-black mt-3 text-justify"> A Styled gift voucher is about more than just a new outfit, 
+                        it’s gifting a newfound sense of confidence and style. Who wouldn’t want that!
+                        Treat someone special to one-of-a-kind personal styling experience.Our fun and informative styling sessions 
+                        are geared towards all shapes, sizes, genders and ages. We’ll then email the Styled Gift Card directly to you or the lucky recipient within one workday, or post to an address of your choice.
+                    </p>
+                    </div>
+       
+		    <div class="row">
+                    <form class="form" action="" method="">
+                        {% csrf_token %}
+                        
+                        <div class="form-row">
+                            
+                                <div class="col-12">
+                                    {{ gift_voucher_form|crispy }}
+                                    <!--<p><strong>Select an amount:</strong></p>
+                                    <select class="form-control rounded-0 w-80 fw-bold" name="session-option" id='id_gift_option'>
+                                        <option value=""></option>
+                                    </select>-->
+                                </div>
+    
+                            <div class="col-12 mt-2 mb-3">
+                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase fw-bold">Keep Shopping</span>
+                                </a>
+                                <input type="submit" class="btn bg-orange rounded-0 text-uppercase mt-5 w-30 fw-bold" value="Add to Bag">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
+                </div>
+                    </div>
+                </div>
+                {% include 'includes/footer.html' %}
+                </div>
+                {% endblock %}
