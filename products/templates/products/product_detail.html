@@ -57,9 +57,9 @@
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
+                                    <span class="text-uppercase fw-bold">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5 w-50" value="Add to Bag">
+                                <input type="submit" class="btn bg-orange rounded-0 text-uppercase mt-5 w-50 fw-bold" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
@@ -67,20 +67,20 @@
                 </div>
                     </div>
                 </div>
-            <hr class="text-orange mb-5">
+            <hr class="text-black mb-5">
             <div class="row">
-                <div class="col-md-6 offset-md-3 text-justify text-black logo-font">
-                    <h3 class="logo-font text-center text-black mb-4">Styled Session Includes:</h3>
+                <div class="col-md-6 offset-md-3 text-center text-black logo-font">
+                        <img class="text-justify mb-0 img-fluid h-10" src="{% get_media_prefix %}logo_small.jpg" alt="Styled Logo">
+                    <h3 class="logo-font text-center text-black mb-4 mt-3">Session Includes:</h3>
+                    
                     {% for f in  features %}
-                    <ul>
-                        <li>{{f.name}}</li>
-                    </ul>
-                    {% endfor %}  
+                    <div class="bg-orange pt-2 pb-2">
+                        <p>{{f.name}}</p>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
-</div>
-       
- 
+    </div>
 {% endblock %}
 
 {% block postloadjs %}

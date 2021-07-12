@@ -73,7 +73,7 @@ h2.logo-font{
 }
 
 .text-orange{
-    color:  rgb(255,153,102);
+    color:  rgb(235, 132, 77);
 }
 
 .border-black {
@@ -91,8 +91,8 @@ h2.logo-font{
     left: 10%;
 }
 
-#clients{
-    background-color:  rgb(255,153,102, .85);
+.bg-orange{
+    background-color:  rgb(235, 132, 77, .85);
 }
 
 .client-img{
@@ -120,6 +120,14 @@ h2.logo-font{
 	position: fixed;
 	background: white;
 	z-index: -1;
+}
+
+#id_product_option.form-control{
+    border:2px solid rgba(235, 132, 77, .85);
+}
+
+select#id_product_option.form-control{
+    background-color:#fff ;
 }
 
 
