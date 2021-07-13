@@ -80,7 +80,8 @@ h2.logo-font{
     border: 1px solid black !important;
 }
 
-.home-img{
+.home-img,
+.gallery-img{
     height: 600px;
 }
 

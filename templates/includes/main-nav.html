@@ -29,10 +29,10 @@
                 Look Book
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="outfit-link">
-                <a href="" class="dropdown-item">Workwear</a>
-                <a href="" class="dropdown-item">Occasion Wear</a>
-                <a href="" class="dropdown-item">Casual Chic</a>
-                <a href="" class="dropdown-item">Going Out Glam</a>
+                <a href="{% url 'gallery' %}?category=work_wear" class="dropdown-item">Workwear</a>
+                <a href="{% url 'gallery' %}?category=occasion_wear" class="dropdown-item">Occasion Wear</a>
+                <a href="{% url 'gallery' %}?category=casual_chic" class="dropdown-item">Casual Chic</a>
+                <a href="{% url 'gallery' %}?category=going_out_glam" class="dropdown-item">Going Out Glam</a>
             </div>
         </li>
 
