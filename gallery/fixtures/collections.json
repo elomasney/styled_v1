@@ -1,0 +1,34 @@
+[
+    {
+        "pk": 1,
+        "model": "gallery.collection",
+        "fields": {
+            "name": "work_wear",
+            "friendly_name": "Work Wear"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "gallery.collection",
+        "fields": {
+            "name": "occasion_wear",
+            "friendly_name": "Occasion Wear"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "gallery.collection",
+        "fields": {
+            "name": "casual_chic",
+            "friendly_name": "Casual Chic"
+        }
+    },
+{
+        "pk": 4,
+        "model": "gallery.collection",
+        "fields": {
+            "name": "going_out_glam",
+            "friendly_name": "Going Out Glam"
+        }
+    }
+]

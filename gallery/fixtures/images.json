@@ -4,7 +4,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Workwear 1",
-	    "category": 4,
+	    "collection": 1,
         "image_url": "https://i.pinimg.com/736x/58/b4/3a/58b43ad0af215df0b95caacc0a661a55.jpg",
         "image": "workwear-1.jpg",
 	    "upvote":0
@@ -15,7 +15,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Workwear 2",
-	    "category": 4,
+	    "collection": 1,
         "image_url": "https://i.pinimg.com/originals/ba/bf/0b/babf0b9949df85a30c9a7d3c58675a69.jpg",
         "image": "workwear-2.jpg",
 	    "upvote":0
@@ -25,11 +25,11 @@
         "pk": 3,
         "model": "gallery.image",
         "fields": {
-            "name": "Workwear 3",
-	    "category": 4,
-            "image_url": "https://i.pinimg.com/236x/1d/74/3f/1d743fd6de3d3bf38b7a557057a929e2.jpg",
-            "image": "workwear-3.jpg",
-	        "upvote":0
+        "name": "Workwear 3",
+	    "collection":1,
+        "image_url": "https://i.pinimg.com/236x/1d/74/3f/1d743fd6de3d3bf38b7a557057a929e2.jpg",
+        "image": "workwear-3.jpg",
+	    "upvote":0
 	}
     },
     {
@@ -37,7 +37,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Workwear 4",
-	    "category": 4,
+	    "collection": 1,
         "image_url": "https://i.pinimg.com/236x/2d/4e/82/2d4e8218fa7e3dff94b126095c47bfae.jpg",
         "image": "workwear-4.jpg",
 	    "upvote":0
@@ -48,7 +48,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Workwear 5",
-	    "category": 4,
+	    "collection": 1,
         "image_url": "https://i.pinimg.com/236x/f4/26/14/f4261457dab447bed52f85b856664479.jpg",
         "image": "workwear-5.jpg",
 	    "upvote":0
@@ -59,7 +59,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Workwear 6",
-	    "category": 4,
+	    "collection": 1,
         "image_url": "https://i.pinimg.com/originals/f7/f4/d0/f7f4d00738f407756d07b07b68575e2a.jpg",
         "image": "workwear-6.jpg",
 	    "upvote":0
@@ -70,7 +70,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Occasion Wear 1",
-	    "category": 5,
+	    "collection": 2,
         "image_url": "https://i.pinimg.com/originals/ff/e0/82/ffe082548af309dcb8e6fdd9b5b49983.jpg",
         "image": "occasion-1.jpg",
 	    "upvote":0
@@ -81,7 +81,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Occasion Wear 2",
-	    "category": 5,
+	    "collection": 2,
         "image_url": "https://i.pinimg.com/736x/2f/97/ff/2f97ffa37815c0202ad030c3a5d0cb07.jpg",
         "image": "occasion-2.jpg",
 	    "upvote":0
@@ -92,7 +92,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Occasion Wear 3",
-	    "category": 5,
+	    "collection": 2,
         "image_url": "https://i.pinimg.com/originals/33/d3/35/33d335a296677eed8957b7b9b1462fbb.jpg",
         "image": "occasion-3.jpg",
 	    "upvote":0
@@ -103,7 +103,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Occasion Wear 4",
-	    "category": 5,
+	    "collection": 2,
         "image_url": "https://i.pinimg.com/474x/20/b3/ec/20b3eca3015b6a7fc900caa5fafdd4ba.jpg",
         "image": "occasion-4.jpg",
 	    "upvote":0
@@ -114,7 +114,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Occasion Wear 5",
-	    "category": 5,
+	    "collection": 2,
         "image_url": "https://i.pinimg.com/originals/09/6a/84/096a84a10dc1957aaa062bfebf34a3db.jpg",
         "image": "occasion-5.jpg",
 	    "upvote":0
@@ -125,7 +125,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Occasion Wear 6",
-	    "category": 5,
+	    "collection": 2,
         "image_url": "https://i.pinimg.com/236x/d5/32/54/d53254f900a46a7d8db56d74849e5445.jpg",
         "image": "occasion-6.jpg",
 	    "upvote":0
@@ -136,7 +136,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Casual Chic 1",
-	    "category": 6,
+	    "collection": 3,
         "image_url": "https://i.pinimg.com/236x/8f/53/c4/8f53c43f7a4f968884682283be7fbc1d.jpg",
         "image": "casualchic-1.jpg",
 	    "upvote":0
@@ -147,7 +147,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Casual Chic 2",
-	    "category": 6,
+	    "collection": 3,
         "image_url": "https://i.pinimg.com/236x/31/31/23/313123aac6a2be012b0e7b84921ea220.jpg",
         "image": "casualchic-3.jpg",
 	    "upvote":0
@@ -158,7 +158,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Casual Chic 3",
-	    "category": 6,
+	    "collection": 3,
         "image_url": "https://i.pinimg.com/236x/b4/56/2d/b4562d105166fd46e6124837cd938b15.jpg",
         "image": "casualchic-3.jpg",
 	    "upvote":0
@@ -169,7 +169,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Casual Chic 4",
-	    "category": 6,
+	    "collection": 3,
         "image_url": "https://i.pinimg.com/236x/cc/09/82/cc0982c0ae696301d24be87827adb134.jpg",
         "image": "casualchic-4.jpg",
 	    "upvote":0
@@ -180,7 +180,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Casual Chic 5",
-	    "category": 6,
+	    "collection": 3,
         "image_url": "https://i.pinimg.com/236x/f1/a0/17/f1a0171565c2e3e8c8cde4466e6f8377.jpg",
         "image": "casualchic-5.jpg",
 	    "upvote":0
@@ -191,7 +191,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Casual Chic 6",
-	    "category": 6,
+	    "collection": 3,
         "image_url": "https://i.pinimg.com/474x/19/a4/78/19a478703c323974290023781658fcc5.jpg",
         "image": "casualchic-6.jpg",
 	    "upvote":0
@@ -202,7 +202,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Going Out Glam 1",
-	    "category": 7,
+	    "collection": 4,
         "image_url": "https://i.pinimg.com/236x/2f/03/17/2f03178a5db6af1bbe9ad5f852e0a9a9.jpg",
         "image": "goingout-1.jpg",
 	    "upvote":0
@@ -213,7 +213,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Going Out Glam 2",
-	    "category": 7,
+	    "collection": 4,
         "image_url": "https://i.pinimg.com/236x/b3/1e/ab/b31eab481922bea784a4a5a7e80f9701.jpg",
         "image": "goingout-2.jpg",
 	    "upvote":0
@@ -224,7 +224,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Going Out Glam 3",
-	    "category": 7,
+	    "collection": 4,
         "image_url": "https://i.pinimg.com/236x/f6/2d/cc/f62dccecc4450bf1bfbc9c205bcb5056.jpg",
         "image": "goingout-3.jpg",
 	    "upvote":0
@@ -235,7 +235,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Going Out Glam 4",
-	    "category": 7,
+	    "collection": 4,
         "image_url": "https://i.pinimg.com/236x/cd/61/2c/cd612cc1700c5672e942d62e81f967b1.jpg",
         "image": "goingout-4.jpg",
 	    "upvote":0
@@ -246,7 +246,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Going Out Glam 5",
-	    "category": 7,
+	    "collection": 4,
         "image_url": "https://i.pinimg.com/236x/d1/c2/2f/d1c22fc99a107160826ed818bae262b8.jpg",
         "image": "goingout-5.jpg",
 	    "upvote":0
@@ -257,7 +257,7 @@
         "model": "gallery.image",
         "fields": {
         "name": "Going Out Glam 6",
-	    "category": 7,
+	    "collection": 4,
         "image_url": "https://i.pinimg.com/originals/dd/ce/01/ddce01526d57c5eca02860505d82a006.jpg",
         "image": "goingout-6.jpg",
 	    "upvote":0
