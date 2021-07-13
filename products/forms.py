@@ -6,4 +6,4 @@ class GiftVoucherForm(forms.ModelForm):
 
     class Meta:
         model = GiftVoucher
-        fields = ('amount',)
+        fields = ('select_amount',)
