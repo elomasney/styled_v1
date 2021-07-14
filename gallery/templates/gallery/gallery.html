@@ -41,6 +41,12 @@
                             <div class="card h-100 border-0">
                                     <img class="card-img-top img-fluid gallery-img" src="{{ image.image.url }}" alt="{{ image.name }}">
                                 <div class="card-body pb-0">
+                                    {% if request.user.is_superuser %}
+                                        <small class="ml-3">
+                                        <a class="text-black logo-font" href="">Edit</a> | 
+                                        <a class="text-danger logo-font" href="">Delete</a>
+                                        </small>
+                                    {% endif %}
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
