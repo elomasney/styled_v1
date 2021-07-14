@@ -53,9 +53,9 @@
                             {% if product.online_price %}
                                 <div class="col-12">
                                     <p><strong>Select a Session:</strong></p>
-                                    <select class="form-control rounded-0 w-80 fw-bold" name="session_option" id='id_product_option'>
-                                        <option value="{{product.online_price}}">Online Session - €{{ product.online_price }}</option>
-                                        <option value="{{product.price}}">In Person Session - €{{ product.price }}</option>
+                                    <select class="form-control rounded-0 w-80 fw-bold" name="price_option" id='id_price_option'>
+                                        <option value="{{product.online_price}}">Online - €{{ product.online_price }}</option>
+                                        <option value="{{product.price}}">In Person - €{{ product.price }}</option>
                                     </select>
                                 </div>
                             {% endif %}
