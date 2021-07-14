@@ -17,7 +17,20 @@
                 <hr class="text-orange">
                 <h3 class="logo-font display-6 mb-3 mt-3 fst-italic">The Look Book</h3>
                 <hr class="text-orange">
+                {% for c in current_collections %}
+                <a class="category-badge text-decoration-none" href="{% url 'gallery' %}?collection={{ c.name }}">
+                    <span class="p-2 px-3 mt-2 badge badge-white text-black bg-orange rounded-0 border border-dark">{{ c.friendly_name }} Looks</span>
+                </a>
+            {% endfor %}
             </div>
+        </div>
+        <div class="col-12 col-md-4 order-md-first mb-3">
+            <p class="text-muted mt-3 text-center text-md-left">
+                {% if current_collections != 'None_None' %}
+                    <span class="small"><a class="text-orange" href="{% url 'gallery' %}"> Looks</a> | </span>
+                {% endif %}
+                {{ images|length }} Images{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+            </p>
         </div>
         <div class="row">
             <div class="product-container col-10 offset-1">
