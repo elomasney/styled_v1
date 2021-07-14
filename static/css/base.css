@@ -58,6 +58,12 @@ h2.logo-font{
     padding: 15px 10px;
 }
 
+.btn-orange {
+    background: #eb844d;
+    color: black;
+    padding: 15px 10px;
+}
+
 .get-styled-button:hover,
 .get-styled-button:active,
 .get-styled-button:focus,

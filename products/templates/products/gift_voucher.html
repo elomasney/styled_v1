@@ -29,7 +29,7 @@
             <div class="col-12 col-md-6 col-lg-4 offset-lg-1">
                 <div class="gift-voucher-container mb-5 mt-md-5">
                     <h3 class="mb-0 logo-font"> A Styled Surprise</h3>
-                    <p class="lead logo-font mt-3 text-orange">€50.00 - €300.00 </p>
+                    <p class="lead logo-font mt-3 text-orange">€50.00 - €400.00 </p>
                     <p class="text-black mt-3 text-justify"> A Styled gift voucher is about more than just a new outfit, 
                         it’s gifting a newfound sense of confidence and style. Who wouldn’t want that!
                         Treat someone special to one-of-a-kind personal styling experience.Our fun and informative styling sessions 
@@ -43,13 +43,41 @@
                         
                         <div class="form-row">
                             
-                                <div class="col-12">
+                                <div class="col-12 logo-font mb-3 py-3">
                                     {{ gift_voucher_form|crispy }}
                                     <!--<p><strong>Select an amount:</strong></p>
                                     <select class="form-control rounded-0 w-80 fw-bold" name="session-option" id='id_gift_option'>
                                         <option value=""></option>
                                     </select>-->
                                 </div>
+                                <div class="col-12">
+                                    <p class="mt-3 logo-font"><strong>Quantity:</strong></p>
+                                    <div class="form-group w-50">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-orange rounded-0" 
+                                                    data-item_id="{{ gift_voucher.id }}" id="decrement-qty_{{ gift_voucher.id }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-minus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <input class="form-control qty_input text-center" type="number"
+                                                name="quantity" value="1" min="1" max="99"
+                                                data-item_id="{{ gift_voucher.id }}"
+                                                id="id_qty_{{ gift_voucher.id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-orange text-black rounded-0"
+                                                    data-item_id="{{ gift_voucher.id }}" id="increment-qty_{{ gift_voucher.id }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-plus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
     
                             <div class="col-12 mt-2 mb-3">
                                 <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
