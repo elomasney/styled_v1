@@ -99,7 +99,7 @@ h2.logo-font{
 }
 
 .bg-orange{
-    background-color:  rgb(235, 132, 77, .85);
+    background-color:  rgb(235, 132, 77);
 }
 
 .client-img{
@@ -148,6 +148,15 @@ select#id_product_option.form-control{
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+a.category-badge > span.badge:hover {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+input[name='q']::placeholder {
+    color: rgba(235,132,77);
 }
 
 
