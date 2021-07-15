@@ -16,15 +16,16 @@ def add_to_bag(request, item_id):
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = 1
+    price = float(request.POST.get('price_option'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
     if item_id in list(bag.keys()):
-        bag[item_id] += quantity
+        bag[item_id] += price * quantity
         messages.success(
             request, f'Updated {product.name} quantity to {bag[item_id]}')
     else:
-        bag[item_id] = quantity
+        bag[item_id] = price * quantity
         messages.success(request, f'Added {product.name} to your bag')
 
     request.session['bag'] = bag

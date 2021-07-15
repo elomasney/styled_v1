@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product, ProductFeature, Category
-from .forms import GiftVoucherForm
+from .models import Product, ProductFeature, Category, GiftVoucher
 
 # Create your views here.
 
@@ -56,10 +55,10 @@ def product_detail(request, product_id):
 
 def gift_voucher(request):
     """ A view to return the Gift Vouchers Page """
-    gift_voucher_form = GiftVoucherForm()
+    giftvoucher = GiftVoucher.objects.all()
 
     context = {
-        'gift_voucher_form': gift_voucher_form,
+        'giftvoucher': giftvoucher,
     }
 
     return render(request, 'products/gift_voucher.html', context)
