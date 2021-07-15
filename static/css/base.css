@@ -144,6 +144,12 @@ select#id_product_option.form-control{
     background-color:#fff ;
 }
 
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 
 /* -------------------------------- Media Queries */
 

@@ -35,7 +35,7 @@
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
                     <a class="text-black logo-font" href="">Edit</a> | 
-                    <a class="text-danger logo-font" href="">Delete</a>
+                    <a class="text-orange logo-font" href="">Delete</a>
                 </small>
             {% endif %}
             </div>
@@ -87,9 +87,4 @@
             </div>
             {% include 'includes/footer.html' %}
     </div>
-{% endblock %}
-
-{% block postloadjs %}
-{{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
