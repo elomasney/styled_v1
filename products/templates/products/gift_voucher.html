@@ -4,103 +4,85 @@
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col"></div>
+            <div class="col">
+            </div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container-fluid h-100">
-        <div class="row">
-            <div class="col text-center">
-                <hr class="text-orange">
-                <h3 class="logo-font display-6 mb-3 mt-3 fst-italic">Gift Vouchers</h3>
-                <hr class="text-orange">
-            </div>
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center">
+            <hr class="text-orange">
+            <h3 class="logo-font display-6 mb-3 mt-3 fst-italic">Gift Vouchers</h3>
+            <hr class="text-orange">
         </div>
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-1">
-                <div class="image-container my-auto mt-5 mx-auto">
-                            <img class="card-img-top img-fluid mt-3 mb-3" src="{% get_media_prefix %}gift-card-image.jpg" alt="Thank you image">
-                </div>
-            </div>
-        
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-1">
-                <div class="gift-voucher-container mb-5 mt-md-5">
-                    <h3 class="mb-0 logo-font"> A Styled Surprise</h3>
-                    <p class="lead logo-font mt-3 text-orange">€50.00 - €400.00 </p>
-                    <p class="text-black mt-3 text-justify"> A Styled gift voucher is about more than just a new outfit, 
-                        it’s gifting a newfound sense of confidence and style. Who wouldn’t want that!
-                        Treat someone special to one-of-a-kind personal styling experience.Our fun and informative styling sessions 
-                        are geared towards all shapes, sizes, genders and ages. We’ll then email the Styled Gift Card directly to you or the lucky recipient within one workday, or post to an address of your choice.
-                    </p>
-                    </div>
-       
-		    <div class="row">
-                    <form class="form" action="" method="POST">
-                        {% csrf_token %}
-                        
-                        <div class="form-row">
-                            
-                                <div class="col-12 logo-font mb-3 py-3">
-                                        <p><strong>Select Amount:</strong></p>
-                                        <select class="form-control rounded-0 w-80 fw-bold" name="gift_amount" id='id_gift_amount'>
-                                            {% for gift in giftvoucher %}
-                                            <option value="{{gift.select_amount}}">€{{ gift.select_amount|floatformat:2 }}</option>
-                                            {% endfor %}
-                                        </select>
-                                        
+    </div>
+    <div class="col-12 col-md-4 order-md-first mb-3">
+        <p class="text-muted mt-3 text-center text-md-left">
+            {% if search_term or current_categories != 'None_None' %}
+                <span class="small"><a class="text-orange" href="{% url 'products' %}"> Gift Vouchers</a> | </span>
+            {% endif %}
+            {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+        </p>
+    </div>
+    <div class="row">
+        <div class="product-container col-10 offset-1">
+                <div class="row">
+                    {% for product in products %}
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                            <div class="card h-100 border-0">
+                                    <img class="card-img-top img-fluid" src="{% get_media_prefix %}gift-card-image.jpg" alt="gift-card">
+                                <div class="card-body pb-0">
+                                    <p class="mb-0 text-center">{{ product.name }}</p>
                                 </div>
-                                <div class="col-12">
-                                    <p class="mt-3 logo-font"><strong>Quantity:</strong></p>
-                                    <div class="form-group w-50">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <button class="decrement-qty btn btn-orange rounded-1" 
-                                                    data-item_id="{{ giftvoucher.id }}" id="decrement-qty_{{ giftvoucher.id }}">
-                                                    <span class="icon">
-                                                        <i class="fas fa-minus"></i>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                            <input class="form-control qty_input text-center" type="number"
-                                                name="quantity" value="1" min="1" max="99"
-                                                data-item_id="{{ giftvoucher.id }}"
-                                                id="id_qty_{{ giftvoucher.id }}">
-                                            <div class="input-group-append">
-                                                <button class="increment-qty btn btn-orange text-black rounded-1"
-                                                    data-item_id="{{ giftvoucher.id }}" id="increment-qty_{{ giftvoucher.id }}">
-                                                    <span class="icon">
-                                                        <i class="fas fa-plus"></i>
-                                                    </span>
-                                                </button>
-                                            </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-center">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="price mb-0 text-center fw-bold">€{{ product.price }}</p>
                                         </div>
                                     </div>
                                 </div>
-    
-    
-                            <div class="col-12 mt-2 mb-3">
-                                <a href="{% url 'gift_voucher' %}" class="btn btn-outline-black rounded-0 mt-5">
-                                    <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="text-uppercase fw-bold logo-font">Keep Shopping</span>
-                                </a>
-                                <input type="submit" class="btn bg-orange rounded-0 text-uppercase mt-5 w-30 fw-bold logo-font" value="Add to Bag">
                             </div>
-                            <input type="hidden" name="redirect_url" value="">
                         </div>
-                    </form>
+                        {% if forloop.counter|divisibleby:1 %}
+                            <div class="col-12 d-sm-none mb-5">
+                                <hr class="text-orange">
+                            </div>
+                        {% endif %}                        
+                        {% if forloop.counter|divisibleby:2 %}
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-block d-xl-none mb-5">
+                                <hr class="text-orange">
+                            </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:3 %}
+                            <div class="col-12 d-none d-lg-none d-xl-block mb-5">
+                                <hr class="text-orange">
+                            </div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
-                    </div>
-                </div>
-                {% include 'includes/footer.html' %}
-                </div>
-                {% endblock %}
+            </div>
+        </div>
+    
+    <div class="btt-button shadow-sm rounded-1 border border-black text-center col-md-2 offset-md-5 bg-orange">
+        <a id="btt-link" class="btt-link h-100">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>	
+    </div>
+    {% include 'includes/footer.html' %}
+</div>
+{% endblock %}
 
 {% block postloadjs %}
-{{ block.super }}
+    {{ block.super }}
+    <script type="text/javascript">
+		document.getElementById('btt-link').onclick = function() {
+			window.scrollTo(0,0)
+		};
+	</script>
 {% include 'products/includes/quantity_input_script.html' %}
+
 {% endblock %}

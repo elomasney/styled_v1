@@ -44,19 +44,14 @@
                 <div class="product-details-container mb-5 mt-md-5">
                     <h3 class="mb-0 logo-font">{{ product.name }}</h3>
                     <p class="mt-3">{{ product.description }}</p>
-                    </div>
+                    <span class="logo-font mb-3 text-orange"><strong>Price:</strong></span>
+                    <p class="lead mb-3 logo-font text-left fw-bold" value="{{product.price}}">€{{ product.price }}</p>
+                </div>
        
 		    <div class="row">
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
-                                <div class="col-12">
-                                    <p><strong>Select a Session:</strong></p>
-                                    <select class="form-control rounded-0 w-80 fw-bold" name="price_option" id='id_price_option'>
-                                        <option value="{{product.online_price}}" >Online - €{{ product.online_price }}</option>
-                                        <option value="{{product.price}}">In Person - €{{ product.price }}</option>
-                                    </select>
-                                </div>
                                 <div class="col-12">
                                     <p class="mt-3 logo-font"><strong>Quantity:</strong></p>
                                     <div class="form-group w-50">
