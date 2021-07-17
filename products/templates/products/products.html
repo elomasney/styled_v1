@@ -49,13 +49,13 @@
                                 <div class="card-footer bg-white pt-0 border-0 text-center">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="price mb-0 text-center fw-bold">In-Person Price: €{{ product.price }}</p>
-                                            <p class="price mb-0 text-center fw-bold">Online Price: €{{ product.online_price }}</p>
+                                            <p class="price mb-0 text-center fw-bold">€{{ product.price }}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                         {% if forloop.counter|divisibleby:1 %}
                             <div class="col-12 d-sm-none mb-5">
                                 <hr class="text-orange">

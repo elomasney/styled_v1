@@ -51,14 +51,3 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
-
-
-def gift_voucher(request):
-    """ A view to return the Gift Vouchers Page """
-    giftvouchers = Product.objects.all()
-
-    context = {
-        'giftvouchers': giftvouchers,
-    }
-
-    return render(request, 'products/gift_voucher.html', context)
