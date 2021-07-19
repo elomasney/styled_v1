@@ -43,7 +43,7 @@ header{
 }
 
 h2.logo-font{
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .get-styled-button {
@@ -86,20 +86,19 @@ h2.logo-font{
     border: 1px solid black !important;
 }
 
-.home-img,
-.gallery-img{
-    height: 600px;
-}
-
 .carousel-caption{
     background-color: rgba(255, 255, 255, .55);
     top:25%;
-    bottom: 20%;
+    bottom: 15%;
     left: 10%;
 }
 
 .bg-orange{
     background-color:  rgb(235, 132, 77);
+}
+
+.carousel-item img{
+    object-fit: cover;
 }
 
 .client-img{
@@ -235,6 +234,10 @@ input[name='q']::placeholder {
   .container {
     max-width: 90%;
   }
+
+  .carousel-caption {
+    bottom: 30%;
+}
 }
 
 /* fixed top navbar only on medium and up */
@@ -252,6 +255,11 @@ input[name='q']::placeholder {
     }
 }
 
+.home-img,
+.gallery-img{
+    height: 600px;
+}
+
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
@@ -261,4 +269,10 @@ input[name='q']::placeholder {
     body {
         height: calc(100vh - 116px);
     }
+
+    .home-img,
+    .gallery-img{
+    height: 100%;
+}
+
 }

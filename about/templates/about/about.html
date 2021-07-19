@@ -23,7 +23,7 @@
         <h3 class="lead mb-0 logo-font text-center"></h3>
         <div class="col-md-12 col-lg-6 text-center">
             <div class="image-container my-5">
-                <img class="img-fluid" src="{% get_media_prefix %}about-image.jpg" alt="style quote">
+                <img class="img-fluid" src="{% static 'images/about-image.jpg' %}" alt="style quote">
             </div>
         </div>
             <div class="col-md-12 col-lg-6">
@@ -43,7 +43,7 @@
 
             <div class="col-md-4">
                 <div class="card border-0">
-                    <img src="{% get_media_prefix %}image-mini.png" class="mx-auto d-block rounded-circle service-img " alt="...">
+                    <img src="{% static 'images/image-mini.png' %}" class="mx-auto d-block rounded-circle service-img " alt="...">
                     <div class="card-body text-center">
                         <a href="{% url 'product_detail' 1 %}" class="btn btn-large rounded-1 text-uppercase btn-black py-0">More Info</a>
                     </div>
@@ -51,7 +51,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card border-0">
-                    <img src="{% get_media_prefix %}shopping-mini.png" class="mx-auto d-block rounded-circle service-img" alt="...">
+                    <img src="{% static 'images/shopping-mini.png' %}" class="mx-auto d-block rounded-circle service-img" alt="...">
                     <div class="card-body text-center">
                         <a href="{% url 'product_detail' 3 %}" class="btn btn-large rounded-1 text-uppercase btn-black py-0">More Info</a>
                     </div>
@@ -59,7 +59,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card border-0">
-                    <img src="{% get_media_prefix %}body-mini.png" class="mx-auto d-block rounded-circle service-img" alt="...">
+                    <img src="{% static 'images/body-mini.png' %}" class="mx-auto d-block rounded-circle service-img" alt="...">
                     <div class="card-body text-center">
                         <a href="{% url 'product_detail' 2 %}" class="btn btn-large rounded-1 text-uppercase btn-black py-0">More Info</a>
                     </div>
@@ -69,7 +69,7 @@
             <div class="row align-items-center mt-3 mb-5">
             <div class="col-md-4">
                 <div class="card border-0">
-                    <img src="{% get_media_prefix %}style_overhaul_mini.png" class="mx-auto d-block rounded-circle service-img" alt="...">
+                    <img src="{% static 'images/style_overhaul_mini.png' %}" class="mx-auto d-block rounded-circle service-img" alt="...">
                     <div class="card-body text-center">
                         <a href="{% url 'product_detail' 4 %}" class="btn btn-large rounded-1 text-uppercase py-0 btn-black">More Info</a>
                     </div>
@@ -77,7 +77,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card border-0">
-                    <img src="{% get_media_prefix %}wardrobe-mini.png" class=" mx-auto d-block rounded-circle service-img" alt="...">
+                    <img src="{% static 'images/wardrobe-mini.png' %}" class=" mx-auto d-block rounded-circle service-img" alt="...">
                     <div class="card-body text-center">
                         <a href="{% url 'product_detail' 5 %}" class="btn btn-large rounded-1 text-uppercase py-0 btn-black ">More Info</a>
                     </div>
@@ -85,7 +85,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card border-0 ">
-                    <img src="{% get_media_prefix %}group_style_mini.png" class=" mx-auto d-block rounded-circle service-img" alt="...">
+                    <img src="{% static 'images/group_style_mini.png' %}" class=" mx-auto d-block rounded-circle service-img" alt="...">
                     <div class="card-body text-center">
                         <a href="{% url 'product_detail' 6 %}" class="btn btn-large rounded-1 text-uppercase py-0 btn-black">More Info</a>
                     </div>
@@ -95,10 +95,9 @@
         <hr class="text-orange">
             <h2 class="logo-font mb-5 mt-5 fst-italic text-center">Styled Squad</h2>
         <div class="row align-items-center">
-
             <div class="col-md-6">
                 <div class="card border-0">
-                    <img src="{% get_media_prefix %}style-consultant-1.jpg" class="mx-auto d-block service-img" alt="...">
+                    <img src="{% static 'images/style-consultant-1.jpg' %}" class="mx-auto d-block service-img" alt="...">
                     <div class="card-body text-center">
                         <p class="lead logo-font text-black mt-3 text-center px-5 fst-italic lh-lg">Owner & Image Consultant</p>
                         <p class="text-black mt-3 text-center px-5 fst-italic lh-lg">Jessica Prendiville</p>
@@ -108,10 +107,10 @@
             </div>
             <div class="col-md-6">
                 <div class="card border-0">
-                    <img src="{% get_media_prefix %}style-consultant-2.jpg" class="mx-auto d-block  service-img" alt="...">
+                    <img src="{% static 'images/style-consultant-2.jpg' %}" class="mx-auto d-block  service-img" alt="...">
                     <div class="card-body text-center">
-                        <p class="lead logo-font text-black mt-3 text-center px-5 fst-italic lh-lg">Senior Stylist</p>
-                        <p class="text-black text-center px-5 fst-italic lh-lg">Alice Bergin</p>
+                        <p class="lead logo-font text-black mt-3 text-center px-5 fst-italic lh-lg">Senior Personal Stylist </p>
+                        <p class="text-black mt-3 text-center px-5 fst-italic lh-lg">Alice Bergin</p>
                         <p class=" text-orange text-center px-5 fst-italic lh-lg">alicebergin@mail.com</p>
                     </div>
                 </div>
