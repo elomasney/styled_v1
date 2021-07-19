@@ -51,15 +51,3 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
-
-
-def gift_voucher(request):
-    category = get_object_or_404(Category, pk=2)
-    giftvouchers = Product.objects.all()
-
-    context = {
-        'category': category,
-        'giftvouchers': giftvouchers,
-    }
-
-    return render(request, 'gift_voucher.html', context)

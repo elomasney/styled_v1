@@ -27,7 +27,7 @@
         <div class="col-12 col-md-4 order-md-first mb-3">
             <p class="text-muted mt-3 text-center text-md-left">
                 {% if current_collections != 'None_None' %}
-                    <span class="small"><a class="text-orange" href="{% url 'gallery' %}"> Looks</a> | </span>
+                    <span class="small"><a class="text-orange" href="{% url 'gallery' %}?collection=work_wear,occasion_wear,casual_chic,going_out_glam"> Looks</a> | </span>
                 {% endif %}
                 {{ images|length }} Images{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
             </p>
