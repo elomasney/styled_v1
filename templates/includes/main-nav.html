@@ -16,12 +16,11 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?category=style_services" class="dropdown-item">All Styling Services</a>
-                {% if category %}
-                {% for product in products %}
-                <a href="{% url 'product_detail' product.id %}" class="dropdown-item">{{product.name}}</a>
+                {% for product in products|slice:6%}
                 
+                <a href="{% url 'product_detail' product.id %}" class="dropdown-item">{{product.name}}</a>
+              
                 {% endfor %}
-                {% endif%}
                             <!--<a href="{% url 'product_detail' 1 %}" class="dropdown-item">1:1 Image Consultation</a>
                 <a href="{% url 'product_detail' 2%}" class="dropdown-item ">Body Analysis</a>
                 <a href="{% url 'product_detail' 3 %}" class="dropdown-item ">Personal Shopping Experience</a>
@@ -43,7 +42,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="logo-font fw-bold nav-link text-black mr-5" href="{% url 'products' %}?category='gift_vouchers" id="gift-link">
+            <a class="logo-font fw-bold nav-link text-black mr-5" href="{% url 'products' %}?category=gift_vouchers" id="gift-link">
                 Gift Cards
             </a>
         </li>

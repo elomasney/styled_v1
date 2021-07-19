@@ -38,24 +38,3 @@ class ProductFeature(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class GiftVoucher(models.Model):
-    CARD_AMOUNTS = (
-        (50, '€50.00'),
-        (100, '€100.00'),
-        (150, '€150.00'),
-        (200, '€200.00'),
-        (250, '€250.00'),
-        (300, '€300.00'),
-        (350, '€350.00'),
-        (400, '€400.00'),
-    )
-
-    category_id = models.ForeignKey(
-        'Category', null=True, blank=True, on_delete=models.SET_NULL)
-    name = models.CharField(max_length=254, default='Gift Voucher')
-    select_amount = models.IntegerField(choices=CARD_AMOUNTS, default=0)
-
-    def __str__(self):
-        return self.name
