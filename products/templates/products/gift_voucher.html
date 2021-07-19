@@ -14,13 +14,6 @@
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
-        {% if products.category == 'style_services' %}
-        <div class="col text-center">
-            <hr class="text-orange">
-            <h3 class="logo-font display-6 mb-3 mt-3 fst-italic">Styled Services</h3>
-            <hr class="text-orange">
-        </div>
-        {% else %}
         <div class="col text-center">
             <hr class="text-orange">
             <h3 class="logo-font display-6 mb-3 mt-3 fst-italic">Gift Vouchers</h3>
@@ -39,10 +32,10 @@
     <div class="row">
         <div class="product-container col-10 offset-1">
                 <div class="row">
-                    {% for product in products %}
+                    {% for giftvoucher in giftvouchers %}
                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
                             <div class="card h-100 border-0">
-                                {% if product.image %}
+                                {% if giftvoucher.image %}
                                 <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
@@ -52,12 +45,12 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0 text-center">{{ product.name }}</p>
+                                    <p class="mb-0 text-center">{{ giftvoucher.name }}</p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-center">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="price mb-0 text-center fw-bold">€{{ product.price }}</p>
+                                            <p class="price mb-0 text-center fw-bold">€{{ giftvoucher.price }}</p>
                                         </div>
                                     </div>
                                 </div>

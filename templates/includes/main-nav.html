@@ -16,11 +16,17 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?category=style_services" class="dropdown-item">All Styling Services</a>
-                <a href="{% url 'product_detail' 1 %}" class="dropdown-item">1:1 Image Consultation</a>
+                {% if category %}
+                {% for product in products %}
+                <a href="{% url 'product_detail' product.id %}" class="dropdown-item">{{product.name}}</a>
+                
+                {% endfor %}
+                {% endif%}
+                            <!--<a href="{% url 'product_detail' 1 %}" class="dropdown-item">1:1 Image Consultation</a>
                 <a href="{% url 'product_detail' 2%}" class="dropdown-item ">Body Analysis</a>
                 <a href="{% url 'product_detail' 3 %}" class="dropdown-item ">Personal Shopping Experience</a>
                 <a href="{% url 'product_detail' 4 %}" class="dropdown-item">Full Style Overhaul</a>
-		        <a href="{% url 'product_detail' 5 %}" class="dropdown-item">Closet Clearout</a>
+		        <a href="{% url 'product_detail' 5 %}" class="dropdown-item">Closet Clearout</a>-->
             </div>
         </li>
 
@@ -30,15 +36,14 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="outfit-link">
                 <a href="{% url 'gallery' %}?collection=work_wear,occasion_wear,casual_chic,going_out_glam" class="dropdown-item">All Looks</a>
-                <a href="{% url 'gallery' %}?collection=work_wear" class="dropdown-item">Workwear</a>
-                <a href="{% url 'gallery' %}?collection=occasion_wear" class="dropdown-item">Occasion Wear</a>
-                <a href="{% url 'gallery' %}?collection=casual_chic" class="dropdown-item">Casual Chic</a>
-                <a href="{% url 'gallery' %}?collection=going_out_glam" class="dropdown-item">Going Out Glam</a>
+                {% for collection in collections %}
+                <a href="{% url 'gallery'%}?collection={{collection.name}}" class="dropdown-item">{{collection.friendly_name}}</a>
+                {% endfor %}
             </div>
         </li>
 
         <li class="nav-item">
-            <a class="logo-font fw-bold nav-link text-black mr-5" href="{% url 'products' %}?category=gift_vouchers" id="gift-link">
+            <a class="logo-font fw-bold nav-link text-black mr-5" href="{% url 'giftvoucher' %}" id="gift-link">
                 Gift Cards
             </a>
         </li>
