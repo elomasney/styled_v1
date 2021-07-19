@@ -15,9 +15,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center">
+            {% for c in current_categories %}
             <hr class="text-orange">
-            <h3 class="logo-font display-6 mb-3 mt-3 fst-italic">Styled Services</h3>
+            <h3 class="logo-font display-6 mb-3 mt-3 fst-italic">{{c.friendly_name}}</h3>
             <hr class="text-orange">
+            {% endfor%}
         </div>
     </div>
     <div class="col-12 col-md-4 order-md-first mb-3">
