@@ -34,7 +34,7 @@
                 </div>
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
-                    <a class="text-black logo-font" href="">Edit</a> | 
+                    <a class="text-black logo-font" href="{% url 'edit_product' product.id %}">Edit</a> | 
                     <a class="text-orange logo-font" href="">Delete</a>
                 </small>
             {% endif %}
@@ -98,7 +98,7 @@
             <hr class="text-black mb-5 mt-5">
             <div class="row">
                 <div class="col-md-8 offset-md-2 text-center text-black logo-font">
-                        <img class="text-justify mb-0 img-fluid h-10" src="{% get_media_prefix %}logo_small.jpg" alt="Styled Logo">
+                        <img class="text-justify mb-0 img-fluid h-10" src="{% static 'images/logo_small.jpg' %}" alt="Styled Logo">
                     <h3 class="logo-font text-center text-black mb-4 mt-3">Session Includes:</h3>
                     
                     {% for f in  features %}
