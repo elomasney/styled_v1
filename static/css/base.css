@@ -112,6 +112,10 @@ h2.logo-font{
     border: 1px solid #000;
 }
 
+.logo-img{
+    width: 500px;
+}
+
 #all-products-link,
 #home-link,
 #about-link,
@@ -156,6 +160,11 @@ a.category-badge > span.badge:hover {
 
 input[name='q']::placeholder {
     color: rgba(235,132,77);
+}
+
+.form-control{
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 /* ------------------------------- bootstrap toasts */
