@@ -46,6 +46,11 @@ select option[value=""] {
     color: #aab7c4 !important;
 }
 
+.form-check-input:checked{
+    background-color: rgba(235,132,77);;
+    border-color: #000;
+}
+
 #loading-overlay {
 	display: none;
 	position: fixed;
