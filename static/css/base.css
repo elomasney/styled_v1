@@ -116,6 +116,10 @@ h2.logo-font{
     width: 500px;
 }
 
+.order a{
+    color: rgb(235, 132, 77);
+}
+
 #all-products-link,
 #home-link,
 #about-link,
