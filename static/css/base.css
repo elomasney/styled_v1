@@ -313,6 +313,62 @@ label.form-check-label{
     border-color: #000;
 }
 
+/* Sweet Alerts*/
+.swal2-shown {
+    font-size: .8rem;
+}
+
+div.swal2-popup {
+    background-color: #fff;
+}
+
+h2#swal2-title.swal2-title {
+    color: rgb(235, 132, 77);
+    font-weight: bolder;
+    font-size: 2rem;
+    padding: 5px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+#swal2-content {
+    color: #000	;
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 5px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+div.swal2-icon.swal2-warning.swal2-icon-show {
+    color: rgb(235, 132, 77);
+    border: rgb(235, 132, 77);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+div.swal2-icon.swal2-success {
+    color: rgb(235, 132, 77);
+    border-color: #000;
+}
+
+button.swal2-cancel.swal2-styled {
+    color: #000;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+button.swal2-confirm.swal2-styled {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.swal2-html-container {
+    color: #000;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

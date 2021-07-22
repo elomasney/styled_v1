@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_js %}
+<script src="{% static 'js/sweet_alert.js' %}"></script>
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -35,7 +39,7 @@
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
                     <a class="text-black logo-font" href="{% url 'edit_product' product.id %}">Edit</a> | 
-                    <a class="text-orange logo-font" href="{% url 'delete_product' product.id %}">Delete</a>
+                    <a class="text-orange logo-font product_delete" data-href="{% url 'delete_product' product.id %}">Delete</a>
                 </small>
             {% endif %}
             </div>
