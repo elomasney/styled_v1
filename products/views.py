@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.admin.views.decorators import staff_member_required
 from django.db.models import Q
 from .models import Product, ProductFeature, Category
-from .forms import ProductForm
+from .forms import ProductForm, ProductFeatureForm
 
 # Create your views here.
 
@@ -117,3 +117,25 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product successfully deleted!')
     return redirect(reverse('products'))
+
+
+@staff_member_required
+def add_feature(request):
+    """ Add a product feature to the db """
+    if request.method == 'POST':
+        form = ProductFeatureForm(request.POST, request.FILES)
+        if form.is_valid:
+            form.save()
+            messages.success(request, 'Successfully added product feature!')
+            return redirect(reverse('add_product_feature'))
+        else:
+            messages.error(request, 'Failed to add product featured. Please ensure the form is valid.')
+    else:
+        form = ProductFeatureForm()
+
+    template = 'products/add_feature.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
