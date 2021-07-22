@@ -74,3 +74,16 @@ def edit_image(request, image_id):
     }
 
     return render(request, template, context)
+
+
+@staff_member_required
+def delete_image(request, image_id):
+    """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    image = get_object_or_404(Image, pk=image_id)
+    image.delete()
+    messages.success(request, 'Image successfully deleted!')
+    return redirect(reverse('gallery'))
