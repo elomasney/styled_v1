@@ -108,6 +108,13 @@
                     {% for f in  features %}
                     <div class="bg-orange pt-2 pb-2">
                         <p>{{f.name}}</p>
+                        {% if request.user.is_superuser %}
+                        <small class="ml-3">
+                            <a class="text-light logo-font" href="{% url 'edit_feature' f.id %}">Edit</a> |
+                            <a class="text-light logo-font feature_delete"
+                                data-href="">Delete</a>
+                        </small>
+                        {% endif %}
                     </div>
                     {% endfor %}
                 </div>

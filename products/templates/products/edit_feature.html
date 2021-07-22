@@ -16,23 +16,21 @@
             <div class="col-12 col-md-6 offset-md-3 mt-4 text-center">
                 <hr class="text-orange">
                 <h2 class="logo-font fw-bold mb-4">Product Feature Management</h2>
-                <h5 class="text-orange logo-font">Add a Product Feature</h5>
+                <h5 class="text-orange logo-font">Edit a Product Feature</h5>
                 <hr class="text-orange">
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-md-6 offset-md-3">
-                <form method="POST" action="{% url 'add_feature' %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'edit_feature' feature.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
-                    {% if option != 'Gift Voucher'%}
                         {{ field | as_crispy_field }}
-                    {% endif %}
                         {% endfor %}
                     <div class="text-center mt-4">
                         <a class="btn btn-outline-black btn-orange rounded-0 logo-font fw-bold" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0 logo-font" type="submit">Add Feature</button>
+                        <button class="btn btn-black rounded-0 logo-font" type="submit">Edit Feature</button>
                     </div>
                 </form>
             </div>            

@@ -139,3 +139,32 @@ def add_feature(request):
     }
 
     return render(request, template, context)
+
+
+@staff_member_required
+def edit_feature(request, feature_id):
+    """ Edit a product feature """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    feature = get_object_or_404(ProductFeature, pk=feature_id)
+    if request.method == 'POST':
+        form = ProductFeatureForm(request.POST, request.FILES, instance=feature)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated feature!')
+            return redirect(reverse('products'))
+        else:
+            messages.error(request, 'Failed to update feature. Please ensure the form is valid.')
+    else:
+        form = ProductFeatureForm(instance=feature)
+        messages.info(request, f'You are editing {feature.name}')
+
+    template = 'products/edit_feature.html'
+    context = {
+        'form': form,
+        'feature': feature,
+    }
+
+    return render(request, template, context)
