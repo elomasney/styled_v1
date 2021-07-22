@@ -406,6 +406,11 @@ button.swal2-confirm.swal2-styled {
     border-radius: 0;
 }
 
+/* -----------Contact Form-------*/
+.form-control{
+    border: 1px solid rgb(235, 132, 77)
+}
+
 
 /* -------------------------------- Media Queries */
 
