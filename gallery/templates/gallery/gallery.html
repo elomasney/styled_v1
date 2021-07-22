@@ -47,8 +47,8 @@
                                 <div class="card-body pb-0">
                                     {% if request.user.is_superuser %}
                                         <small class="ml-3">
-                                        <a class="text-black logo-font" href="{% url 'edit_image' image.id %}">Edit</a> | 
-                                        <a class="text-danger logo-font image_delete" data-href="{% url 'delete_image' image.id %}">Delete</a>
+                                        <a class="text-black logo-font update-link" href="{% url 'edit_image' image.id %}">Edit</a> | 
+                                        <a class="text-danger logo-font remove-item image_delete" data-href="{% url 'delete_image' image.id %}">Delete</a>
                                         </small>
                                     {% endif %}
                                 </div>

@@ -168,3 +168,16 @@ def edit_feature(request, feature_id):
     }
 
     return render(request, template, context)
+
+
+@staff_member_required
+def delete_feature(request, feature_id):
+    """ Delete a product feature from the db """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    feature = get_object_or_404(ProductFeature, pk=feature_id)
+    feature.delete()
+    messages.success(request, 'Product feature successfully deleted!')
+    return redirect(reverse('products'))

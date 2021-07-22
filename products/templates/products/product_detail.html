@@ -38,8 +38,8 @@
                 </div>
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
-                    <a class="text-black logo-font" href="{% url 'edit_product' product.id %}">Edit</a> | 
-                    <a class="text-orange logo-font product_delete" data-href="{% url 'delete_product' product.id %}">Delete</a>
+                    <a class="text-black logo-font update-link" href="{% url 'edit_product' product.id %}">Edit</a> | 
+                    <a class="text-orange logo-font remove-item product_delete" data-href="{% url 'delete_product' product.id %}">Delete</a>
                 </small>
             {% endif %}
             </div>
@@ -110,9 +110,9 @@
                         <p>{{f.name}}</p>
                         {% if request.user.is_superuser %}
                         <small class="ml-3">
-                            <a class="text-light logo-font" href="{% url 'edit_feature' f.id %}">Edit</a> |
-                            <a class="text-light logo-font feature_delete"
-                                data-href="">Delete</a>
+                            <a class="text-light logo-font update-link" href="{% url 'edit_feature' f.id %}">Edit</a> |
+                            <a class="text-light logo-font remove-item feature_delete"
+                                data-href="{% url 'delete_feature' f.id %}">Delete</a>
                         </small>
                         {% endif %}
                     </div>

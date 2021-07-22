@@ -84,3 +84,46 @@ function confirm_delete_image(delete_url) {
     });
 }
 
+/**
+ * @function - displays sweetalert confirmation on 'delete feature' button
+ */
+//Popup confirm delete product feature on link click
+$(function () {
+    $('.feature_delete').on('click', function () {
+        let delete_url = $(this).attr('data-href');
+        confirm_delete_feature(delete_url);
+    });
+});
+
+/**
+ * @function confirm_delete_feature- displays sweetalert popup
+ * @param delete_url - path to delete a product feature from the db
+ * Asks user to confirm if they want to delete a product feature from the db
+ * On confirmation the product feature is deleted from the db
+ */
+//Confirm Delete Feature
+function confirm_delete_feature(delete_url) {
+
+    Swal.fire({
+        title: 'Delete this Feature?',
+        text: "This feature will be permanently deleted!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: 'rgba(235,132,77)',
+        cancelButtonColor: '#000',
+        confirmButtonText: 'Yes, delete it!',
+
+    }).then((result) => {
+        if (result.isConfirmed) {
+
+            window.location.href = delete_url;
+
+            Swal.fire(
+                'Deleted!',
+                'This product feature has been deleted.',
+                'success');
+
+        }
+    });
+}
+
