@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from .models import Image, Collection
 from .forms import GalleryForm
@@ -42,6 +42,35 @@ def add_image(request):
     template = 'gallery/add_image.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@staff_member_required
+def edit_image(request, image_id):
+    """ Edit an image in the gallery"""
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    image = get_object_or_404(Image, pk=image_id)
+    if request.method == 'POST':
+        form = GalleryForm(request.POST, request.FILES, instance=image)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated image in gallery!')
+            return redirect(reverse('gallery'))
+        else:
+            messages.error(request, 'Failed to update image in gallery. Please ensure the form is valid.')
+    else:
+        form = GalleryForm(instance=image)
+        messages.info(request, f'You are editing {image.name}')
+
+    template = 'gallery/edit_image.html'
+    context = {
+        'form': form,
+        'image': image,
     }
 
     return render(request, template, context)

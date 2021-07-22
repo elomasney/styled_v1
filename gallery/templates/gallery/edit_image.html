@@ -16,14 +16,14 @@
             <div class="col-12 col-md-6 offset-md-3 mt-4 text-center">
                 <hr class="text-orange">
                 <h2 class="logo-font fw-bold mb-4">Look Book Management</h2>
-                <h5 class="text-orange logo-font">Add an Image</h5>
+                <h5 class="text-orange logo-font">Edit an Image</h5>
                 <hr class="text-orange">
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-md-6 offset-md-3">
-                <form method="POST" action="{% url 'add_image' %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'edit_image' image.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
                         {% if field.name != 'image' %}
@@ -34,7 +34,7 @@
                     {% endfor %}
                     <div class="text-center mt-4">
                         <a class="btn btn-outline-black btn-orange rounded-0 logo-font fw-bold" href="{% url 'gallery' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0 logo-font" type="submit">Add Image</button>
+                        <button class="btn btn-black rounded-0 logo-font" type="submit">Edit Image</button>
                     </div>
                 </form>
             </div>            
