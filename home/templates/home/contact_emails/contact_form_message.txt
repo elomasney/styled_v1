@@ -1,0 +1,5 @@
+Enquiry received from {{email}}:
+
+{{message}}
+
+Please respond at {{email}}!

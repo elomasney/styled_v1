@@ -28,7 +28,7 @@
 
         <div class="row">
             <div class="col-12 col-md-6 offset-md-3">
-                <form method="POST" action="" class="form mb-2 logo-font fw-bold text-black rounded-0" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'send_contact_form' %}" class="form mb-2 logo-font fw-bold text-black rounded-0" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ contact_form|crispy }}
                     <div class="text-center mt-4">

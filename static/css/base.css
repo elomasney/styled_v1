@@ -171,6 +171,10 @@ input[name='q']::placeholder {
     margin-bottom: 15px;
 }
 
+.form-check-input{
+    margin-top: 10px;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -311,6 +315,10 @@ label.form-check-label{
 .form-check-input:checked{
     background-color: rgb(235, 132, 77);
     border-color: #000;
+}
+
+.form-check-input[type=checkbox] {
+    border: 1px solid rgb(235, 132, 77);
 }
 
 /* Sweet Alerts*/
