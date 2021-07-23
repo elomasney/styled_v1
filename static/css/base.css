@@ -171,6 +171,11 @@ input[name='q']::placeholder {
     margin-bottom: 15px;
 }
 
+.form-control.qty_input{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .form-check-input{
     margin-top: 10px;
 }
@@ -429,7 +434,7 @@ button.swal2-confirm.swal2-styled {
   }
 
   .carousel-caption {
-    bottom: 30%;
+    bottom: 25%;
 }
 }
 
