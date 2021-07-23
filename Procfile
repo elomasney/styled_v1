@@ -1,0 +1,1 @@
+web: gunicorn styled.wsgi:application
