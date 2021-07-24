@@ -108,11 +108,7 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-if 'DEVELOPMENT' in os.environ:
-    DEFAULT_FROM_EMAIL = os.getenv('EMAIL_HOST_USER')
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    EMAIL_USE_TLS = False
-else:
+if 'HEROKU_ON' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_HOST = os.environ.get('EMAIL_HOST')
     EMAIL_PORT = os.environ.get('EMAIL_PORT')
@@ -120,6 +116,10 @@ else:
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
     EMAIL_USE_TLS = True
+else:
+    DEFAULT_FROM_EMAIL = os.getenv('EMAIL_HOST_USER')
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    EMAIL_USE_TLS = False
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
