@@ -109,7 +109,7 @@ AUTHENTICATION_BACKENDS = [
 SITE_ID = 1
 
 if 'DEVELOPMENT' in os.environ:
-    DEFAULT_FROM_EMAIL = 'styled@example.com'
+    DEFAULT_FROM_EMAIL = os.getenv('EMAIL_HOST_USER')
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     EMAIL_USE_TLS = False
 else:
