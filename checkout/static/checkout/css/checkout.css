@@ -1,3 +1,4 @@
+/* Stripe Card Element */
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
@@ -24,6 +25,8 @@
 .stripe-style-input::placeholder {
     color: #aab7c4;
 }
+
+/* Checkout form Element */
 
 .fieldset-label {
     position: relative;

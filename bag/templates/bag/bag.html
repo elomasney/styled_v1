@@ -22,7 +22,7 @@
             <hr class="text-orange">
         </div>
     </div>
-
+<!--Structured Layout for Bag Items on Mobile Devices-->
     <div class="row">
         <div class="col-md-12 col-sm-6">
             {% if bag_items %}
@@ -67,6 +67,7 @@
                     </a>	
                 </div>
             </div>
+            <!--Structured Layout for Bag Items on Larger Devices-->
                 <div class="table-responsive rounded d-none d-md-block">
                     <table class="table table-sm table-borderless">
                         <thead class="text-black bg-orange logo-font px-3 ">
@@ -123,18 +124,22 @@
             {% endif %}
         </div>
     </div>
+    <!--Footer-->
     {% include 'includes/footer.html' %}
 </div>
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
+<!--JS for scroll to top button-->
 <script type="text/javascript">
     $('.btt-link').click(function(e) {
         window.scrollTo(0,0)
     })
 </script>
+<!--JS for increasing and decreasing product quantites-->
 {% include 'products/includes/quantity_input_script.html' %}
+<!--JS for updating and removing items from the shopping bag-->
 <script type="text/javascript">
     // Update quantity on click
     $('.update-link').click(function(e) {

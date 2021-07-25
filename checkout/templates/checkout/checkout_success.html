@@ -18,13 +18,14 @@
     <div class="container">
         <div class="row mt-4">
             <div class="col">
+                <!--Order Confirmation-->
                 <hr class="text-orange">
                 <h2 class="logo-font mb-4">Thank You</h2>
                 <hr class="text-orange">
                 <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
             </div>
         </div>
-
+        <!--Order Details-->
         <div class="row">
             <div class="col-12 col-lg-7">
                 <div class="order-confirmation-wrapper p-2 border">
@@ -57,7 +58,7 @@
                             <small class="text-orange">Order Details:</small>
                         </div>
                     </div>
-
+                    <!--Items in purchased in the order-->
                     {% for item in order.lineitems.all %}
                     <div class="row">
                         <div class="col-12 col-md-4">
@@ -71,6 +72,7 @@
                     </div>
                     {% endfor %}
                     <hr class="text-black">
+                    <!--If order has a gift voucher in it provide delivery details in confirmation-->
                     {% for item in order.lineitems.all %}
                     {% if item.product.name == 'Gift Voucher'%}
                     <div class="row">
@@ -158,12 +160,14 @@
                     </div>
                     {% endif %}
                     {% endfor %}
+                    <!--Billing Details-->
                     <hr class="text-black">
                     <div class="row">
                         <div class="col">
                             <small class="text-orange">Billing Info:</small>
                         </div>
                     </div>
+                    <!--Order Total-->
                     <hr class="text-black">
                     <div class="row">
                         <div class="col-12 col-md-4">
@@ -176,6 +180,7 @@
                 </div>
             </div>
         </div>
+        <!--If user came from profile, display back to profile button-->
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
                 {% if from_profile %}
@@ -186,6 +191,7 @@
                         <span class="text-uppercase">Back to Profile</span>
                     </a>
                 {% else %}
+                <!--Else display button to take user to the Look Book Page Gallery-->
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
 				<a href="{% url 'gallery' %}?collection=work_wear,occasion_wear,casual_chic,going_out_glam" class="btn btn-orange rounded-0 my-2">

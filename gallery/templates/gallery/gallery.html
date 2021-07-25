@@ -21,6 +21,7 @@
                 <hr class="text-orange">
                 <h3 class="logo-font display-6 mb-3 mt-3 fst-italic">The Look Book</h3>
                 <hr class="text-orange">
+                <!--Displays a badge that acts as link for each collection-->
                 {% for c in current_collections %}
                 <a class="category-badge text-decoration-none" href="{% url 'gallery' %}?collection={{ c.name }}">
                     <span class="p-2 px-3 mt-2 badge badge-white text-black bg-orange rounded-0 border border-dark">{{ c.friendly_name }} Looks</span>
@@ -30,12 +31,14 @@
         </div>
         <div class="col-12 col-md-4 order-md-first mb-3">
             <p class="text-muted mt-3 text-center text-md-left">
+                <!--Displays a badge for all looks if no specific collection is searched for-->
                 {% if current_collections != 'None_None' %}
                     <span class="small"><a class="text-orange" href="{% url 'gallery' %}?collection=work_wear,occasion_wear,casual_chic,going_out_glam"> Looks</a> | </span>
                 {% endif %}
                 {{ images|length }} Images{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
             </p>
         </div>
+        <!--Displays look book images-->
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
@@ -45,6 +48,7 @@
                             <div class="card h-100 border-0">
                                     <img id="{{image.id}}" class="card-img-top img-fluid gallery-img" src="{{ image.image.url }}" alt="{{ image.name }}">
                                 <div class="card-body pb-0">
+                                    <!--If user is a superuser then display edit and delete buttons-->
                                     {% if request.user.is_superuser %}
                                         <small class="ml-3">
                                         <a class="text-black logo-font update-link" href="{% url 'edit_image' image.id %}">Edit</a> | 
@@ -61,6 +65,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!--Displays certain amount of images per row based on screen size-->
                         {% if forloop.counter|divisibleby:1 %}
                             <div class="col-12 d-sm-none mb-5">
                                 <hr class="text-orange">
@@ -80,6 +85,7 @@
                 </div>
             </div>
         </div>
+        <!--Footer-->
         {% include 'includes/footer.html' %}
     </div>
 {% endblock %}

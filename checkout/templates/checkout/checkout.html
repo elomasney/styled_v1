@@ -24,7 +24,7 @@
                 <hr class="text-orange">
             </div>
         </div>
-
+        <!--Order Summary-->
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
                 <p class="text-black logo-font">Order Summary ({{ product_count }})</p>
@@ -36,6 +36,7 @@
                         <p class="mb-1 mt-0 small text-orange logo-font">Subtotal</p>
                     </div>
                 </div>
+                <!--List of items in the shopping bag-->
                 {% for item in bag_items %}
                     <div class="row">
                         <div class="col-2 mb-1">
@@ -56,6 +57,7 @@
                         </div>
                     </div>
                 {% endfor %}
+                <!--Order Total and Grand total-->
                 <hr class=" text-orange my-0 mb-4 mt-4">
                 <div class="row text-black text-right">
                     <div class=" col-sm-6 offset-sm-3 col-7 offset-2">
@@ -68,6 +70,7 @@
                     </div>
                 </div>
             </div>
+            <!--Order Form -->
             <div class="col-12 col-lg-6">
                 <p class="text-black fw-bold">Please fill out the form below to complete your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
@@ -98,6 +101,7 @@
 							{% endif %}
 						</div>
                     </fieldset>
+                    <!--Payment Details-->
                     <fieldset class="px-3">
                         <legend class="fieldset-label small text-orange px-2 w-auto logo-font">Payment :</legend>
                         <!-- A Stripe card element will go here -->
@@ -108,8 +112,8 @@
                         <!-- Pass the client secret to the view so we can get the payment intent id -->
                         <input type="hidden" value="{{client_secret}}" name="client_secret">
                     </fieldset>
-
-                    <div class="submit-button text-md-start d-grid gap-2 d-md-block col-sm-6 mt-5 mb-2">                    
+                    <!--Buttons to adjust bag or checkout and complete order-->
+                    <div class="submit-button text-md-start d-grid gap-2 col-sm-6 mt-5 mb-2">                    
 						<a href="{% url 'view_bag' %}" class="btn btn-orange btn-outline-black rounded-0">
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
@@ -132,8 +136,10 @@
                 </form>
             </div>
         </div>
+        <!--Footer-->
         {% include 'includes/footer.html' %}
     </div>
+    <!--Loading Spinner-->
     <div id="loading-overlay">
         <h1 class="text-black logo-font loading-spinner">
             <span class="icon">

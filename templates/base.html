@@ -12,6 +12,7 @@
     {% block extra_meta %}
     {% endblock %}
 
+    <!--Core CSS Files-->
     {% block corecss %}
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,9 +21,11 @@
       <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
     {% endblock %}
 
+    <!--Extra CSS Files-->
     {% block extra_css %}
     {% endblock %}
 
+    <!--Core JS Files-->
     {% block corejs %}
       <script src="https://kit.fontawesome.com/71923bd6f2.js" crossorigin="anonymous"></script>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -32,6 +35,7 @@
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       {% endblock %}
 
+    <!--Extra JS Files-->
     {% block extra_js %}
     <script src="{% static 'js/sweet_alert.js' %}"></script>
     {% endblock %}
@@ -47,6 +51,7 @@
                         <h2 class="logo-font text-dark my-0">Styled</h2>
                     </a>
                 </div>
+                <!--Search Bar-->
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                     <form method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100">
@@ -71,20 +76,24 @@
                                 </div>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                <!--Display these links for a superuser-->
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
                                         <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                                         <a href="{% url 'add_feature' %}" class="dropdown-item">Product Feature Management</a>      
                                         <a href="{% url 'add_image' %}" class="dropdown-item">Look Book Management</a>
                                     {% endif %}
+                                    <!--Display these links for a registered user-->
                                     <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                     <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                                 {% else %}
+                                <!--Display these links for a guest user-->
                                     <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                     <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                                 {% endif %}
                             </div>
                         </li>
+                        <!--Shopping bag total if the user has items in their bag-->
                         <li class="list-inline-item">
                             <a class="{% if total %}text-info fw-bold{% else %}text-dark{% endif %} nav-link" href="{% url 'view_bag' %}">
                                 <div class="text-center">
@@ -103,6 +112,7 @@
                 </div>
             </div>
         </div>
+        <!--Include either main nav or mobile navbar depending on screen size-->
         <div class="row bg-white">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -114,7 +124,7 @@
         </div> 
     </header>
     
-   
+   <!--Display messages if any-->
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
@@ -141,6 +151,7 @@
 
 
     {% block postloadjs %}
+    <!--Triggers the toast alerts-->
     <script type="text/javascript">
         var toastElList = [].slice.call(document.querySelectorAll('.toast'))
         var toastList = toastElList.map(function (toastEl) {

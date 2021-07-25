@@ -1,15 +1,18 @@
 <div class="collapse navbar-collapse mt-3" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item d-block d-md-none">
+            <!--Home Link-->
             <a class="logo-font fw-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
                 Home
             </a>
         </li>
+        <!--About Link-->
         <li class="nav-item">
             <a class="logo-font fw-bold nav-link text-black mr-5" href="{% url 'about' %}" id="about-link">
                 About
             </a>
         </li>
+        <!--Services dropdown links-->
         <li class="nav-item dropdown">
             <a class="logo-font fw-bold nav-link text-black mr-5" href="#" id="all-products-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Services
@@ -21,7 +24,7 @@
                 {% endfor %}
             </div>
         </li>
-
+        <!--Look Book Gallery Links-->
         <li class="nav-item dropdown">
             <a class="logo-font fw-bold nav-link text-black mr-5" href="#" id="outfit-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Look Book
@@ -33,13 +36,13 @@
                 {% endfor %}
             </div>
         </li>
-
+        <!--Link to gift voucher page-->
         <li class="nav-item">
             <a class="logo-font fw-bold nav-link text-black mr-5" href="{% url 'products' %}?category=gift_vouchers" id="gift-link">
                 Gift Cards
             </a>
         </li>
-
+        <!--Link to Contact Page-->
         <li class="nav-item">
             <a class="logo-font fw-bold nav-link text-black" href="{% url 'contact'%}" id="contact-link">
                 Contact

@@ -20,7 +20,7 @@
                 <hr class="text-orange">
             </div>
         </div>
-
+        <!--Form to add a product to the database-->
         <div class="row">
             <div class="col-12 col-md-6 offset-md-3">
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
@@ -39,12 +39,14 @@
                 </form>
             </div>            
         </div>
+        <!--Footer-->
         {% include 'includes/footer.html' %}
     </div>
 {% endblock %}
 
 {% block postloadjs %}
     {{ block.super }}
+    <!--Displays the uploaded image to the user-->
     <script type="text/javascript">
         $('#new-image').change(function() {
             var file = $('#new-image')[0].files[0];

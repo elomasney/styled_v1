@@ -14,6 +14,7 @@
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row mt-4">
+        <!--Renders the current category selected-->
         <div class="col text-center">
             {% for c in current_categories %}
             <hr class="text-orange">
@@ -22,6 +23,7 @@
             {% endfor%}
         </div>
     </div>
+    <!--If no category has been selected render this header-->
     <div class="col-12 col-md-4 order-md-first mb-3">
         <p class="text-muted mt-3 text-center text-md-left">
             {% if search_term or current_categories != 'None_None' %}
@@ -30,6 +32,7 @@
             {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
         </p>
     </div>
+    <!--Displays a list of all products including image, product name and price-->
     <div class="row">
         <div class="product-container col-10 offset-1">
                 <div class="row">
@@ -57,7 +60,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <!--Displays a certain number of images per row depensing on screen size-->
                         {% if forloop.counter|divisibleby:1 %}
                             <div class="col-12 d-sm-none mb-5">
                                 <hr class="text-orange">
@@ -77,18 +80,20 @@
                 </div>
             </div>
         </div>
-    
+    <!--Button to allow user to scroll back to the top of the page-->
     <div class="btt-button shadow-sm rounded-1 border border-black text-center col-md-2 offset-md-5 bg-orange">
         <a id="btt-link" class="btt-link h-100">
             <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
         </a>	
     </div>
+    <!--Footer-->
     {% include 'includes/footer.html' %}
 </div>
 {% endblock %}
 
 {% block postloadjs %}
     {{ block.super }}
+    <!--JS to allow user to scroll back to the top of the page-->
     <script type="text/javascript">
 		document.getElementById('btt-link').onclick = function() {
 			window.scrollTo(0,0)

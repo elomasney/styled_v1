@@ -28,6 +28,7 @@
                 <hr class="text-orange">
             </div>
         </div>
+        <!--Displays users default delivery information if saved-->
         <div class="row">
             <div class="col-12 col-lg-6 mt-4 ">
                 <p class="text-orange logo-font fw-bold ">Default Delivery Information</p>
@@ -37,6 +38,7 @@
                     <button class="btn btn-orange fw-bold logo-font rounded-1 text-uppercase float-right mb-4 mt-3">Update Information</button>
                 </form>
             </div>
+            <!--Displays users order history if they have any-->
             <div class="col-12 col-lg-6 mt-4">
                 <p class="text-orange logo-font fw-bold">Order History</p>
                 <div class="order-history table-responsive">
@@ -76,11 +78,13 @@
                 </div>
             </div>
         </div>
+        <!--Footer-->
         {% include 'includes/footer.html' %}
     </div>
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
+<!--Displays the countryfield as dropdown select box-->
     <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}

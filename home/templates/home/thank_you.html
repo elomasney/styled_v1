@@ -8,7 +8,7 @@
         </div>
     </div>
 {% endblock %}
-
+<!--Thank you confirmation to user that contact form has been sent-->
 {% block content %}
     <div class="overlay"></div>
     <div class="container">
@@ -21,6 +21,7 @@
                 <hr class="text-orange">
             </div>
         </div>
+        <!--Button to take user back to the All Services Page-->
         <div class="row mt-3">
 			<div class="col-12 col-lg-6 offset-lg-3 text-center">
 				<a href="{% url 'products' %}?category=style_services" class="btn btn-orange rounded-0 my-2">
@@ -31,6 +32,7 @@
 				</a>
 			</div>
 		</div>
+        <!--Footer-->
         {% include 'includes/footer.html' %}
     </div>
     {% endblock %}
