@@ -15,7 +15,7 @@
                 Services
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?category=style_services" class="dropdown-item">All Styling Services</a>
+                <a href="{% url 'products' %}?category=style_services" class="dropdown-item text-black">All Styling Services</a>
                 {% for service in services %}
                 <a href="{% url 'product_detail' service.id %}" class="dropdown-item">{{service.name}}</a>      
                 {% endfor %}
@@ -27,7 +27,7 @@
                 Look Book
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="outfit-link">
-                <a href="{% url 'gallery' %}?collection=work_wear,occasion_wear,casual_chic,going_out_glam" class="dropdown-item">All Looks</a>
+                <a href="{% url 'gallery' %}?collection=work_wear,occasion_wear,casual_chic,going_out_glam" class="dropdown-item text-black">All Looks</a>
                 {% for collection in collections %}
                 <a href="{% url 'gallery'%}?collection={{collection.name}}" class="dropdown-item">{{collection.friendly_name}}</a>
                 {% endfor %}
