@@ -122,16 +122,16 @@ WSGI_APPLICATION = 'styled.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if 'HEROKU_ON' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
-else:
+if DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
+    }
+else:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 
 # Password validation
@@ -206,7 +206,7 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
-if 'DEVELOPMENT' in os.environ:
+if DEBUG:
     DEFAULT_FROM_EMAIL = os.getenv('EMAIL_HOST_USER')
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     EMAIL_USE_TLS = False

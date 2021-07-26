@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Product, ProductFeature, Category
 from .forms import ProductForm, ProductFeatureForm
@@ -55,7 +55,7 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
-@staff_member_required
+@login_required
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
@@ -81,7 +81,7 @@ def add_product(request):
     return render(request, template, context)
 
 
-@staff_member_required
+@login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
@@ -110,7 +110,7 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
-@staff_member_required
+@login_required
 def delete_product(request, product_id):
     """ Delete a product from the store """
     if not request.user.is_superuser:
@@ -123,7 +123,7 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 
-@staff_member_required
+@login_required
 def add_feature(request):
     """ Add a product feature to the db """
     if not request.user.is_superuser:
@@ -149,7 +149,7 @@ def add_feature(request):
     return render(request, template, context)
 
 
-@staff_member_required
+@login_required
 def edit_feature(request, feature_id):
     """ Edit a product feature """
     if not request.user.is_superuser:
@@ -178,7 +178,7 @@ def edit_feature(request, feature_id):
     return render(request, template, context)
 
 
-@staff_member_required
+@login_required
 def delete_feature(request, feature_id):
     """ Delete a product feature from the db """
     if not request.user.is_superuser:

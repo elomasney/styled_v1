@@ -3,7 +3,7 @@ from django.contrib import messages
 from .models import Image, Collection
 from .forms import GalleryForm
 
-from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -25,7 +25,7 @@ def gallery(request):
     return render(request, 'gallery/gallery.html', context)
 
 
-@staff_member_required
+@login_required
 def add_image(request):
     """ Add a image to the gallery """
     if not request.user.is_superuser:
@@ -51,7 +51,7 @@ def add_image(request):
     return render(request, template, context)
 
 
-@staff_member_required
+@login_required
 def edit_image(request, image_id):
     """ Edit an image in the gallery"""
     if not request.user.is_superuser:
@@ -80,7 +80,7 @@ def edit_image(request, image_id):
     return render(request, template, context)
 
 
-@staff_member_required
+@login_required
 def delete_image(request, image_id):
     """ Delete a product from the store """
     if not request.user.is_superuser:
