@@ -247,7 +247,7 @@ It is hosted on Heroku using automatic deployment from GitHub. Link to the live 
 - Unsplash
 - Pexels
 - Scheme Colour
-- Redketchup.io
+- Favicon.io
 - Beautifier.io
 - Tutor Support
 
