@@ -3,6 +3,7 @@ from products.models import Product
 
 
 def bag_contents(request):
+    """ Renders items in bag to be viewed across all templates """
 
     bag_items = []
     total = 0

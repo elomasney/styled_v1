@@ -27,11 +27,19 @@ def send_contact_form(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            subject = render_to_string('home/contact_emails/contact_form_subject.txt', {'subject': form.cleaned_data['subject']})
-            message = render_to_string('home/contact_emails/contact_form_message.txt', {'message': form.cleaned_data['message'], 'email': form.cleaned_data['email']})
+            subject = render_to_string(
+                'home/contact_emails/contact_form_subject.txt',
+                {'subject': form.cleaned_data['subject']})
+            message = render_to_string(
+                'home/contact_emails/contact_form_message.txt',
+                {'message': form.cleaned_data['message'],
+                 'email': form.cleaned_data['email']})
 
             try:
-                send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, ['styledv1@gmail.com'])
+                send_mail(
+                    subject, message,
+                    settings.DEFAULT_FROM_EMAIL, ['styledv1@gmail.com']
+                    )
             except BadHeaderError:
                 messages.warning(request, 'An error occured. Please try again')
 

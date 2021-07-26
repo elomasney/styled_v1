@@ -4,13 +4,14 @@ from .models import Product, Category, ProductFeature
 
 
 class ProductForm(forms.ModelForm):
-
+    """ Creates instance of Product Form """
     class Meta:
         model = Product
         fields = '__all__'
         exclude = ('online_price',)
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(
+        label='Image', required=False, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -23,7 +24,7 @@ class ProductForm(forms.ModelForm):
 
 
 class ProductFeatureForm(forms.ModelForm):
-
+    """ Creates instance of Product Feature Form """
     class Meta:
         model = ProductFeature
         fields = '__all__'

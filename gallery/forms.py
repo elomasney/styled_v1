@@ -4,13 +4,14 @@ from .models import Image, Collection
 
 
 class GalleryForm(forms.ModelForm):
-
+    """ Create image gallery form """
     class Meta:
         model = Image
         fields = '__all__'
         exclude = ('upvote',)
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(
+        label='Image', required=False, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse
+    )
 from django.contrib import messages
 from django.conf import settings
 from django.views.decorators.http import require_POST
@@ -10,7 +12,6 @@ from profiles.forms import UserProfileForm
 from products.models import Product
 
 from bag.contexts import bag_contents
-
 
 import stripe
 import json
@@ -72,9 +73,10 @@ def checkout(request):
                     order_line_item.save()
 
                 except Product.DoesNotExist:
-                    messages.error(request, (
-                        "One of the items in your bag wasn't found in our database."
-                        "Please call us for assistance!")
+                    messages.error(
+                        request,
+                        ("One of the items in your bag is not in our database."
+                         "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))

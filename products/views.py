@@ -69,7 +69,10 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('add_product'))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                ('Failed to add product. Please ensure the form is valid.')
+            )
     else:
         form = ProductForm()
 
@@ -96,7 +99,10 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                ('Failed to update product. Please ensure the form is valid.')
+            )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -137,7 +143,10 @@ def add_feature(request):
             messages.success(request, 'Successfully added product feature!')
             return redirect(reverse('add_feature'))
         else:
-            messages.error(request, 'Failed to add product featured. Please ensure the form is valid.')
+            messages.error(
+                request,
+                ('Failed to add feature. Please ensure the form is valid.')
+            )
     else:
         form = ProductFeatureForm()
 
@@ -158,13 +167,17 @@ def edit_feature(request, feature_id):
 
     feature = get_object_or_404(ProductFeature, pk=feature_id)
     if request.method == 'POST':
-        form = ProductFeatureForm(request.POST, request.FILES, instance=feature)
+        form = ProductFeatureForm(
+            request.POST, request.FILES, instance=feature)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated feature!')
             return redirect(reverse('products'))
         else:
-            messages.error(request, 'Failed to update feature. Please ensure the form is valid.')
+            messages.error(
+                request,
+                ('Failed to update feature. Please ensure the form is valid.')
+            )
     else:
         form = ProductFeatureForm(instance=feature)
         messages.info(request, f'You are editing {feature.name}')

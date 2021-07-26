@@ -39,7 +39,9 @@ def add_image(request):
             messages.success(request, 'Successfully added Gallery Image!')
             return redirect(reverse('add_image'))
         else:
-            messages.error(request, 'Failed to add Gallery Image. Please ensure the form is valid.')
+            messages.error(
+                request,
+                ('Failed to add Image. Please ensure the form is valid.'))
     else:
         form = GalleryForm()
 
@@ -66,7 +68,10 @@ def edit_image(request, image_id):
             messages.success(request, 'Successfully updated image in gallery!')
             return redirect(reverse('gallery'))
         else:
-            messages.error(request, 'Failed to update image in gallery. Please ensure the form is valid.')
+            messages.error(
+                request,
+                ('Failed to update image. Please ensure the form is valid.')
+            )
     else:
         form = GalleryForm(instance=image)
         messages.info(request, f'You are editing {image.name}')
