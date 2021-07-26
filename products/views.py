@@ -127,7 +127,7 @@ def add_feature(request):
         if form.is_valid:
             form.save()
             messages.success(request, 'Successfully added product feature!')
-            return redirect(reverse('add_product_feature'))
+            return redirect(reverse('add_feature'))
         else:
             messages.error(request, 'Failed to add product featured. Please ensure the form is valid.')
     else:
