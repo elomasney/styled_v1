@@ -3,8 +3,6 @@ from django.db import models
 
 # Create your models here.
 class Collection(models.Model):
-    class Meta:
-        verbose_name_plural = 'Collections'
 
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
