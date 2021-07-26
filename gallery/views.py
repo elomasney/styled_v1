@@ -28,6 +28,10 @@ def gallery(request):
 @staff_member_required
 def add_image(request):
     """ Add a image to the gallery """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = GalleryForm(request.POST, request.FILES)
         if form.is_valid:

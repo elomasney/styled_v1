@@ -58,6 +58,10 @@ def product_detail(request, product_id):
 @staff_member_required
 def add_product(request):
     """ Add a product to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid:
@@ -122,6 +126,10 @@ def delete_product(request, product_id):
 @staff_member_required
 def add_feature(request):
     """ Add a product feature to the db """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = ProductFeatureForm(request.POST, request.FILES)
         if form.is_valid:
