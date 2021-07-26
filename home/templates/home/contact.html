@@ -26,7 +26,7 @@
             </div>
         </div>
         <!--Contact Form for users to send enquiry to site owners-->
-        <div class="row">
+        <div class="row pb-5">
             <div class="col-12 col-md-6 offset-md-3">
                 <form method="POST" action="{% url 'send_contact_form' %}" class="form mb-2 logo-font fw-bold text-black rounded-0" enctype="multipart/form-data">
                     {% csrf_token %}
@@ -38,7 +38,7 @@
                 </form>
             </div>            
         </div>
-        <!--Footer-->
-        {% include 'includes/footer.html' %}
     </div>
+     <!--Footer-->
+     {% include 'includes/footer.html' %}
 {% endblock %}

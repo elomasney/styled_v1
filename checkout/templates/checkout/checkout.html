@@ -75,12 +75,13 @@
                 <p class="text-black fw-bold">Please fill out the form below to complete your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
-                    <fieldset class="rounded px-3 mb-5">
+                    <fieldset class="rounded px-3 mb-4">
                         <legend class="fieldset-label small text-orange logo-font px-2 w-auto">Details :</legend>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
-                    <fieldset class="rounded px-3 mb-5">
+                    <small class="text-black text-center"> *Due to fraud and security reasons your delivery address must match the billing address.</small>
+                    <fieldset class="rounded px-3 mb-5 mt-3">
                         <legend class="fieldset-label small text-orange logo-font px-2 w-auto">Delivery :</legend>
                         {{ order_form.phone_number | as_crispy_field }}
                         {{ order_form.street_address1 | as_crispy_field }}
@@ -91,7 +92,7 @@
                         {{ order_form.country | as_crispy_field }}
                         <div class="form-check form-check-inline float-right mr-0 mt-4">
 							{% if user.is_authenticated %}
-								<label class="form-check-label logo-font" for="id-save-info">Save this delivery information to my profile</label>
+								<label class="form-check-label logo-font text-sm-center" for="id-save-info">Save this delivery information to my profile</label>
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
 							{% else %}
 								<label class="form-check-label col-12" for="id-save-info">
@@ -113,7 +114,7 @@
                         <input type="hidden" value="{{client_secret}}" name="client_secret">
                     </fieldset>
                     <!--Buttons to adjust bag or checkout and complete order-->
-                    <div class="submit-button text-md-start d-grid gap-2 col-sm-6 mt-5 mb-2">                    
+                    <div class="submit-button d-md-inline d-grid gap-2 col-sm-6 mt-5 mb-2">                    
 						<a href="{% url 'view_bag' %}" class="btn btn-orange btn-outline-black rounded-0">
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
