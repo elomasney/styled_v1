@@ -1,5 +1,5 @@
 html{
-    height: 100vh;
+    height: 100%;
 }
 
 body{
@@ -10,6 +10,8 @@ body{
     max-width: 2000px;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
    
 }
 
@@ -26,6 +28,13 @@ hr{
 
 header{
     background-color: white;
+}
+
+footer{
+    margin-top: auto;
+    bottom: 0;
+    height: 0px;
+    margin-bottom: -80px;
 }
 
 /* from Bulma */
