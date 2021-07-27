@@ -31,7 +31,7 @@ The purpose of the project is to build a full-stack site based around business l
 - To have the ability to create their own profile.
 - To browse the services and products easily.
 - Easily navigate to detailed information on services and products.
-- A fast, secure and reliable payement system of purchasing items.
+- A fast, secure and reliable payment system of purchasing items.
 - Easily identify the total of my purchases at any time.
 - The ability to update items in my shopping bag.
 - The ability to delete items in my shopping bag.
@@ -59,6 +59,32 @@ The purpose of the project is to build a full-stack site based around business l
 ## **UX Design**
 
 ### **_User Stories_**
+- As a user I would like to understand the purpose of the website.
+- As a user I want to be able to create my own profile that holds all my content.
+- As a user, I want to be able to navigate the website with ease.
+- As a user I expect to be able to quickly find products and services I am looking for.
+- As I user I want to know the price of the products.
+- As a user, I would like information about what is included in the service I am purchasing.
+- As I user I want to easily see the total price of my current shopping bag.
+- As a user I want the ability to update and delete items in my shopping bag.
+- As a user I would like a profile that holds all the information on my previous orders.
+- As a user I would like to login and logout easily.
+- As a user I would like receive email confirmation of any purchases made.
+- As a user I would like to have all the order details specified in my email order confirmation.
+- As a user, I would like to receive alerts/messages when I submit, enquire or make a purchase that inform me it was successful.
+- As a user, I would like the ability to edit and delete the contents of the shopping bag.
+- As a user, I would like to have access to a fast secure payment system when purchasing items.
+- As a new user, I would like the ability to register for a user account
+- As a user, I would like the ability to recover my password.
+- As a user I would like the ability to be able to communicate with the company via email from the site.
+- As the owner and user, I want to encourages users to make purchases and earn an income.
+- As the owner and user, I want to be able to add, update or delete products on the website.
+- As the owner and user, I want the ability to create, update and delete product features.
+- As the owner and user, I want the ability to create, update and delete gallery images.
+- As the owner and user, I want other users to be able to contact me if they have any questions or complaints or general feedback.
+- As the owner and user, I want provide users with incentive to sign up.
+- As a guest user, I would like to be able to search for products and services.
+
 
 ### **_Visitors to the site expect:_**
 - To navigate the site easily
