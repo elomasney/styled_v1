@@ -351,17 +351,54 @@ tablet and mobile devices.
 ## **_Future Features Left to Implement_**
 
 ## **Defensive Design**
+- Warning alerts are used on registration form if username or email already exists.
+- Warning alerts on login page to let user know if they have entered incorrect details.
+- Sweet Alert popups have been implemented on all delete functionality to alert user and ask them to confirm the delete action before proceeding with the delete process.
+- On all Admin CRUD functionality pages, it is designed that if the user is not admin they will be redirected back to the sign in page.
+- Inbuilt Django validation has been utilised and check , for example, using form and model fields for data type validation and strings contains length validation, emailFields will only allow email input. 
 
 ## **Technologies Used**
 ### **_Languages_**
+- HTML
+- CSS
+- JavaScript
+- Python3
 
 ### **_Databases_**
+- SQLite : Used in Development
+- PostgreSQL : Used in Production
 
 ### **_Frameworks/Integrations_**
+- **Bootstrap5:**  : Used for the grid layout for the website and styling classes
+- **Font Awesome:** Used to add icons to the website.
+- **Google Fonts:** Used to select the font styles used on the website for the section headers and body.
+- **JQuery:** 
+- **SweetAlert2:** Used to create the alerts for the popup confirmation boxes used to confirm deletes on data from the database.
+- **Django:** [Django](https://www.djangoproject.com/) was used as python web framework for rapid development and clean design.
 
 ### **_Workspace_**
+- **Github:** - (IDE) Integrated Development Environment
+- **GitPod:** - Cloud based hosting platform for managing my repositories, tracking changes and storing files.
+- **VSCode:** - [Visual Studio Code](https://code.visualstudio.com/) is the IDE used for developing this project locally when no internet was available. Also for using extensions which proved to be more reliable in VSC than in the more rececently established gitpod e.g. beautifying the code
+- **Heroku:** - Cloud application platform used to deploy and host the website
 
 ### **_Other_**
+- **Stripe:** : [Stripe](https://stripe.com/gb) as payment platform to validate and accept credit card payments securely.
+- **AWS S3 Bucket:** : [AWS S3 Bucket](https://aws.amazon.com/)  to store static files and images entered into the database.
+- **Boto3:** : [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) to enable creation, configuration and management of AWS S3
+- **Django Crispy Forms:** : [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) to style django forms.
+- **Django Storages:** : [Django Storages](https://django-storages.readthedocs.io/en/latest/) a collection of custom storage backends with django to work with boto3 and AWS S3.
+- **Gunicorn:** : [Gunicorn](https://pypi.org/project/gunicorn/)WSGI HTTP Server for UNIX to aid in deployment of the Django project to heroku.
+- **Pillow:** : [Pillow](https://pillow.readthedocs.io/en/stable/)as python imaging library to aid in processing image files to store in database.
+- **Psycopg2:** :[Psycopg2](https://pypi.org/project/psycopg2/) as PostgreSQL database adapter for Python.
+- **PIP Installation Package:** : [PIP](https://pip.pypa.io/en/stable/installing/) for installation of tools needed in this project.
+- **Gmail:** : Used to set up email confirmations and contact form email configuration.
+- **Canva:** :[Canva](https://www.canva.com/) to create the service icons on about page.
+- **Namecheap** :[Namecheap](https://www.namecheap.com/logo-maker/app/) : Created Logo Image on Product Detail & Profile Pages
+- **Tinyjpeg:** : This was used to compress the images used on the website.
+- **Balsamiq Wireframes:** : Used to create wireframes for this project
+- **Chrome DevTools:** : used to check the UX design on all devices
+- **Favicon:** : used to create a favicon for the website
 
 ## **Testing**
 - Full Testing Documentation can be found [here]()
@@ -370,7 +407,6 @@ tablet and mobile devices.
 This project was developed using Gitpod IDE, then pushed to GitHub where the repository was stored.
 It is hosted on Heroku using automatic deployment from GitHub. Link to the live site [here](https://styled-el.herokuapp.com/)
 
-#### **Requirements to Run this App**
 
 ### **Project Deployment**
 #### **The following steps outline how the project was deployed to Heroku:**
@@ -442,18 +478,17 @@ e.g load categories before products.
 #### **Step 13: Disable COLLECTSTATIC**
 - Temporarily disable collectstatic byt typing `heroku config:set DISABLE_COLLECTSTATIC=1` in the terminal
 
-
-### **Step 14: Allowed Hosts**
+#### **Step 14: Allowed Hosts**
 - Add the host name of the Heroku app to the ALLOWED_HOSTS in the settings.py file
 - Also add `localhost`
 
-### **Step 15: Deploy to Heroku**
+#### **Step 15: Deploy to Heroku**
 - Git add .
 - Commit and push all changes to your github repository
 - Push to Heroku using `git push heroku main`
 - Go to your Heroku app on the Heroku site.
 
-### **Step 16: Set up Automatic Deployment to Heroku**
+#### **Step 16: Set up Automatic Deployment to Heroku**
 - Click on the Deploy Tab
 - Select deployment method 'GitHub'
 - Make sure your GitHub name is displayed
@@ -478,7 +513,6 @@ AWS_S3_OBJECT_PARAMETERS = {
         'CacheControl': 'max-age=94608000',
     }
 
-    # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'styled-el'
     AWS_S3_REGION_NAME = 'eu-west-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
@@ -599,10 +633,27 @@ os.environ.setdefault("EMAIL_PASS", "secret key here")
 
 ## **Credits**
 ### **Code**
+**_Code Institute Course Content - Project Boutique Ado_**
+- Code snippets were taken from the [Project Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1) mini project from the course material. Code for Bootstrap layouts for the shopping bag and checkout were used and edited to suit my particular project.
+
+**_Favicon_**
+- Code snippet used to generate a favicon for this website. This code was inserted into the html document in the `<head>` section. I have also included the source files for this in the favicon folder. The website used to generate the favicon and associated files was [Favicon](https://favicon.io/)
 
 ### **Content**
+- Content for this website was inspired by a variety of different style consultancy websites:
+    - [Wishi](https://www.wishi.me/?gclid=Cj0KCQjw3f6HBhDHARIsAD_i3D8iXiNFkXPdRy10hjTgCFR15dwowQ1LeLpfwxUB6fqCFj85oylsV0gaAnAREALw_wcB)
+    - [Ele Personal Styling](https://www.elepersonalstyling.com/)
+    - [Denikiro](https://denikiro.com/shop/style-consultation/)
+    - [925 Style](https://925style.ie/)
+    - [Style Savvy](https://925style.ie/)
+
 ### **Media**
 **Images:**
+- Pexels.com & [Unsplash.com](https://unsplash.com/) : Carousel Images on Homepage (Main Carousel & Testimonial Carousel)
+- [Pexels.com](https://www.pexels.com/): Services & Gift Voucher Images
+- [Pinterest.com](https://www.pinterest.com/) : Look Book Outfit Inspiration
+- [Namecheap](https://www.namecheap.com/logo-maker/app/) : Created Logo Image on Product Detail & Profile Pages
+- [Canva](https://www.canva.com/) : Used to create service icons on services pages
 
 ### **Resources**
 - Code Institute Content - specifically the Boutique Ado Project
@@ -615,12 +666,15 @@ os.environ.setdefault("EMAIL_PASS", "secret key here")
 - Balsamiq Wireframes
 - CSS Tricks
 - Pinterest for Images
-- Personal Stylist websites (Wishi, )
+- Personal Stylist websites
 - Unsplash
 - Pexels
-- Scheme Colour
+- Colour Hexa
 - Favicon.io
 - Beautifier.io
 - Tutor Support
 
 ### **Acknowledgements**
+This project was both challenging and rewarding, I can't believe how much I have learned in the past year and I am delighted to achieved reaching my final milestone project. I would like to thank tutor support for the amazing help, guidance, and advice,  when dealing with one or two issues in this project. I found the tutor support experience to be really beneficial, and has allowed me to develop my troubleshooting skills. I have thoroughly enjoyed my experience on this course and I am looking forward to a new chapter, continuing to learn and hopefully lead to a successful career in software development.
+I would also like to thank my mentor Brian Macaria, for his support, encouragement, and guidance and help throughout this project and was essential to my development through this course. Thanks for being a great mentor.
+I would also like to thank Code Institute, for giving me the opportunity to change my career and finally find something I really enjoy.
