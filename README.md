@@ -374,14 +374,228 @@ It is hosted on Heroku using automatic deployment from GitHub. Link to the live 
 
 ### **Project Deployment**
 #### **The following steps outline how the project was deployed to Heroku:**
-##### **Step 1:**
+#### **Step 1: Create requirement.txt file**
+- Using command 'pip3 freeze --local > requirements.txt
+- This contains a list of dependancies needed to run the app
 
-### **To set up automatic deployment to Heroku:**
+#### **Step 2: Log In to Heroku.com/Create a new account** 
+- Log in to heroku.com or create a new account if you have not set one up.
+
+#### **Step 3: Heroku Dashboard**
+- Go to the dashboard and click on 'Create a New App'
+
+#### **Step 4: Create App**
+- Give the app a name, this must be unique. Use all lowercase, and a dash or minus instead of spaces
+- Choose your region
+- Then click on 'Create App'
+
+#### **Step 5: Provision Postgres Database Add On**
+- Go to the Resources Tab within your newly created app.
+- Search for Heroku Postgres
+- Select Hobby Dev Free and click submit on the form
+
+#### **Step 6: Add 'DATABASE_URL' variable to your Heroku Config Vars**
+- Click on the Settings Tab
+- Click Reveal Config Vars
+- Insert the DATABASE_URL copied value from the HEROKU Postgres Database
+- Save variable
+
+#### **Step 7: Provision Postgres Database Add On** 
+- Log in to heroku.com or create a new account if you have not set one up.
+
+
+#### **Step 8: DJ_DATABASE_URL/PSYCOPG2**
+- Go back to the terminal and install dj-database-url using `pip3 install dj-database-url`
+- Install pyscopg2 using `pip3 install pyscopg2-binary`
+- Freeze these to your requirements.txt file using `pip3 freeze > requirements.txt`
+- Go to your settings.py file and add dj-database-url to your imports at the top using `import dj-database-url`
+- Update your DATABASES = to `DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}` 
+- As I used fixtures for this project, I commented out the SQLite database and connected to the HEROKU Postgres database to prepare to make migrations.
+
+#### **Step 9: Migrate Data to Postgres**
+- Run `python3 manage.py make migrations --dry-run`
+- If all is ok then run `python3 manage.py make migrations`
+- Then run `python3 manage.py migrate --plan`
+- If all looks good then run `python3 manage.py migrate`
+- Then load your fixtures by typing python3 loaddata categories (and same for other fixtures)
+- Ensure that you load the data in order if one element depends on another within the database.
+e.g load categories before products.
+
+#### **Step 10: Create superuser**
+- In the terminal type `python3 manage.py createsuperuser`
+- Insert name when prompted.
+- Insert email when prompted
+- Insert password when prompted
+- Reenter password when prompted.
+- Superuser is created.
+- You will now be able to login to the Django admin page.
+
+#### **Step 11: Create the Procfile**
+- Using the command ' echo web: python app.py > Procfile
+- This tells Heroku to create a web dyno and how to run our app.
+
+#### **Step 12: Install unicorn and set up Procfile**
+- Install unicorn using `pip3 install gunicorn
+- Add to requirements. txt file using `pip3 freeze > requirements.txt`
+- Inside this file type: `web: gunicorn styled.wsgi:application` and save.
+
+#### **Step 13: Disable COLLECTSTATIC**
+- Temporarily disable collectstatic byt typing `heroku config:set DISABLE_COLLECTSTATIC=1` in the terminal
+
+
+### **Step 14: Allowed Hosts**
+- Add the host name of the Heroku app to the ALLOWED_HOSTS in the settings.py file
+- Also add `localhost`
+
+### **Step 15: Deploy to Heroku**
+- Git add .
+- Commit and push all changes to your github repository
+- Push to Heroku using `git push heroku main`
+- Go to your Heroku app on the Heroku site.
+
+### **Step 16: Set up Automatic Deployment to Heroku**
+- Click on the Deploy Tab
+- Select deployment method 'GitHub'
+- Make sure your GitHub name is displayed
+- Enter the name of your repository and click 'Search'
+- Once the correct repository is found, click 'Connect'
+
+#### **Step 17: AWS -S3 Bucket**
+- Login or set up an AWS account
+- Search for S3 in the services menu
+- Select S3 and select create bucket.
+- Insert password when prompted
+
+#### **Step 18: Install Django Storages & Boto3**
+- Back in the terminal install django-storages using `pip3 install django-storages`
+- Install Boto3 using `pip3 install boto3`
+- Go to settings.py file and add `'storages'` to INSTALLED APPS.
+
+#### **Step 19: Add AWS S3 to settings.py file**
+- Go to settings.py and add the following:
+AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'styled-el'
+    AWS_S3_REGION_NAME = 'eu-west-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+- Add AWS variables to the HEROKU Config Vars.
+- These AWS keys are gotten from S3 in your AWS account
+
+#### **Step 20: Storages**
+- Create a `custom_storages.py` file at the top level:
+- Add the following imports at the top of the file 
+    - from django.conf import settings  
+    - from storages.backends.s3boto3 import S3Boto3Storage
+- Create the following classes:
+    - class StaticStorage(S3Boto3Storage):
+    location = settings.STATICFILES_LOCATION
+    - class MediaStorage(S3Boto3Storage):
+    location = settings.MEDIAFILES_LOCATION
+- Add this to your settings.py file:
+
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/
+
+- Remove 'DISABLE_COLLECTSTATIC' from Config Vars in Heroku.
+- Go back to the terminal to enable collectstatic and run `python3 manage.py COLLECTSTATIC`
+
+#### **Step 21: Add environment variables to HEROKU**
+- Ensure you have added all the following variable to your Heroku Config Vars:
+    - STRIPE_PUBLIC_KEY
+    - STRIPE_SECRET
+    - STRIPE_WH_SECRET
+    - DATABASE_URL
+    - SECRET_KEY
+    - AWS_ACCESS_KEY_ID
+    - AWS_SECRET_ACCESS_KEY"
+    - EMAIL_USER
+    - EMAIL_PASS
+
+#### **Step 22: Open app in HEROKU**
+- Once the build is complete, click on `Open app`
+- From the link provided add /admin to the end of the url, log in with your superuser account
 
 ### **Deployment to Heroku from the CLI:**
 
 ### **To run the project locally:**
+- To allow you to access all functionality on the site locally, ensure you have created free accounts with the following services: - Stripe - AWS and set up an S3 bucket - Gmail.
+
 ##### **Step 1:**
+-  Follow this link to my [Repository on Github](https://github.com/elomasney/styled_v1)
+
+##### **Step 2:**
+- Click `Clone or Download`.
+
+##### **Step 3:**
+- In the Clone with HTTPs section, click the `copy` icon.
+
+##### **Step 4:**
+- In your local IDE open Git Bash.
+
+##### **Step 5:**
+- Change the current working directory to where you want the cloned directory to be made.
+
+##### **Step 6:**
+- Type `git clone`, and then paste the URL you copied earlier.
+
+##### **Step 7:**
+- Press enter and your local clone will be ready.
+
+##### **Step 8:**
+- Create and start a new environment:  
+python -m .venv venv  
+source env/bin/activate
+
+##### **Step 9:**
+- Install the project dependencies:  
+pip install -r requirements.txt
+
+##### **Step 10:**
+- Create a new file, called `env.py` and add your environment variables:
+
+import os  
+os.environ.setdefault("STRIPE_PUBLIC_KEY", "secret key here")
+os.environ.setdefault("STRIPE_SECRET", "secret key here")
+os.environ.setdefault("STRIPE_WH_SECRET", "secret key here")
+os.environ.setdefault("DATABASE_URL", "secret key here")
+os.environ.setdefault("SECRET_KEY", "secret key here")
+os.environ.setdefault("AWS_ACCESS_KEY_ID", "secret key here")
+os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "secret key here")
+os.environ.setdefault("EMAIL_USER", "secret key here")
+os.environ.setdefault("EMAIL_PASS", "secret key here")
+
+##### **Step 11:**
+- Go to `settings.py` file and add your environment variables.
+
+##### **Step 12:**
+- Add `env.py` to .gitignore file
+
+##### **Step 13:**
+- Go to terminal and run the following: `python3 manage.py makemigrations`, then `python3 manage.py migrate` to migrate all existing migrations to postgres database.
+
+##### **Step 14:**
+- Create a superuser: `python3 manage.py createsuperuser`
+
+##### **Step 15:**
+- Run it with the following command:  
+`python manage.py runserver`
+
+##### **Step 16:**
+- Open `localhost:8000` on your browser
+
+##### **Step 17:**
+- Add `/admin` to the end of the url address and login with your superuser account and create new products to add to your database.
 
 ## **Credits**
 ### **Code**
