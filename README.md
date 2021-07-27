@@ -69,9 +69,14 @@ The purpose of the project is to build a full-stack site based around business l
 - Browse and locate products with ease
 
 ### **_Strategy Plane_**
+- The aim of this project was to develop a personal stylist website that provides styling experiences as services such as Image Consultation, Personal Shopping, Full Style Overhaul, Group Style Events and Closet Clearout. The website is professional, modern mimimalist, inviting, and easy to navigate.
+- This website was designed with a focus on user experience and user needs, the services offered are expensive as there is alot of time and effort required to execute these services to a high standard so it was important to reflect the exclusivity of these luxury services. However it is also vital to offer the users a user experience that is easy and worth the money they will spend on these services. The aim of the project is to encourage to sign up and purchase the services offered while also ensuring that the user receives prompt feedback, a fast and secure payment system and a efficient means of communication with the service providers. It is designed so only admin users can add/edit/delete products, product features and images and users can add/update and remove items from their shopping bag, adjust quantities and save their default information to their profile for ease of use for the checkout process.
+- I have also included a contact form that is allows users both registered and guest to submit an email form to that is sent to the company email address if users have any queries, questions or complaints.
 
 ### **_Scope Plane_**
-
+- The use of vivid images, and minimal text on the product pages, was done so that the user isn't overwhelmed with information, but has the option to get more information about a specific product if they want.
+- The future goals for this project would be to allow users to upload their own 'outfit inspiration' pics to the the Look Book Page and possibly use an upvote/like system on these images with the aim of allowing users to save favourite looks to their profile page. Due to time constraints this was not achieveable for this project.
+- Another future goal for this project will be to offer the services provided in an online capacity through the use of video conferencing and this would be reflected in an online price and an in-person price. The online price has been included in the product model, however again due to time constraints I have not been able to implement this aspect at this stage.
 ### **_Structure Plane_**
 - The structure of this website was designed to be easy to navigate and user-friendly. The navigation bar is visible on every page, and includes different links depending on whether a user is logged in, a guest user or the admin user. 
 - The project consists of 7 apps: Home, About, Products, Gallery, Profiles, Bag & Checkout.
@@ -125,20 +130,55 @@ This page layout is designed with a form layout for the user's default delivery 
 The database for this project was created using PostgreSQL in production and SQLite3 in development. 
 It consists of 8 models:
 
-- Categories
-- Products
-- Product Features
-- Orders
-- Order Line Items
-- Users/User Profile
-- Collections(For Look Book)
-- Images (for Look Book)
+- Categories: stores the category name and category friendly name
+- Products: stores the product name, category which is a foreign key to the category model, description, online price, price, image url and image.
+- Product Features: stores the product feature name and associated products which is a many to many field
+- Orders: stores order number, user profile(foreignkey to User), full name, email, phone number, address, town, county, postcode, date, order total, original bag, and stripe pid.
+- Order Line Items: stores order(foreign key to order), product(foreign key to product), quantity, lineitem total
+- User Profile: stores user(one to one field with User), phone, address, town, county, postcode, country
+- Collections(For Look Book): stores collection name and friendly name
+- Images (for Look Book): stores image name, collection(foreign key to collection), image url, image and upvote.
 - The collections were structured as follows:
 
 ![Database Schema](static/images/database_schema.jpg "Database Collections")
 
 ### **_Skeleton Plane_**
+This project contains multiple apps, Home, About, Products, Gallery, Profiles, Bag, and Checkout. Some pages display different elements based on the level of user: Admin user, guest user and registered user. It incorporates CRUD functionality for registered users, and admin users, in a variety of different elements. It also includes delete confirmation popups through the use of Sweet Alerts to ensure the delete functionality is authorised/confirmed by the user or admin user.
+This project layout contains the following pages:
+- Home App
+    - Homepage
+    - Contact Page
+    - Thank You Page
+- About App
+    - About Page
+- Gallery App
+    - Look Book Page
+    - Edit Image Page (Admin Only)
+    - Add Image Page (Admin Only)
+- Products App
+    - Products Page
+    - Product Detail Page
+    - Add Product Page (Admin Only)
+    - Edit Product Page (Admin Only)
+    - Add Product Feature Page (Admin Only)
+    - Edit Product Feature Page (Admin Only)
+- Profiles App
+    - User Profile Page
+- Login Page
+- Register Page
+- Bag App
+    - Shopping Bag Page
+- Checkout App
+    - Checkout Page
+    - Checkout Success Page
 
+The Admin user CRUD functionality is all accessed through crispy forms which include:
+- Add Product
+- Edit Product
+- Add Product Feature
+- Edit Product Feature
+- Add Image
+- Edit Image
 
 ### **_Wireframes Mockup_**
 **Wireframes:**
@@ -163,11 +203,11 @@ It consists of 8 models:
 #### **_Images_**
 The images for this site were sourced from a variety of locations:
 
-The carousel images on the homepage were sourced from Pexels.com & Unsplash.com
-The services images and gift voucher images were sourced from Pexels.com 
-The Look Book images were sourced from Pinterest.com
-The logo image on the profile page and product details features section was created using Namecheap.
-The logo images on the about page for the services were created for this project using Canva.
+The carousel images on the homepage were sourced from Pexels.com & [Unsplash.com](https://unsplash.com/)
+The services images and gift voucher images were sourced from [Pexels.com](https://www.pexels.com/)
+The Look Book images were sourced from [Pinterest.com](https://www.pinterest.com/)
+The logo image on the profile page and product details features section was created using [Namecheap](https://www.namecheap.com/logo-maker/app/).
+The logo images on the about page for the services were created for this project using [Canva](https://www.canva.com/).
 
 ## **Features**
 ### **_CRUD Functionality_**
