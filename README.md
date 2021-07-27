@@ -1,5 +1,7 @@
 ![Styled logo](static/images/logo_image_small.jpg "Company Logo")
 
+---
+
 ### **You can check out Styled** [Here](https://styled-el.herokuapp.com/)
 
 ## **_Milestone Project 4 - Full Stack Frameworks with Django_**
@@ -59,16 +61,64 @@ The purpose of the project is to build a full-stack site based around business l
 ### **_User Stories_**
 
 ### **_Visitors to the site expect:_**
+- To navigate the site easily
+- Determine the site purpose immediately
+- Fast feedback on all actions
+- Access order history efficiently
+- Secure and reliable payment system
+- Browse and locate products with ease
 
 ### **_Strategy Plane_**
 
 ### **_Scope Plane_**
 
 ### **_Structure Plane_**
+- The structure of this website was designed to be easy to navigate and user-friendly. The navigation bar is visible on every page, and includes different links depending on whether a user is logged in, a guest user or the admin user. 
+- The project consists of 7 apps: Home, About, Products, Gallery, Profiles, Bag & Checkout.
+- The colour scheme is minimal with a pop of orange color and plenty vibrant images to grab the attention of the user and provide an inviting and professional experience.
 
-**Here is the site layout for this project:**
+#### **_Home App_**
+- The homepage is simple and straightforward, with a an image carousel, and a jumbotron with minimal text that states the website's purpose and a call to action button 'Let's Get Styled' which acts as a link to the products page to encourage the user to check out the services the site offers.
+- A search bar is located at the top of the page allowing the user to search the services available on the site. The navigation bar includes a dropdown menu of a list of the services provided and will take the user to the service detail pages for each one with a link for all services included on this list., The user can also avail of a dropdown menu 'Look Book' which provides a list of outfit collections to browse outfits within these collections. This will take the user directly to the 'Look Book' page. The navbar is simple yet professional using black text and dropdown items highlighted in orange.
+- A shopping bag icon is also located at the top of the page, to indicate to the user the total amount for any items they have added to their bag. This is visible on all pages throughout the site.
+- The homepage also contains a brief description about the company and what we do. Giving the user a basic introduction to the company values and goals.
+- The bottom of the homepage features another carousel displaying a few customer testimonials with rouned image and blockquotes. This allows the user to gain insight into some of the experiences of other users.
+- The footer is minimal, displaying copyright information to the left and two social icon links to the company's Instagram and Facebook pages.
+- The contact page is located within the Home App. The layout is a contact form with fields for Email(customer's email), subject and message. The user can complete this form and submit it to send an email directly to the site owners. On submitting the form the email will be sent directly to the site owner email and the user will be directed to a Thank You page.
+- The Thank You page is designed to alert the user that the email was sent successfully and that they will receive a response as soon as possible. A button is also located on this page, 'Check Out our Looks', when clicked will direct the user to check out the Look Book page displaying all the outfits for inspiration.
 
-![Site Layout]("Site Map")
+#### **_About App_**
+- The about page is structured into 3 sections: some information on the company, with an image to the left and text, a 'what we do' section with icons displaying the services we offer and a link to each service using a call to action button 'More Info' and at the bottom of the page, a section on the team 'Style Squad' which is a card layout with top image and text underneath with employee title, name and email.
+
+#### **_Products App_**
+- The products page is displayed using a card layout with top image and service name and price underneath each image. The image acts as a link to the product detail page for each service. The design will display the cards with 3 images to each row on larger screens, 2 images per row on medium screens and one image to each row on small screens. This page also shows the user the number of results found if they have used the search bar to locate products and the accompanying label acts as a link to all products.
+- The giftcard page has the same layout as the products using a card structure, with product images and a card with basic product information. This page is designed to only display products from the gift voucher category. Gift Vouchers range from 100 euro to 500 euro currently. The idea behind the gift vouchers as products is that they would be a pre-paid credit card that would be posted to the user and the mechanism would allow the user to purchase items with these in the same way as a credit card.
+- The product detail page is designed using a card layout with image to the left and text on the right on medium screens and up and displayed with top image and text below on small screens. The product detail page includes product image, product name, description, price and a quantity input field. The quantity input field allows the user to increase or decrease the quanity of the items they wish to purchase. It also includes 2 call to action buttons, 'Add to Bag' and 'Keep Shopping'. The 'Add to Bag' button, when clicked will add the item to the customer's bag and this will be reflecte with a success message to the user through the use of Bootstrap toasts. This message will alert the user the product has been added o their bag and will populate the bag total on the navbar to reflect this action. The 'Keep Shopping' button, when clicked will direct the user back to the all products page where they can continue browsing for items. 
+- The bottom half of the product detail page, shows the user a list of product features, these describe what is included in the specified service. These product features are not a required for all products, i.e Gift Voucher products do not have any product features displayed on the product detail pages.
+- As an Admin user or site owner, I have designed CRUD functionality to allow these users the ability to add, edit and delete products and product features. If an Admin user is logged in on the product detail page, 2 links, 'Edit' and 'Delete' are provided underneath the product image and undernath each product feature. The 'Edit' link will direct the user to the Edit Product or Edit Product Feature template. This template contains a form which is auto populated with the specified product/product feature information and will allow the user to edit these fields. There are 2 form buttons located at the bottom, 'Edit Product' and 'Cancel'. 
+- If an Admin User is logged in, they can also access the 'Product Management' link on the navbar. This link will direct the user to the 'Add Product' page, where they can add a new product to the database. It contains 2 form buttons at the bottom of the form: 'Add Product' and 'Cancel'.
+
+#### **_Gallery App_**
+- The 'Look Book' page consists of outfit images from 4 different collections. It uses card layout with 3 images displayed per row on larger screens, 2 images per row on medium screens and 1 image per row on small screens. On the 'All Looks' page, there are badges located at the top which show the user all the collections available to view. These badges, when clicked will direct the user to the specified collection. It will also alert the user as to the number of images within this selection and provide a link next to this number to bring the user back to 'All Looks'.
+- As an Admin user or site owner, I have designed CRUD functionality to allow these users the ability to add, edit and delete images within the gallery. If an Admin user is logged in on the Look Book page, 2 links, 'Edit' and 'Delete' are provided underneath the gallery image. The 'Edit' link will direct the user to the Edit Image page. This page contains a form which is auto populated with the specified image information and will allow the user to edit these fields. There are 2 form buttons located at the bottom, 'Edit Image' and 'Cancel'. 
+- If an Admin User is logged in, they can also access the 'Look Book Management' link on the navbar. This link will direct the user to the 'Add Image' page, where they can add a new image to the look book page and to the database. It contains 2 form buttons at the bottom of the form: 'Add Image' and 'Cancel'.
+
+#### **_Profiles App_**
+- The profiles app contains the user profile page. Once a user registers for an account and verifies their email address, the user can then login to the site and gain access to their own profile page.
+This page layout is designed with a form layout for the user's default delivery information and a table layout to display the user's order history. If the user makes a purchase, they will have the choice to selct a checkbox to save their information to their profile. If this box is clicked and a purchase is made, then when the user navigates to their profile page from the navbar menu they will be able to see this information reflected in the profile page. The default deleivery information will be populate with the address they provided on the checkout form. The order history information will display the users orders including order number, order date, items in the order and the order total. The order number acts as a link, that when clicked, will direct the user to the order confirmation page for that specific order.
+
+#### **_Bag App_**
+- The bag page is located in the bag app and is where users can view the items they have added to their bag. The items are displayed include the product image, product quantity, product price and a subtotal of these items. A quantity input element allows the user to increase or decrease the quantity of the specific items in their bag. Directly underneath the quantity element are 2 links, 'Update' and 'Remove'. The 'Update' link, once clicked will update the quantity of the item in the shopping bag. The 'Remove' link, when clicked will remove the item from the user's shopping bag.
+- Two call to action buttons are located at the end of the shopping bag page, ' Secure Checkout' and 'Keep Shopping'. If the user clicks the 'Secure Checkout' button they will be directed to the checkout page to complete their order and purchase the items in the shopping bag. The 'Keep Shopping' button, when clicked, will direct the user back to the all products page to keep browsing for products.
+- The shopping bag page was refactored to display a different layout on mobile screens for ease of use for the user when purchasing items on a mobile device.
+
+#### **_Checkout App_**
+- Once the user has clicked the 'Secure Checkout' button on either the shopping bag page or from the shopping bag alert on the navbar, they will be directed to the checkout page. This page displays the checkout form on the left and the order items on the right on medium screens and up and displays the order items on top and the checkout form underneath on smaller screens. The checkout form consists of fields name, email, delivery address and card number. 
+- There are two buttons located at the bottom of the form, 'Complete Order' and 'Ajust Bag'. The Complete Order button will submit the order form and will direct the user to any form errors if these exist before submitting and completing the stripe authentication on the user's card. The Adjust Bag button will direct the user back to the shopping bag page where they can edit the items within the shopping bag before making their purchase. 
+- Once the user clicks complete order, a spinner icon will appear to show the user that the transaction is being processed and disable the checkout buttons, to avois any duplicate charges to the user's card. 
+- If the payment is successful the user will be directed to the checkout success page. This page displays the order confirmation including order number, order date, user details, order total and order items. The user will also receive an alert via bootstrap toasts, which will tell the user that the order was successful and an email confirmation for this order will be sent to the email address provided on the form.
+- This checkout success page also features a call to action button at the bottom 'Check out our Looks', which will direct the user to the Look Book page on order completion.
+- If the user is a registered user and has saved their default information to their profile, when the user navigates to the checkout page, their details will be auto populated on the checkout form.
 
 ### **Database Architecture**
 
@@ -92,9 +142,14 @@ It consists of 8 models:
 
 ### **_Wireframes Mockup_**
 **Wireframes:**
-- Desktop Wireframes can be viewed [here]()
-- Tablet Wireframes can be viewed [here]()
-- Mobile Wireframes can be viewed [here]()
+- Desktop Wireframes(Home & About) can be viewed [here](static/wireframes/desktop-wireframes-home.jpg)
+- Desktop Wireframes(Services & Gallery) can be viewed [here](static/wireframes/desktop-wireframes-services.jpg)
+- Desktop Wireframes(Profile & Sign Up) can be viewed [here](static/wireframes/desktop-wireframes-profile.jpg)
+- Desktop Wireframes(Checkout) can be viewed [here](static/wireframes/desktop-wireframes-checkout.jpg)
+- Desktop Wireframes(Contact & Add Product) can be viewed [here](static/wireframes/desktop-wireframes-contact.jpg)
+- Tablet Wireframes can be viewed [here](static/wireframes/tablet-wireframes.jpg)
+- Mobile Wireframes can be viewed [here](static/wireframes/mobile-wireframes.jpg)
+- Mobile Wireframes (Contact Page) can be viewed [here](static/wireframes/mobile-wireframes-contact.jpg)
 
 ### **_Surface Plane_**
 #### **_Colours_**
@@ -119,10 +174,34 @@ The logo images on the about page for the services were created for this project
 
 The CRUD functionality for this website works as follows:
 #### **Users Can:**
+- Register for an account
+- Create a user profile
+- Update their user profile
+- Make purchases
+- Save default delivery information to their profile
+- View their order history from their profile page.
+- Reset account password
+- View all products/services
+- View all Look Book Images
+- Contact the site owners by email through the contact page
 
 #### **Admin Can:**
+- Add a Product
+- Edit a Product
+- Delete a Product
+- Add a Product Feature
+- Edit a Product Feature
+- Delete a Product Feature
+- Add a Look Book Image
+- Edit a Look Book Image
+- Delete a Look Book Image
 
 #### **Guest Users Can:**
+- View all products and services
+- View all images in the Look Book Gallery
+- Register for an account
+- Make a purchase
+- Contact the site owners via email through the contact page.
 
 ### **_Navigation Bar & Footer_**
 - The **navigation bar** is in a fixed position.
@@ -206,7 +285,6 @@ tablet and mobile devices.
 
 ## **Testing**
 - Full Testing Documentation can be found [here]()
-
 
 ## **Deployment**
 This project was developed using Gitpod IDE, then pushed to GitHub where the repository was stored.
