@@ -182,8 +182,8 @@ iPhone, android, android table and iPad and across a variety of browsers Interne
 |Navigation Links   |  Test that all navigation links take the user to the correct page | All navigation links should take the user to the correct targeted page  | Pass - The navigation links all work as intended and operate correctly. |   |
 | Navigation links should change depending on user status  | Access the site as different user types and check navbar links are correct  |  The correct links are visible to Admin, Registered Users and Guest Users of the site | Pass - All intended links are showing up depending on user status  |  |
 | Navigation bar responsiveness  | Check responsiveness of navigation bar using Chrome DevTools to check if it worked across all devices  | The navigation bar is fully responsive, showing links to the right hand side on larger screens and collapses into a hamburger menu on medium and smaller devices.  | Pass - Navbar is working as expected and is responsive |   |
-| Test  | Test Action  |  Expected Outcome |  Test Result |   |
-| Test  | Test Action  |  Expected Outcome |  Test Result |   |
+| Navigation links change to orange colour on hover/focus | Go to navigation menu and hover over nav links |  Navigation links change to orange colour when hovered over| PASS - Test was successful and navigation links change to orange on hover/focus |   |
+| Hamburger Toggle menu closes after nav item selection  | Use Dev Tools to inspect website on mobile device, click on hamburger menu, select a link  |  Hamburger menu closes when link is selected |  Pass - This test was a success |   |
 | Test  | Test Action  |  Expected Outcome |  Test Result |   |
 | Test  | Test Action  |  Expected Outcome |  Test Result |   |
 | Test  | Test Action  |  Expected Outcome |  Test Result |   |
