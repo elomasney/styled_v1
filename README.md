@@ -251,52 +251,6 @@ The logo images on the about page for the services were created for this project
 
 ## **Features**
 
-### **_Apps_**
-- Home App
-- About App
-- Gallery App
-- Products App
-- Profiles App
-- Bag App
-- Checkout App
-
-### **_CRUD Functionality_**
-
-The CRUD functionality for this website works as follows:
-#### **Users Can:**
-- Register for an account
-- Create a user profile
-- Update their user profile
-- Make purchases
-- Save default delivery information to their profile
-- View their order history from their profile page.
-- Reset account password
-- View all products/services
-- View all Look Book Images
-- Contact the site owners by email through the contact page
-
-#### **Admin Can:**
-- Add a Product
-- Edit a Product
-- Delete a Product
-- Add a Product Feature
-- Edit a Product Feature
-- Delete a Product Feature
-- Add a Look Book Image
-- Edit a Look Book Image
-- Delete a Look Book Image
-
-#### **Guest Users Can:**
-- View all products and services
-- View all images in the Look Book Gallery
-- Register for an account
-- Make a purchase
-- Contact the site owners via email through the contact page.
-
-## **Existing Features**
-
-### **_General_**
-
 ### **_Navigation Bar & Footer_**
 - The **navigation bar** is in a fixed position.
 - Access to navigation elements on all pages for a user friendly experience.
@@ -339,7 +293,271 @@ The CRUD functionality for this website works as follows:
 
 - The navigation bar is **responsive**, and the links collapse into a **hamburger menu** for both 
 tablet and mobile devices. 
-- The footer is fixed at the bottom, and contains **copyright information** located in the center. 
+- The footer is fixed at the bottom, and contains **copyright information** located to the right and social icons for Facebook and Instagram to the left as links to these pages. The footer details are aligned in the center on mobile devices. 
+
+### **_Apps_**
+
+### **Home App**
+#### **_Homepage_**
+- The homepage layout has three sections, a carousel of images with a callout jumbotron, a brief company intro in the middle section and a carousel of testimonials at the bottom.
+- The **carousel** of images includes a **jumbotron** clearly stating the purpose of the website plus a **callout** button 'Let's Get Styled', which directs the user to the products page.
+- The 'What We Do' section is a brief intro about the company. It has a white background and black text, with the 'Styled' name highlighted in orange text.
+- The bottom section is a **carousel** of testimonials features a rounded image at the top and a blockquote directly underneath.
+
+#### **_Contact Page_**
+- The contact page consists of a form. This feature is accessible to all users including guest users.
+- The form includes fields for email, subject and message.
+- Once submitted, the form will be sent via Gmail to the company email account.
+- Alls fields are required.
+- There are two **buttons**: 'Cancel' and 'Send'. The cancel button directs the user back to the Homepage and the send button submits the contact form as long (provided all fields are valid).
+
+#### **_Thank You Page_**
+- Displayed to the user on successful submission of the contact email form.
+- If the form is valid and it was successful, they will be directed to the Thank You page.
+- Features a basic heading layout alerting the user that the form was sent successfully and let's them know that someone will repsond to them as soon as possible.
+- A **call to action** button is located at the bottom 'Check out our Looks'. This button directs the user to the Look Book gallery page..
+
+### **About App**
+#### **_About Page_**
+- The about page has three sections: detailed information about the company and the brand which displays of an image to the left and text on the right on medium screens and up, and, on smaller screens a top image and text underneath.
+- The 'What We Do' is a list of **icons**, for each of the services provided and a **call to action** button located directly below each icon, 'More Info'. This button directs the user to the product detail page for that specific service.
+- The 'Styled Squad' section, has information about the Styled team and consists of a top image and text underneath and includes the team member's title, name and email address.
+
+### **Gallery App**
+#### **_Look Book Page_**
+- The Look Book page is a gallery element of the website.
+- It uses a **card** layout, displaying 3 images per row on larger screens, 2 images per row on medium screens and 1 image per row on smaller screens.
+- At the top of the page **badges** for each collection are displayed for the user. Each badge acts as a link to images within that specific collection.
+- These badges indicate to the user which collections are currently being displayed on the the page.
+- The number of images currently displayed on the page is visible at the top right hand corner, along with a link back to the 'All Looks' page.
+- Two **links** are provided (for Admin users only) directly below the gallery image: 'Edit' and 'Delete'. The 'Edit' link directs the admin user to the Edit Image page.
+- The delete link will trigger a popup confirmation using Sweet Alerts that will ask the user to confirm if they are sure they wish to delete this image. The Admin user can then select to cancel the delete request or confirm the delete.
+
+#### **_Add Image Page_**
+- Only be accessed by an Admin user.
+- Access this page through the 'My Account' dropdown menu by selecting Look Book Management link.
+- This link directs the user to the Add Image page.
+- Consists of **form** layout and includes fields for image name, collection, image url, and image upload field.
+- There are two **buttons**: 'Add Image' and 'Cancel'
+- The Add Image button, submits the form. 
+- Any errors in the form are highlighted for the user to be fixed.
+- If the form is valid, it is submitted and the image is added to the database.
+- The user will be alerted through Bootstrap toasts in the top right hand corner that the image was successfully added to the database and redirected back to the add image page with a clean new add image form.
+
+#### **_Edit Image Page_**
+- Only be accessed by an Admin user.
+- Access this page through the links provided below the each image on the Look Book gallery page.
+- This 'Edit' link directs the user to the Edit Image page.
+- Consists of **form** layout and includes fields for image name, collection, image url and image upload field.
+- This form is auto populated with the image details for that speciifc image.
+- User is alerted via Bootstrap toasts that they are editing a specific image.
+- From here the Admin user can edit the fields as necessary.
+- There are two **buttons**: 'Edit Image' and 'Cancel'
+- The Edit Image button, submits the form.
+- Any errors are highlighted for the user to be fixed.
+- If the form is valid, it is submitted and the image is updated to the database.
+- The user will be alerted through Bootstrap toasts in the top right hand corner that the image was successfully updated in the database and redirected back to the all looks gallery page.
+
+#### **_Delete Image_**
+- Only be accessed by an Admin user.
+- Access this link through the Look Book gallery page via the 'Delete' link provided below each image on the gallery page.
+- The 'Delete' link, triggers a **sweetalert popup** and asks the user to confirm the delete function. 
+- Cancel will redirect the user back to the gallery Look Book 'All Looks' page. 
+- Confirm deletes the image, and removes it from the database.
+- The user will be alerted through Bootstrap toasts in the top right hand corner, that the image was successfully deleted from the database and is redirected back to the Look Book 'All Looks' gallery page.
+
+### **Products App**
+#### **_Services Page_**
+- The services page displays the products and services available to purchase on the website. It consists of a card layout with product image and some basic service information.
+- Each product image acts as a link to the specified product detail page of each product.
+- The number of products displayed on the page is visible to the user in the top right hand corner.
+- The layout is displayed as 3 images per row on large screens, 2 images per row on medium screens and 1 image per row on smaller screens.
+- A scroll to top button located at the bottom of the page to allow the user to navigate back to the top of the page easily without scrolling.
+
+#### **_Service Detail Page_**
+- Consists of 2 sections: Product Information and Product Features
+- Uses a **card** layout with image to the left and text to the right on medium screens and up, and top image and text underneath on smaller screens.
+- The product information includes name, description, price, and quantity selector field. The quantity selector allows the user to increase and decrease the quantity of the item.
+- The a link is provided with the category name for the product/service above the product/service image It directs the user back to the all products/services page for that category.
+- Two **buttons** located below the quantity selector 'Add to Bag' and 'Keep Shopping'. The Add to Bag button adds the product to the users shopping bag.
+- This shopping bag total is reflected in the navbar shopping bag underneath the shopping bag icon.
+- The Keep Shopping button, directs the user back to the all products/services page.
+- An Admin user has access to 2 **links** located directly below the product image: 'Edit' and 'Delete'. The 'Edit' link directs the admin user to the Edit Product page.
+- The delete link will trigger a popup confirmation using Sweet Alerts that will ask the user to confirm if they are sure they wish to delete this product. The Admin user can then select to cancel the delete request or confirm the delete.
+- The Product/Service Feature section displays the product features associated with the specific product.
+- An Admin user has acccess to 2 **links** located directly below each product feature: 'Edit' and 'Delete'. The 'Edit' link directs the admin user to the Edit Product Feature page.
+- The delete link will trigger a popup confirmation using Sweet Alerts that will ask the user to confirm if they are sure they wish to delete this product feature. The Admin user can then select to cancel the delete request or confirm the delete.
+
+#### **_Gift Voucher Page_**
+- Displays the products within the category 'Gift Vouchers' available to purchase on the website. 
+- Uses a card layout with gift card image and some basic gift card information and gift card price.
+- Each gift card image acts as a link to the gift voucher detail page of each gift card. 
+- At the top of the page on the left hand side the number of gift card products is displayed for the user.
+- The layout shows 3 images per row on large screens, 2 images per row on medium screens and 1 image per row on smaller screens.
+- There is a scroll to top button located at the bottom of the page to allow the user to navigate back to the top of the page easily.
+
+#### **_Add Product Page_**
+- Only be accessed by an Admin user.
+- Access this page through the 'My Account' dropdown menu by selecting Product Management link.
+- This link directs the user to the Add Product page.
+- Consists of **form** layout and includes fields for product name, description, category, price, image url and image.
+- There are two **buttons**: 'Add Product' and 'Cancel'
+- The Add Product button, submits the form. 
+- Any errors are highlighted for the user to be fixed.
+- If the form is valid, the form is submitted and the product is added to the database.
+- The user will be alerted through Bootstrap toasts in the top right hand corner that the product was successfully added to the database and redirected back to the add product page with a clean new add product form.
+
+#### **_Edit Product Page_**
+- Only be accessed by an Admin user.
+- Access this page through the links provided below the product image on the product detail page.
+- This 'Edit' link directs the user to the Edit Product page.
+- Consists of **form** layout and includes fields for product name, description, category, price, image url and image.
+- This form is auto populated with the product details for that speciifc product.
+- The user is alerted via Bootstrap toasts that they are editing a specific product.
+- User can then edit the fields as necessary.
+- The form has two **buttons**: 'Edit Product' and 'Cancel'
+- The Edit Product button, subbmits the form. 
+- Any errors are highlighted to the user to be fixed.
+-  Once the form is valid, it is submitted and the product is updated to the database.
+- The user will be alerted through Bootstrap toasts in the top right hand corner that the product was successfully updated in the database and redirected back to the all products/services page.
+
+#### **_Delete Product_**
+- Only be accessed by an Admin user.
+- Access this link through the product detail page via the 'Delete' link provided below the product image on the product detail page.
+- The 'Delete' link, triggers a **sweetalert popup** and asks the user to confirm the delete function. 
+- Cancel will redirect the user back to the product detail page. 
+- Confirm deletes the product, and removes it from the database.
+- The user will be alerted through Bootstrap toasts in the top right hand corner, that the product was successfully deleted from the database and redirected back to the product detail page.
+
+#### **_Add Product Feature Page_**
+- Only be accessed by an Admin user.
+- Access this page through the 'My Account' dropdown menu by selecting Product Feature Management link.
+- This link directs the user to the Add Product Feature page.
+- Consists of **form** layout and includes fields for product feature name, products (multiple select box field) to select the products to link to this feature.
+- There are two **buttons**: 'Add Feature' and 'Cancel'
+- The Add Feature button, submits the form. 
+- User is alerted if form has any errors. 
+- Once the form is valid, it is submitted and the product feature is added to the database.
+- The user will be alerted through Bootstrap toasts in the top right hand corner that the feature was successfully added to the database and redirected back to the add product page.
+
+#### **_Edit Product Feature Page_**
+- Only be accessed by an Admin user.
+- Access this page through the links provided below each product feature on the product detail page.
+- This 'Edit' link will direct the user to the Edit Product Feature page.
+- Consists of **form** layout and includes fields for product feature name, products (multiple select box field) to select the products to link to this feature.
+- This form is auto populated with the name and associated products for that speciifc feature.
+- The user is alerted via Bootstrap toasts that they are editing a specific product feature.
+- The form has two **buttons**: 'Edit Feature' and 'Cancel'
+- The Edit Feature button, submits the form. 
+- User is alerted if form has any errors. 
+- Once the form is valid, it is submitted and the product feature is updated to the database.
+- User will be alerted through Bootstrap toasts in the top right hand corner that the product feature was successfully updated in the database and redirected to the all products page.
+
+#### **_Delete Product Feature_**
+- Can only be accessed by an Admin user.
+- Accessed through the product detail page via the 'Delete' link provided below each product feature on the product detail page.
+- The 'Delete' link, triggers a **sweetalert popup** and asks the user to confirm the delete function. 
+- Cancel will redirect the user back to the product detail page. 
+- Confirm deletes the product, and removes it from the database.
+- If the delete function is successful, the user will be alerted through Bootstrap toasts in the top right hand corner.
+
+### **Profiles App**
+#### **_Profile Page_**
+- Users can login in to their account using the 'My Account' dropdown menu on the navigation bar.
+- Users can navigate to their profile page using the 'My Account' dropdown menu on the navigation bar.
+- Displays a **form** showing the user's default delivery information. 
+- Directly underneath this form is a **button** 'Update Information'. It allows the user to edit their default delivery information.
+- The second section is an order history summary, it includes the order number, order date, order items and order total.
+- The order number acts as a link to the order confirmation details of this specific order.
+- When clicked, will direct the user to the order confirmation page for that specific order.
+
+### **Bag App**
+#### **_Shopping Bag Page_**
+- Access this page from the shopping bag icon located on the navigation bar.
+- Consists of a **table** layout displaying the items added to the user's bag.
+- Includes information such as product image, product name, quantity, item price and subtotal. 
+- The quantity input selector allows the user to increase or decrease the quantity of each specific item within their shopping bag.
+- Two **links** are provided: 'Update' and 'Remove'.
+- The 'Update' link allows the user to update the quantity of the item within the shopping bag.
+- The 'Remove' link allows the user to remove the specified item from the shopping bag.
+- There are two **buttons** visible to the user at the bottom: 'Secure Checkout' and 'Keep Shopping'
+- The 'Secure Checkout' button, directs the user to the checkout page to complete their purchase order.
+- The 'Keep Shopping' button, directs the user back to the all products/services page.
+
+### **Checkout App**
+#### **_Checkout Page_**
+- Accessed via the 'Secure Checkout' button located on the shopping bag page.
+- The checkout page has two elements 'Order Form' and 'Order Summary'
+- Consists of the Order form, a **form** that contains fields for Full name, email, delivery address and card number details.
+- The Order Summary displays item information such as item name, quantity and subtotal.
+- There are two **buttons** located at the bottom of the order form : 'Adjust Bag' and 'Complete Order'.
+- The Adjust Bag button, directs the user back to the shopping bag page where they can update or remove items from the shopping bag before checking out.
+- The Complete Order button will submit the completed order form, create the order within the database, and process the card payment through Stripe.
+- If the form details are incorrect the user is alerted and directed to the fields that require fixes. 
+- If the payment details are incorrect or invalid, the user is alerted as to what the errors and directed to fields with errors.
+- Once the complete order button is selected, a loading spinner is triggered and the form button are disabled to ensure there are no duplicate payments.
+- If successful the user will be alerted via Bootstrap toasts, in the top right hand corner, and tell the user the order was successfully, and an email order confirmation has been sent.
+- The user is then be directed to the checkout success page.
+
+#### **_Checkout Success Page_**
+- Consists of the order confirmation details which include:
+    - Order Number
+    - Order Date
+    - Order Items
+    - Delivery Details
+    - Billing Details
+    - Order Total
+- Provides confirmation for the user that ther order was created successfully and payment has been made.
+- The user will receive this order confirmation via email as well.
+- A registered user can view their order confirmations via their profile page by clicking the order number on the order history section.
+
+### **_CRUD Functionality_**
+
+The CRUD functionality for this website works as follows:
+#### **Users Can:**
+- Register for an account
+- Create a user profile
+- Update their user profile
+- Make purchases
+- Save default delivery information to their profile
+- View their order history from their profile page.
+- Reset account password
+- View all products/services
+- View all Look Book Images
+- Contact the site owners by email through the contact page
+
+#### **Admin Can:**
+- Add a Product
+- Edit a Product
+- Delete a Product
+- Add a Product Feature
+- Edit a Product Feature
+- Delete a Product Feature
+- Add a Look Book Image
+- Edit a Look Book Image
+- Delete a Look Book Image
+
+#### **Guest Users Can:**
+- View all products and services
+- View all images in the Look Book Gallery
+- Register for an account
+- Make a purchase
+- Contact the site owners via email through the contact page.
+
+## **Existing Features**
+
+### **_General_**
+- Navigation bar that is in a **fixed position**, and **accessible** from all pages sitewide, includes a logo, that acts as link back to homepage, and navigation links to the right, that change depending on the user status. It is **fully responsive**, and collapses into a **hamburger menu** on medium and small devices.
+- The navigation bar consists of a **logo** to the left, which acts as a link back to the homepage, and **navigation links** to the right. These navigation links differ depending on the user status: 
+    - A guest user has access to the Homepage, About Page, Services ( which is a dropdown menu of the services currently available plus a link to all services on the website), Service Detail pages (accessed through the indiviual service links on the dropdown menu), Look Book Page (gallery page), Gift Voucher Page(gift voucher products), Contact Page, Login Page, Register Page
+    - A registered user upon signing into their account will be able to view links to the Homepage, About Page, Services ( which is a dropdown menu of the services currently available plus a link to all services on the website), Service Detail pages (accessed through the indiviual service links on the dropdown menu), Look Book Page (gallery page), Gift Voucher Page(gift voucher products), Contact Page, Login Page (accessed through 'My Account' link), Profile Page (accessed through 'My Account' link), Logout Page (accessed through 'My Account' link)
+    - An admin user upon signing into their account will be able to access, the Homepage, About Page, Services ( which is a dropdown menu of the services currently available plus a link to all services on the website), Service Detail pages (accessed through the indiviual service links on the dropdown menu), Look Book Page (gallery page), Gift Voucher Page(gift voucher products), Contact Page, Login Page (accessed through 'My Account' link), Profile Page (accessed through 'My Account' link), Logout Page (accessed through 'My Account' link), Product Management (accessed through 'My Account' link), Product Feature Management (accessed through 'My Account' link), Look Book Management (accessed through 'My Account' link)
+- There is a search bar located on the navigation bar, this function allows user to search for products/services available on the website from any page on the website.
+- The footer is fixed at the bottom, and contains **copyright information** located to the left and social icons for Facebook and Instagram on the right hand side. On mobile view these footer details are aligned in the center.
+- Bootstrap toasts are used to provide users with prompt feedback on all actions including, info message, error messages, success messages and warning messages.
+- Users can sign into their account from the 'My Account' dropdown link on the navigation bar.
+- Users can register, and create their own account, through the register link  from the 'My Account' dropdown link on the navigation bar.
+- Registered users can sign out using the 'My Account' dropdown link on the navigation bar and clicking on the logout link.
 
 ### **_Homepage_**
 - The homepage layout has three sections, a carousel of images with a callout jumbotron, a brief company intro in the middle section and a carousel of testimonials at the bottom.
@@ -348,7 +566,7 @@ tablet and mobile devices.
 - The bottom section of the homepage is a **carousel** of testimonials which includes a rounded image at the top and a blockquote directly underneath. These testimonials are populated by the admin as they are a nice addition but not a fundamental feature to the site at present. For this reason I have only included a couple to give the user an idea of how other users experience as clients of the company.
 
 ### **_About Page_**
-- The about page is divided in the three sections: at the top there is a more detailed information about the company and the brand which consists of an image to the left and text on the right on medium creens and up, and, on smaller screens a top image and text underneath.
+- The about page is divided in the three sections: at the top there is a more detailed information about the company and the brand which consists of an image to the left and text on the right on medium screens and up, and, on smaller screens a top image and text underneath.
 - The middle section of the about page 'What We Do' is a list of **icons**, one for each of the services provided and a **call to action** button located directly below each icon, 'More Info'. This button when clicked will direct the user to the product detail page for that specific service.
 - The bottom section of the about page, 'Styled Squad', is information on the Styled team and consists of a card layout with top image and text underneath that includes the team member's title, name and email address.
 
@@ -362,14 +580,14 @@ tablet and mobile devices.
 ### **_Service Detail Page_**
 - The service detail page consists of 2 sections: Product Information and Product Features
 - The Product Detail section is a **card** layout with image to the left and text to the right on medium screens and up, and top image and text underneath on smaller screens.
-- The product information includes name, description, price, and quantity selector field. The quantity selctor allows the user to increase and decrease the quantity of the item they wish to add to their bag.
+- The product information includes name, description, price, and quantity selector field. The quantity selector allows the user to increase and decrease the quantity of the item they wish to add to their bag.
 - Above the product/service image a link is provided, this link is the category name for the product/service. If a user clicks this link they will be directed back to the all products/services page with that category.
-- There are two **buttons** located below the quantity selector 'Add to Bag' and 'Keep Shopping'. The Add to Bag button will add the product to the users shopping bag. They will be alerted via Bottstrap toast if it was successful or not and the item will be displayed with the toast showing the product image, name, quantity and price.
+- There are two **buttons** located below the quantity selector 'Add to Bag' and 'Keep Shopping'. The Add to Bag button will add the product to the users shopping bag. They will be alerted via Bootstrap toast if it was successful or not and the item will be displayed with the toast showing the product image, name, quantity and price.
 - This shopping bag total will be reflected in the navbar shopping bag underneath the shopping bag icon.
 - The Keep Shopping button, if clicked will direct the user back to the all products/services page which will allow the user to continue to browse the products/services available on the website.
 - In the case of an Admin user being logged in - 2 **links** are provided directly below the product image: 'Edit' and 'Delete'. The 'Edit' link will direct the admin user to the Edit Product page that will auto populate with the specific product details and allow the Admin user to edit the details of that specific product.
 - The delete link will trigger a popup confirmation using Sweet Alerts that will ask the user to confirm if they are sure they wish to delete this product. The Admin user can then select to cancel the delete request or confirm the delete. If confirmed the product will be deleted from the database and the user will be redirected to the all products/services page.
-- The Product/Service Feature section is displays the product features associated with the specific product if they exists. These features describe to the user what is included in the service if they choose to purchase it.
+- The Product/Service Feature section displays the product features associated with the specific product if they exists. These features describe to the user what is included in the service if they choose to purchase it.
 - In the case of an Admin user being logged in - 2 **links** are provided directly below each product feature: 'Edit' and 'Delete'. The 'Edit' link will direct the admin user to the Edit Product Feature page that will auto populate with the specific product feature and allow the Admin user to edit the details of that specific product feature and which products to link with it.
 - The delete link will trigger a popup confirmation using Sweet Alerts that will ask the user to confirm if they are sure they wish to delete this product feature. The Admin user can then select to cancel the delete request or confirm the delete. If confirmed the product feature will be deleted from the database and the user will be redirected to the all products/services page.
 
@@ -422,7 +640,7 @@ tablet and mobile devices.
 - Once a user has registered on the website for a user account they can login in to their account using the 'My Account' dropdown menu on the navigation bar.
 - Once logged in the user can navigate to their profile page using the 'My Account' dropdown menu on the navigation bar.
 - The profile page layout consists of a **form** which holds the user's default delivery information. This is located on the left on larger and medium screens and at the bottom on smaller screens. To the right is the user's order history displayed as a table. This is located to the right on Larger and medium screens and at the top on smaller screens.
-- Directly underneath the deafult delivery information form is a **button** 'Update Information'. This button, when clicked will allow the user to edit their default delivery information and this will be saved to their profile when saved.
+- Directly underneath the default delivery information form is a **button** 'Update Information'. This button, when clicked will allow the user to edit their default delivery information and this will be saved to their profile when saved.
 - On the order history section, if a user makes a purchase while logged in, their completed orders will be displayed in this section. It includes the information, order number, order date, order items and order total.
 - The order number is truncated to display only 6 digits, to save space on the profile page but also acts as a link to the order confirmation details of this specific order.
 - If the order number link is clicked the user will be taken to the order confirmation page for that specific order and view all the order details associated with it.
