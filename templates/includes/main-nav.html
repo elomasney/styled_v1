@@ -14,31 +14,37 @@
         </li>
         <!--Services dropdown links-->
         <li class="nav-item dropdown">
-            <a class="logo-font fw-bold nav-link text-black mr-5" href="#" id="all-products-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font fw-bold nav-link text-black mr-5" href="#" id="all-products-link"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Services
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?category=style_services" class="dropdown-item text-black">All Styling Services</a>
+                <a href="{% url 'products' %}?category=style_services" class="dropdown-item text-black">All Styling
+                    Services</a>
                 {% for service in services %}
-                <a href="{% url 'product_detail' service.id %}" class="dropdown-item">{{service.name}}</a>      
+                <a href="{% url 'product_detail' service.id %}" class="dropdown-item">{{service.name}}</a>
                 {% endfor %}
             </div>
         </li>
         <!--Look Book Gallery Links-->
         <li class="nav-item dropdown">
-            <a class="logo-font fw-bold nav-link text-black mr-5" href="#" id="outfit-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font fw-bold nav-link text-black mr-5" href="#" id="outfit-link" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 Look Book
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="outfit-link">
-                <a href="{% url 'gallery' %}?collection=work_wear,occasion_wear,casual_chic,going_out_glam" class="dropdown-item text-black">All Looks</a>
+                <a href="{% url 'gallery' %}?collection=work_wear,occasion_wear,casual_chic,going_out_glam"
+                    class="dropdown-item text-black">All Looks</a>
                 {% for collection in collections %}
-                <a href="{% url 'gallery'%}?collection={{collection.name}}" class="dropdown-item">{{collection.friendly_name}}</a>
+                <a href="{% url 'gallery'%}?collection={{collection.name}}"
+                    class="dropdown-item">{{collection.friendly_name}}</a>
                 {% endfor %}
             </div>
         </li>
         <!--Link to gift voucher page-->
         <li class="nav-item">
-            <a class="logo-font fw-bold nav-link text-black mr-5" href="{% url 'products' %}?category=gift_vouchers" id="gift-link">
+            <a class="logo-font fw-bold nav-link text-black mr-5" href="{% url 'products' %}?category=gift_vouchers"
+                id="gift-link">
                 Gift Cards
             </a>
         </li>

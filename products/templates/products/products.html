@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
-            </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -27,7 +27,7 @@
     <div class="col-12 col-md-4 order-md-first mb-3">
         <p class="text-muted mt-3 text-center text-md-left">
             {% if search_term or current_categories != 'None_None' %}
-                <span class="small"><a class="text-orange" href="{% url 'products' %}"> Styled Services</a> | </span>
+            <span class="small"><a class="text-orange" href="{% url 'products' %}"> Styled Services</a> | </span>
             {% endif %}
             {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
         </p>
@@ -35,56 +35,57 @@
     <!--Displays a list of all products including image, product name and price-->
     <div class="row">
         <div class="product-container col-10 offset-1">
-                <div class="row">
-                    {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-                            <div class="card h-100 border-0">
-                                {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class="mb-0 text-center">{{ product.name }}</p>
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-center">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="price mb-0 text-center fw-bold">€{{ product.price }}</p>
-                                        </div>
-                                    </div>
+            <div class="row">
+                {% for product in products %}
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                    <div class="card h-100 border-0">
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.jpg"
+                                alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            <p class="mb-0 text-center">{{ product.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-center">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="price mb-0 text-center fw-bold">€{{ product.price }}</p>
                                 </div>
                             </div>
                         </div>
-                        <!--Displays a certain number of images per row depending on screen size-->
-                        {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
-                                <hr class="text-orange">
-                            </div>
-                        {% endif %}                        
-                        {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-block d-xl-none mb-5">
-                                <hr class="text-orange">
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-lg-none d-xl-block mb-5">
-                                <hr class="text-orange">
-                            </div>
-                        {% endif %}
-                    {% endfor %}
+                    </div>
                 </div>
+                <!--Displays a certain number of images per row depending on screen size-->
+                {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-sm-none mb-5">
+                    <hr class="text-orange">
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-block d-xl-none mb-5">
+                    <hr class="text-orange">
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-lg-none d-xl-block mb-5">
+                    <hr class="text-orange">
+                </div>
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
+    </div>
     <!--Button to allow user to scroll back to the top of the page-->
     <div class="btt-button shadow-sm rounded-1 border border-black text-center col-md-2 offset-md-5 bg-orange">
         <a id="btt-link" class="btt-link h-100">
             <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-        </a>	
+        </a>
     </div>
     <!--Footer-->
     {% include 'includes/footer.html' %}
@@ -92,11 +93,11 @@
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <!--JS to allow user to scroll back to the top of the page-->
-    <script type="text/javascript">
-		document.getElementById('btt-link').onclick = function() {
-			window.scrollTo(0,0)
-		};
-	</script>
+{{ block.super }}
+<!--JS to allow user to scroll back to the top of the page-->
+<script type="text/javascript">
+    document.getElementById('btt-link').onclick = function () {
+        window.scrollTo(0, 0)
+    };
+</script>
 {% endblock %}

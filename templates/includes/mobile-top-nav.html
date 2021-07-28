@@ -24,14 +24,14 @@
   </li>
   <!--Links for Registered Users-->
   <li class="list-inline-item dropdown">
-      <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <div class="text-center">
               <div><i class="fas fa-user fa-lg"></i></div>
               <p class="my-0">My Account</p>
           </div>
       </a>
       <!--Display these links if the user is a superuser/admin-->
-      <div class="dropdown-menu border-0" aria-labelledby="user-options">
+      <div class="dropdown-menu border-0" aria-labelledby="mobile-options">
           {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>

@@ -6,7 +6,7 @@
 <div class="container header-container pb-0">
     <div class="row">
         <div class="col">
-            
+
         </div>
     </div>
 </div>
@@ -22,7 +22,7 @@
             <hr class="text-orange">
         </div>
     </div>
-<!--Structured Layout for Bag Items on Mobile Devices-->
+    <!--Structured Layout for Bag Items on Mobile Devices-->
     <div class="row">
         <div class="col-md-12 col-sm-6">
             {% if bag_items %}
@@ -53,74 +53,79 @@
                     </div>
                     <div class="col-12 col-sm-6 mb-2 order-sm-last">
                         <p class="my-0 text-orange">Price Each: €{{ item.product.price }}</p>
-                        <p class="my-0 text-black"><strong>Subtotal: </strong>€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        <p class="my-0 text-black"><strong>Subtotal:
+                            </strong>€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                     </div>
                     <div class="col-12 col-sm-6 mb-2">
                         {% include "bag/quantity-form.html" %}
                     </div>
                 </div>
-                <div class="row"><div class="col"><hr class="text-orange"></div></div>
+                <div class="row">
+                    <div class="col">
+                        <hr class="text-orange">
+                    </div>
+                </div>
                 {% endfor %}
                 <div class="btt-button btn-orange shadow-sm rounded-0 border border-black">
                     <a class="btt-link d-flex h-100">
                         <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-                    </a>	
+                    </a>
                 </div>
             </div>
             <!--Structured Layout for Bag Items on Larger Devices-->
-                <div class="table-responsive rounded d-none d-md-block">
-                    <table class="table table-sm table-borderless">
-                        <thead class="text-black bg-orange logo-font px-3 ">
-                            <tr>
-                                <th scope="col">Item Info</th>
-                                <th scope="col"></th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Qty</th>
-                                <th scope="col">Subtotal</th>
-                            </tr>
-                        </thead>
+            <div class="table-responsive rounded d-none d-md-block">
+                <table class="table table-sm table-borderless">
+                    <thead class="text-black bg-orange logo-font px-3 ">
+                        <tr>
+                            <th scope="col">Item Info</th>
+                            <th scope="col"></th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
 
-                        {% for item in bag_items %}
-                            <tr>
-                                <td class="p-3 w-25">
-                                    {% include "bag/product-image.html" %}
-                                </td>
-                                <td class="py-3">
-                                    <p class="my-0 logo-font"><strong>{{ item.product.name }}</strong></p>
-                                <td class="py-3">
-                                    <p class="my-0 logo-font">{{ item.product.price }}</p>
-                                </td>
-                                <td class="py-2 w-10">
-                                    {% include "bag/quantity-form.html" %}
-                                </td>
-                                <td class="py-3">
-                                    <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                                </td>
-                            </tr>
-                        {% endfor %}
-                        <tr>
-                            <td colspan="5" class="pt-5 text-end">
-                                <hr class="text-orange">
-                                <h6 class="logo-font fw-bold"><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
-                                <h4 class="mt-4 logo-font"><strong>Grand Total: €{{ total|floatformat:2 }}</strong></h4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="5" class="text-end">
-                                <hr class="text-orange">
-                                {% include "bag/checkout-buttons.html" %}
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                    {% for item in bag_items %}
+                    <tr>
+                        <td class="p-3 w-25">
+                            {% include "bag/product-image.html" %}
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0 logo-font"><strong>{{ item.product.name }}</strong></p>
+                        <td class="py-3">
+                            <p class="my-0 logo-font">{{ item.product.price }}</p>
+                        </td>
+                        <td class="py-2 w-10">
+                            {% include "bag/quantity-form.html" %}
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="5" class="pt-5 text-end">
+                            <hr class="text-orange">
+                            <h6 class="logo-font fw-bold"><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
+                            <h4 class="mt-4 logo-font"><strong>Grand Total: €{{ total|floatformat:2 }}</strong></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-end">
+                            <hr class="text-orange">
+                            {% include "bag/checkout-buttons.html" %}
+                        </td>
+                    </tr>
+                </table>
+            </div>
             {% else %}
-                <p class="lead logo-font text-black empty-bag mb-5">Your bag is currently empty.</p>
-                <a href="{% url 'products' %}" class="btn btn-black py-3 px-4 rounded-0 btn-lg">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left fw-bold text-orange"></i>
-                    </span>
-                    <span class="text-uppercase">Keep Shopping</span>
-                </a>
+            <p class="lead logo-font text-black empty-bag mb-5">Your bag is currently empty.</p>
+            <a href="{% url 'products' %}" class="btn btn-black py-3 px-4 rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left fw-bold text-orange"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
             {% endif %}
         </div>
     </div>
@@ -133,8 +138,8 @@
 {{ block.super }}
 <!--JS for scroll to top button-->
 <script type="text/javascript">
-    $('.btt-link').click(function(e) {
-        window.scrollTo(0,0)
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
     })
 </script>
 <!--JS for increasing and decreasing product quantites-->
@@ -142,22 +147,24 @@
 <!--JS for updating and removing items from the shopping bag-->
 <script type="text/javascript">
     // Update quantity on click
-    $('.update-link').click(function(e) {
+    $('.update-link').click(function (e) {
         var form = $(this).prev('.update-form');
         form.submit();
     })
 
     // Remove item and reload on click
-    $('.remove-item').click(function(e) {
+    $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
         var url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken,};
+        var data = {
+            'csrfmiddlewaretoken': csrfToken,
+        };
 
         $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
+            .done(function () {
+                location.reload();
+            });
     })
 </script>
 {% endblock %}
