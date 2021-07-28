@@ -288,30 +288,112 @@ The CRUD functionality for this website works as follows:
 - Access to navigation elements on all pages for a user friendly experience.
 - Consists of a **logo** to the left, which acts as a link back to the homepage, and **navigation links** to the right. These navigation links differ depending on the user status: 
 - A guest user has access to:
+    - Homepage
+    - About Page
+    - Services ( which is a dropdown menu of the services currently available plus a link to all services on the website)
+    - Service Detail pages (accessed through the indiviual service links on the dropdown menu)
+    - Look Book Page (gallery page)
+    - Gift Voucher Page(gift voucher products)
+    - Contact Page
+    - Login Page
+    - Register Page
 - A registered user has access to:
+    - Homepage
+    - About Page
+    - Services ( which is a dropdown menu of the services currently available plus a link to all services on the website)
+    - Service Detail pages (accessed through the indiviual service links on the dropdown menu)
+    - Look Book Page (gallery page)
+    - Gift Voucher Page(gift voucher products)
+    - Contact Page
+    - Login Page (accessed through 'My Account' link)
+    - Profile Page (accessed through 'My Account' link)
+    - Logout Page (accessed through 'My Account' link)
 - An admin user has access to:
+    - Homepage
+    - About Page
+    - Services ( which is a dropdown menu of the services currently available plus a link to all services on the website)
+    - Service Detail pages (accessed through the indiviual service links on the dropdown menu)
+    - Look Book Page (gallery page)
+    - Gift Voucher Page(gift voucher products)
+    - Contact Page
+    - Login Page (accessed through 'My Account' link)
+    - Profile Page (accessed through 'My Account' link)
+    - Logout Page (accessed through 'My Account' link)
+    - Product Management (accessed through 'My Account' link)
+    - Product Feature Management (accessed through 'My Account' link)
+    - Look Book Management (accessed through 'My Account' link)
 
 - The navigation bar is **responsive**, and the links collapse into a **hamburger menu** for both 
 tablet and mobile devices. 
 - The footer is fixed at the bottom, and contains **copyright information** located in the center. 
 
 ### **_Homepage_**
+- The homepage layout has three sections, a carousel of images with a callout jumbotron, a brief company intro in the middle section and a carousel of testimonials at the bottom.
+- The homepage consists of **carousel** of images at the top which includes a **jumbotron** clearly stating the purpose of the website plus a **callout** button 'Let's Get Styled', when clicked will direct the user to the products page where they can view all the products within the 'Style Services' category.
+- The middle section of the homepage is a brief intro about the company and what we do. This is a plain text section with a white background and black text, with the 'Styled' name highlighted in orange text.
+- The bottom section of the homepage is a **carousel** of testimonials which includes a rounded image at the top and a blockquote directly underneath. These testimonials are populated by the admin as they are a nice addition but not a fundamental feature to the site at present. For this reason I have only included a couple to give the user an idea of how other users experience as clients of the company.
 
 ### **_About Page_**
+- The about page is divided in the three sections: at the top there is a more detailed information about the company and the brand which consists of an image to the left and text on the right on medium creens and up, and, on smaller screens a top image and text underneath.
+- The middle section of the about page 'What We Do' is a list of **icons**, one for each of the services provided and a **call to action** button located directly below each icon, 'More Info'. This button when clicked will direct the user to the product detail page for that specific service.
+- The bottom section of the about page, 'Styled Squad', is information on the Styled team and consists of a card layout with top image and text underneath that includes the team member's title, name and email address.
 
 ### **_Services Page_**
+- The services page displays the products and services available to purchase on the website. It consists of a card layout with product image and some basic service information like product name and product price.
+- Each product image acts as a link to the specified product detail page of each product.
+- At the top of the page on the left hand side the number of products is displayed for the user.
+- The layout is displayed as 3 images per row on large screens, 2 images per row on medium screens and 1 image per row on smaller screens.
+- There is a scroll to top button located at the bottom of the page to allow the user to navigate back to the top of the page easily without scrolling.
 
-### **_Service Info Page_**
+### **_Service Detail Page_**
+- The service detail page consists of 2 sections: Product Information and Product Features
+- The Product Detail section is a **card** layout with image to the left and text to the right on medium screens and up, and top image and text underneath on smaller screens.
+- The product information includes name, description, price, and quantity selector field. The quantity selctor allows the user to increase and decrease the quantity of the item they wish to add to their bag.
+- Above the product/service image a link is provided, this link is the category name for the product/service. If a user clicks this link they will be directed back to the all products/services page with that category.
+- There are two **buttons** located below the quantity selector 'Add to Bag' and 'Keep Shopping'. The Add to Bag button will add the product to the users shopping bag. They will be alerted via Bottstrap toast if it was successful or not and the item will be displayed with the toast showing the product image, name, quantity and price.
+- This shopping bag total will be reflected in the navbar shopping bag underneath the shopping bag icon.
+- The Keep Shopping button, if clicked will direct the user back to the all products/services page which will allow the user to continue to browse the products/services available on the website.
+- In the case of an Admin user being logged in - 2 **links** are provided directly below the product image: 'Edit' and 'Delete'. The 'Edit' link will direct the admin user to the Edit Product page that will auto populate with the specific product details and allow the Admin user to edit the details of that specific product.
+- The delete link will trigger a popup confirmation using Sweet Alerts that will ask the user to confirm if they are sure they wish to delete this product. The Admin user can then select to cancel the delete request or confirm the delete. If confirmed the product will be deleted from the database and the user will be redirected to the all products/services page.
+- The Product/Service Feature section is displays the product features associated with the specific product if they exists. These features describe to the user what is included in the service if they choose to purchase it.
+- In the case of an Admin user being logged in - 2 **links** are provided directly below each product feature: 'Edit' and 'Delete'. The 'Edit' link will direct the admin user to the Edit Product Feature page that will auto populate with the specific product feature and allow the Admin user to edit the details of that specific product feature and which products to link with it.
+- The delete link will trigger a popup confirmation using Sweet Alerts that will ask the user to confirm if they are sure they wish to delete this product feature. The Admin user can then select to cancel the delete request or confirm the delete. If confirmed the product feature will be deleted from the database and the user will be redirected to the all products/services page.
 
 ### **_Look Book Page_**
+- The Look Book page is a gallery element of the website. The look images are linked to the collections within the database. It has a **card** layout, displaying 3 images per row on larger screens, 2 images per row on medium screens and 1 image per row on smaller screens.
+- At the top of the page there are **badges** for each collection within the look book gallery. Each badge acts as a link to images within that specific collection.
+- These badges will show the user which collections are currently being displayed on the the page.
+- At the top left hand side it shows the number of images currently displayed on the page, along with a link back to the 'All Looks' page if the user filters the looks using the collection badges based on a specific collection.
+- In the case of an Admin user being logged in - 2 **links** are provided directly below the gallery image: 'Edit' and 'Delete'. The 'Edit' link will direct the admin user to the Edit Image page that will auto populate with the specific gallery image details and allow the Admin user to edit the details of that specific image.
+- The delete link will trigger a popup confirmation using Sweet Alerts that will ask the user to confirm if they are sure they wish to delete this image. The Admin user can then select to cancel the delete request or confirm the delete. If confirmed the image will be deleted from the database and the user will be redirected to the Look Book gallery page, displaying 'All Looks'.
 
 ### **_Gift Voucher Page_**
+- The gift voucher page displays the products within the category 'Gift Vouchers' available to purchase on the website. It consists of a card layout with gift card image and some basic gift card information and gift card price. The gift card image and description is the same for all gift cards.
+- Each gift card image acts as a link to the gift voucher detail page of each gift card. The gift vouchers range from 100 - 500 euro.
+- At the top of the page on the left hand side the number of gift card products is displayed for the user.
+- The layout is displayed as 3 images per row on large screens, 2 images per row on medium screens and 1 image per row on smaller screens.
+- There is a scroll to top button located at the bottom of the page to allow the user to navigate back to the top of the page easily without scrolling.
 
 ### **_Contact Page_**
+- The contact page consists of a form. This feature is accessible to all users including guest users.
+- The form includes fields for email, subject and message.
+- This feature allows users to complete the form and submit it. Once submitted, the form will be sent via Gmail to the company email account with a message to respond to the user's email.
+- Alls fields are required in order for the user to be able to submit the contact form.
+- At the bottom of the form there are two **buttons**: 'Cancel' and 'Send'. The cancel button will direct the user back to the Homepage and the send button will submit the contact form as long as all the fields are valid.
 
 ### **_Thank You Page_**
+- This page is displayed to the user on successful submission of the contact email form.
+- If the user has submitted a valid form and it was successful, they will be directed to the Thank You page.
+- This consists of a basic layout with text alerting the user that the form was sent successfully and to let them know that someone will repsond to them as soon as possible.
+- A **call to action** button is located at the bottom of the text 'Check out our Looks'. This button, when clicked will direct the user to the Look Book gallery page where they can check out the outfits within our collections.
 
 ### **_Login Page_**
+- The login page is a cutomised allauth template which consists of the login form.
+- The fields included are username/or email and password.
+- There is a checkbox 'Remember Me' which will allow users to stay logged in.
+- Two buttons are located at the bottom of the form : 'Sign In' and 'Home'. Sign in will allow the user to sign into there account if the details are correct. If the details are incorrect the user will be alerted to allow them to correct their errors on the form. The Home button will direct users back to the homepage if they navigate to the login in page by accident.
+- Also included is a 'Forgot Password' link, highlighted in orange that will direct the user to the reset password page. Once there, the user can enter their email address and will receive a link via email to reset their password and can then login using the new password for their account.
+- At the top of the login form, there is a link to the sign up page for users who have not yet registered for an account and are attempting to login.
 
 ### **_Register Page_**
 
@@ -361,10 +443,18 @@ tablet and mobile devices.
     - I would like to add a feature where registered users could upload their own outfit for inspiration to the Look Book gallery feature on the website.
 - **Favourite Outfits on User Profile**
     - I would like to add a feature where registered users could save their favourite looks to their profile page so they could be viewed in one location and enhance the user experience.
+- **User Reviews**
+    - In time I would like the addition of a review section for users to share their feedback on their service experience and I would then show the most recent reviews on the homepage which would then be automatically generated.
 - **Vlog**
     - In the future, I would hope to introduce more variety in the types of content the website offers, such as video tutorials on style do's and don'ts, how to dress for certain occasion, tips and tricks etc. Maybe even collaborate with local fashion boutiques or clothing retailers, as a way of supporting local businesses in the community.
 - **Blog**
     - Addition of blog style content, discussing the latest trends, do's and don'ts, and other fashion and style topics of interest to registered users.
+- **Pagination**
+    - Include pagination for the gallery page as the image collection grows to allow for a better and easier user experience and UX design.
+- **Policies**
+    - Include all legal policies such as refund policy, privacy policy, cookies etc
+- **Additional Security**
+    - Increase security measures for all registered user and admin user capabilities.
 
 ## **Defensive Design**
 - Warning alerts are used on registration form if username or email already exists.
