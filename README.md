@@ -250,6 +250,16 @@ The logo image on the profile page and product details features section was crea
 The logo images on the about page for the services were created for this project using [Canva](https://www.canva.com/).
 
 ## **Features**
+
+### **_Apps_**
+- Home App
+- About App
+- Gallery App
+- Products App
+- Profiles App
+- Bag App
+- Checkout App
+
 ### **_CRUD Functionality_**
 
 The CRUD functionality for this website works as follows:
@@ -282,6 +292,10 @@ The CRUD functionality for this website works as follows:
 - Register for an account
 - Make a purchase
 - Contact the site owners via email through the contact page.
+
+## **Existing Features**
+
+### **_General_**
 
 ### **_Navigation Bar & Footer_**
 - The **navigation bar** is in a fixed position.
@@ -391,44 +405,153 @@ tablet and mobile devices.
 - The login page is a cutomised allauth template which consists of the login form.
 - The fields included are username/or email and password.
 - There is a checkbox 'Remember Me' which will allow users to stay logged in.
-- Two buttons are located at the bottom of the form : 'Sign In' and 'Home'. Sign in will allow the user to sign into there account if the details are correct. If the details are incorrect the user will be alerted to allow them to correct their errors on the form. The Home button will direct users back to the homepage if they navigate to the login in page by accident.
+- Two buttons are located at the bottom of the form : 'Sign In' and 'Home'. Sign in will allow the user to sign into there account if the details are valid. If the details are incorrect the user will be alerted to allow them to correct their errors on the form. The Home button will direct users back to the homepage if they navigate to the login in page unintentionlly.
 - Also included is a 'Forgot Password' link, highlighted in orange that will direct the user to the reset password page. Once there, the user can enter their email address and will receive a link via email to reset their password and can then login using the new password for their account.
 - At the top of the login form, there is a link to the sign up page for users who have not yet registered for an account and are attempting to login.
+- When the user has successfully sign in they will be alerted via Bootsrap toasts that they have signed in successfully.
 
 ### **_Register Page_**
+- The register page is a customised allauth template which has form layout.
+- The fields included are email, confirm email, username, password and password confirm again.
+- - Two buttons are located at the bottom of the form : 'Sign Up' and 'Home'. Sign Up will allow the user to register for an account if the details are valid. If the details are incorrect the user will be alerted to allow them to correct their errors on the form. The Home button will direct users back to the homepage if they navigate to the login in page unintentionlly.
+- If the form is valid, then the user will be alerted via Bootstrap toasts that the have successfuly registered and an email has been sent to them where they will need to verify their email address.
+- This email will contain a link to verify the user's email. If verfied then the user will be directed to the login page where they can login to their account.
+- At the top of the register form, there is a link to the sign in page for users who have already registered for an account and navigated to the register page unintentionally.
 
 ### **_Profile Page_**
+- Once a user has registered on the website for a user account they can login in to their account using the 'My Account' dropdown menu on the navigation bar.
+- Once logged in the user can navigate to their profile page using the 'My Account' dropdown menu on the navigation bar.
+- The profile page layout consists of a **form** which holds the user's default delivery information. This is located on the left on larger and medium screens and at the bottom on smaller screens. To the right is the user's order history displayed as a table. This is located to the right on Larger and medium screens and at the top on smaller screens.
+- Directly underneath the deafult delivery information form is a **button** 'Update Information'. This button, when clicked will allow the user to edit their default delivery information and this will be saved to their profile when saved.
+- On the order history section, if a user makes a purchase while logged in, their completed orders will be displayed in this section. It includes the information, order number, order date, order items and order total.
+- The order number is truncated to display only 6 digits, to save space on the profile page but also acts as a link to the order confirmation details of this specific order.
+- If the order number link is clicked the user will be taken to the order confirmation page for that specific order and view all the order details associated with it.
 
 ### **_Add Product Page_**
+- This page can only be accessed by an Admin user.
+- The Admin user can navigate to this page through the 'My Account' dropdown menu by selecting Product Management link.
+- This link will direct the user to the Add Product page.
+- This page has a **form** layout and includes fields for product name, description, category, price, image url and image.
+- At the bottom of the form are two **buttons**: 'Add Product' and 'Cancel'
+- The Add Product button, when clicked will submit the form. If there are any errors on the form, it will not be submitted and the user will be directed to the fields with errors so they can be fixed. Once the form has all the fields validated, the form is submitted and the product is added to the database.
+- If the form is successful the user will be alerted through Bootstrap toasts in the top right hand corner that the product was successfully added to the database. The user is redirected back to the add product page with a clean new add product form.
 
 ### **_Edit Product Page_**
+- This page can only be accessed by an Admin user.
+- The Admin user can navigate to this page through the links provided below the product image on the product detail page.
+- This 'Edit' link will direct the user to the Edit Product page.
+- This page has a **form** layout and includes fields for product name, description, category, price, image url and image.
+- This form is auto populated with the product details for that speciifc product.
+- The user is also alerted via Bootstrap toasts that they are editing a specific product and the product name they are editing is displayed within the toast.
+- From here the Admin user can edit the fields as necessary.
+- At the bottom of the form are two **buttons**: 'Edit Product' and 'Cancel'
+- The Edit Product button, when clicked will submit the form. If there are any errors on the form, it will not be submitted and the user will be directed to the fields with errors so they can be fixed. Once the form has all the fields validated, the form is submitted and the product is updated to the database.
+- If the form is successful the user will be alerted through Bootstrap toasts in the top right hand corner that the product was successfully updated in the database. The user is redirected back to the all products/services page.
 
 ### **_Delete Product_**
+- This link can only be accessed by an Admin user.
+- The Admin user can access this link through the product detail page and click the 'Delete' link provided below the product image on the product detail page.
+- The 'Delete' link, once clicked, a **sweetalert popup** is triggered, and will ask the user to confirm the delete function. 
+- Cancel will redirect the user back to the product detail page. 
+- Confirm deletes the product, and removes it from the database.
+- If the delete function is successful, the user will be alerted through Bootstrap toasts in the top right hand corner, that the product was successfully deleted from the database. The user is redirected back to the product detail page.
 
 ### **_Add Product Feature Page_**
+- This page can only be accessed by an Admin user.
+- The Admin user can navigate to this page through the 'My Account' dropdown menu by selecting Product  Feature Management link.
+- This link will direct the user to the Add Product Feature page.
+- This page has a **form** layout and includes fields for product feature name, products (multiple select box field) to select the products to link to this feature.
+- At the bottom of the form are two **buttons**: 'Add Feature' and 'Cancel'
+- The Add Feature button, when clicked will submit the form. If there are any errors on the form, it will not be submitted and the user will be directed to the fields with errors so they can be fixed. Once the form has all the fields validated, the form is submitted and the product feature is added to the database.
+- If the form is successful the user will be alerted through Bootstrap toasts in the top right hand corner that the feature was successfully added to the database. The user is redirected back to the add product page with a clean new add product feature form.
 
 ### **_Edit Product Feature Page_**
+- This page can only be accessed by an Admin user.
+- The Admin user can navigate to this page through the links provided below each product feature on the product detail page.
+- This 'Edit' link will direct the user to the Edit Product Feature page.
+- This page has a **form** layout and includes fields for product feature name, products (multiple select box field) to select the products to link to this feature.
+- This form is auto populated with the name and associated products for that speciifc feature.
+- The user is also alerted via Bootstrap toasts that they are editing a specific product feature and the feature name they are editing is displayed within the toast.
+- From here the Admin user can edit the fields as necessary.
+- At the bottom of the form are two **buttons**: 'Edit Feature' and 'Cancel'
+- The Edit Feature button, when clicked will submit the form. If there are any errors on the form, it will not be submitted and the user will be directed to the fields with errors so they can be fixed. Once the form has all the fields validated, the form is submitted and the product feature is updated to the database.
+- If the form is successful the user will be alerted through Bootstrap toasts in the top right hand corner that the product feature was successfully updated in the database. The user is redirected back to the all products/services page.
 
 ### **_Delete Product Feature_**
+- This link can only be accessed by an Admin user.
+- The Admin user can access this link through the product detail page and click the 'Delete' link provided below each product feature on the product detail page.
+- The 'Delete' link, once clicked, a **sweetalert popup** is triggered, and will ask the user to confirm the delete function. 
+- Cancel will redirect the user back to the product detail page. 
+- Confirm deletes the product, and removes it from the database.
+- If the delete function is successful, the user will be alerted through Bootstrap toasts in the top right hand corner, that the product feature was successfully deleted from the database. The user is redirected back to the product detail page.
 
 ### **_Add Image Page_**
+- This page can only be accessed by an Admin user.
+- The Admin user can navigate to this page through the 'My Account' dropdown menu by selecting Look Book Management link.
+- This link will direct the user to the Add Image page.
+- This page has a **form** layout and includes fields for image name, collection, image url, and image upload field.
+- At the bottom of the form are two **buttons**: 'Add Image' and 'Cancel'
+- The Add Image button, when clicked will submit the form. If there are any errors on the form, it will not be submitted and the user will be directed to the fields with errors so they can be fixed. Once the form has all the fields validated, the form is submitted and the image is added to the database.
+- If the form is successful the user will be alerted through Bootstrap toasts in the top right hand corner that the image was successfully added to the database. The user is redirected back to the add image page with a clean new add image form.
 
 ### **_Edit Image Page_**
+- This page can only be accessed by an Admin user.
+- The Admin user can navigate to this page through the links provided below the each image on the Look Book gallery page.
+- This 'Edit' link will direct the user to the Edit Image page.
+- This page has a **form** layout and includes fields for image name, collection, image url and image upload field.
+- This form is auto populated with the image details for that speciifc image.
+- The user is also alerted via Bootstrap toasts that they are editing a specific image and the image name they are editing is displayed within the toast.
+- From here the Admin user can edit the fields as necessary.
+- At the bottom of the form are two **buttons**: 'Edit Image' and 'Cancel'
+- The Edit Image button, when clicked will submit the form. If there are any errors on the form, it will not be submitted and the user will be directed to the fields with errors so they can be fixed. Once the form has all the fields validated, the form is submitted and the image is updated to the database.
+- If the form is successful the user will be alerted through Bootstrap toasts in the top right hand corner that the image was successfully updated in the database. The user is redirected back to the all looks gallery page.
 
 ### **_Delete Image_**
+- This link can only be accessed by an Admin user.
+- The Admin user can access this link through the Look Book gallery page and click the 'Delete' link provided below each image on the gallery page.
+- The 'Delete' link, once clicked, a **sweetalert popup** is triggered, and will ask the user to confirm the delete function. 
+- Cancel will redirect the user back to the gallery Look Book 'All Looks' page. 
+- Confirm deletes the image, and removes it from the database.
+- If the delete function is successful, the user will be alerted through Bootstrap toasts in the top right hand corner, that the image was successfully deleted from the database. The user is redirected back to the Look Book 'All Looks' gallery page.
 
 ### **_Shopping Bag Page_**
+- The user can navigate to the shopping bag page from the shopping bag icon located on the navigation bar.
+- The shopping bag page consists of a **table** layout displaying the items that have been added to the user's bag.
+- It includes information such as product image, product name, quantity, item price and subtotal. It has a horizontal layout on medium and large screens and has ben refactored to display vertically on smaller screens with bag total on top and items located below with product image, then item name and quantity and subtotal underneath this.
+- The quantity input selector allows the user to increase or decrease the quantity of each specific item within their shopping bag.
+- Directly below the quantity selector, two **links** are provided: 'Update' and 'Remove'.
+- The 'Update' link will allow the user to update the quantity of the item within the shopping bag.
+- The 'Remove' link will allow the user to remove the specified item from the shopping bag.
+- At the bottom of the page there are two **buttons** visible to the user: 'Secure Checkout' and 'Keep Shopping'
+- The 'Secure Checkout' button, when clicked will direct the user to the checkout page to complete their purchase order.
+- The 'Keep Shopping' button, when clicked, will direct the user back to the all products/services page to continue browsing for products/services to purchase.
 
 ### **_Checkout Page_**
+- The checkout page can be accessed via the 'Secure Checkout' button located on the shopping bag page.
+- The checkout page has two elements 'Order Form' and 'Order Summary'
+- The layout consists of the Order form, a **form** to the left of the screen on larger and medium devices and below the order summary on mobile devices. It contains fields for Full name, email, delivery address and card number details.
+- The Order Summary is located to the right of the screen on larger and medium devices and located at the top on mobile devices. It displays item information such as item name, quantity and subtotal.
+- There are two **buttons** located at the bottom of the order form : 'Adjust Bag' and 'Complete Order'.
+- The Adjust Bag button, when clicked, will direct the user back to the shopping bag page where they can update or remove items from the shopping bag before checking out and making a secure payment.
+- The Complete Order button will submit the completed order form, create the order within the database, and process the card payment through Stripe.
+- If the form details are incorrect the user will be alerted and directed to the fields that require fixes. 
+- If the payment details are incorrect or invalid, the user will be alerted as to what the issue is and directed to fix the fields to fix the errors.
+- Once the form is complete and the payment details are valid, a loading spinner is triggered and the form button are disabled while the transaction is being processed. This is to ensure that the user does not have to experience any duplicate payments.
+- If the order form is valid and all details are correct, the user will be alerted via Bootstrap toasts, in the right hand corner, at the top of the screen. This alert will tell the user that the order was successfully and an email order confirmation has been sent to the email address provided.
+- The user will then be directed to the checkout success page.
 
 ### **_Checkout Success Page_**
-
-## **Existing Features**
-
-### **_General_**
-
-### **_Apps_**
-
+- Once the user's order has been placed successfully and payment made, they will be directed to the checkout success page.
+- This page consists of the order confirmation details which include:
+    - Order Number
+    - Order Date
+    - Order Items
+    - Delivery Details
+    - Billing Details
+    - Order Total
+- This page provides confirmation for the user that ther order was created successfully and payment has been made.
+- The user will also receive this order confirmation via email to their specified email address they provided.
+- A registered user can view their order confirmations via their profile page by clicking the order number on the order history section. This link will direct them to the order confirmation page for the specified order number.
 
 ## **_Future Features Left to Implement_**
 - **Offer Online Services Option via Video Conferencing**
