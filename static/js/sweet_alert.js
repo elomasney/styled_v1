@@ -1,3 +1,5 @@
+/* jshint esversion: 8 */
+
 /**
  * @function - displays sweetalert confirmation on 'delete product' button
  */

@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 html{
     height: 100%;
 }
@@ -10,8 +17,13 @@ body{
     max-width: 2000px;
     margin-left: auto;
     margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
    
 }
 
@@ -39,9 +51,15 @@ footer{
 
 /* from Bulma */
 .icon {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
 }
@@ -52,12 +70,19 @@ footer{
 }
 
 .main-logo-link {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin-left: 30px;
 }
 
 .nav-link{
     font-size: 15px;
+}
+
+a.nav-link:focus,
+a.nav-link:hover {
+    color: rgb(235, 132, 77) !important;
 }
 
 h2.logo-font{
@@ -116,7 +141,8 @@ h2.logo-font{
 }
 
 .carousel-item img{
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .client-img{
@@ -178,6 +204,22 @@ select#id_product_option.form-control{
 a.category-badge > span.badge:hover {
     background: #000 !important;
     color: #fff !important;
+}
+
+input[name='q']::-webkit-input-placeholder {
+    color: rgba(235,132,77);
+}
+
+input[name='q']::-moz-placeholder {
+    color: rgba(235,132,77);
+}
+
+input[name='q']:-ms-input-placeholder {
+    color: rgba(235,132,77);
+}
+
+input[name='q']::-ms-input-placeholder {
+    color: rgba(235,132,77);
 }
 
 input[name='q']::placeholder {
@@ -284,6 +326,22 @@ input[name='q']::placeholder {
     display: none;
 }
 
+.allauth-form-inner-content input::-webkit-input-placeholder {
+    color: rgb(235, 132, 77);
+}
+
+.allauth-form-inner-content input::-moz-placeholder {
+    color: rgb(235, 132, 77);
+}
+
+.allauth-form-inner-content input:-ms-input-placeholder {
+    color: rgb(235, 132, 77);
+}
+
+.allauth-form-inner-content input::-ms-input-placeholder {
+    color: rgb(235, 132, 77);
+}
+
 .allauth-form-inner-content input::placeholder {
     color: rgb(235, 132, 77);
 }
@@ -310,7 +368,11 @@ input[name='q']::placeholder {
     padding: 10px 25px;
 
 /* standard bootstrap btn transitions */
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
