@@ -72,7 +72,6 @@ The purpose of the project is to build a full-stack site based around business l
 - As a user I would like receive email confirmation of any purchases made.
 - As a user I would like to have all the order details specified in my email order confirmation.
 - As a user, I would like to receive alerts/messages when I submit, enquire or make a purchase that inform me it was successful.
-- As a user, I would like the ability to edit and delete the contents of the shopping bag.
 - As a user, I would like to have access to a fast secure payment system when purchasing items.
 - As a new user, I would like the ability to register for a user account
 - As a user, I would like the ability to recover my password.
@@ -848,7 +847,7 @@ The CRUD functionality for this website works as follows:
 - **Favicon:** : used to create a favicon for the website
 
 ## **Testing**
-- Full Testing Documentation can be found [here]()
+- Full Testing Documentation can be found [here](TESTING.md)
 
 ## **Deployment**
 This project was developed using Gitpod IDE, then pushed to GitHub where the repository was stored.
