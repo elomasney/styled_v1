@@ -349,6 +349,22 @@ tablet and mobile devices.
 
 
 ## **_Future Features Left to Implement_**
+- **Offer Online Services Option via Video Conferencing**
+    - Include an online option for the services the company offer. There would be a different price allocated to the online version of the service and users could select whether they would like to purchase the service and experience it online or in person. This would be implemented through the use of a dropdown menu on price selection.
+- **Oufit Url Links**
+    - I would like to include urls links on the Look Book images to allow users to check out where they could purchase the items in the image or similar items either through links or use of a tag element.
+- **Registered User Social Media Login/Messaging Capability**
+    - I would like to include the ability for users to login in from their social media accounts. i.e Instagram or Facebook login capabilities.
+- **Likes, Comments & Upvotes**
+    - Add logic, so users could comment on images within the Look Book, or like/upvote images posted on to the gallery page.
+- **Image Upload Capability for Registered Users**
+    - I would like to add a feature where registered users could upload their own outfit for inspiration to the Look Book gallery feature on the website.
+- **Favourite Outfits on User Profile**
+    - I would like to add a feature where registered users could save their favourite looks to their profile page so they could be viewed in one location and enhance the user experience.
+- **Vlog**
+    - In the future, I would hope to introduce more variety in the types of content the website offers, such as video tutorials on style do's and don'ts, how to dress for certain occasion, tips and tricks etc. Maybe even collaborate with local fashion boutiques or clothing retailers, as a way of supporting local businesses in the community.
+- **Blog**
+    - Addition of blog style content, discussing the latest trends, do's and don'ts, and other fashion and style topics of interest to registered users.
 
 ## **Defensive Design**
 - Warning alerts are used on registration form if username or email already exists.
