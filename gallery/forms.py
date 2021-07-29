@@ -11,7 +11,7 @@ class GalleryForm(forms.ModelForm):
         exclude = ('upvote',)
 
     image = forms.ImageField(
-        label='Image', required=False, widget=CustomClearableFileInput)
+        label='Image', required=True, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

@@ -75,6 +75,7 @@
             <p class="text-black fw-bold">Please fill out the form below to complete your order</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
+                {{ order_form |as_crispy_errors }}
                 <fieldset class="rounded px-3 mb-4">
                     <legend class="fieldset-label small text-orange logo-font px-2 w-auto">Details :</legend>
                     {{ order_form.full_name | as_crispy_field }}

@@ -199,4 +199,129 @@ iPhone, android, android table and iPad and across a variety of browsers Interne
 | Register Link Works | Click on the Register link under 'My Account' dropdown menu in navbar |  Directs the user to the register page |  Pass - the test was successful and the user is directed to the register page |   |
 | Registration Functionality  | Navigate to the registration page and complete the registration form |  User is able to register account and a success message is displayed telling the user an email has been sent to them to verify their email |  Pass - user is able to register and a success message is displayed as expected. |   |
 | Register Form - invalid | Test Action  |  Expected Outcome |  Test Result |   |
-| Test  | Test Action  |  Expected Outcome |  Test Result |   |
+| Registration email is successfully received | Test Action  |  Expected Outcome |  Test Result |   |
+| Registration verify email link works and directs user to the login page | Test Action  |  Expected Outcome |  Test Result |   |
+| About Page Image Responsiveness  | Test Action  |  Expected Outcome |  Test Result |   |
+| About Page Icons Responsiveness  | Test Action  |  Expected Outcome |  Test Result |   |
+| About Page Icon Links Work  | Test Action  |  Expected Outcome |  Test Result |   |
+| About Page Team Card Responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
+| Product Cards Responsiveness  | Test Action  |  Expected Outcome |  Test Result |   |
+| Products Page - Results Link  | Test Action  |  Expected Outcome |  Test Result |   |
+| Image Link on Producs Page Works | Test Action  |  Expected Outcome |  Test Result |   |
+| Scroll to Top Button Brings User to top of page | Test Action  |  Expected Outcome |  Test Result |   |
+| Product Detail Cards Responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
+| Product Detail Quantity Selector Works | Test Action  |  Expected Outcome |  Test Result |   |
+| Product Detail Link back to Styled Services Category Works | Test Action  |  Expected Outcome |  Test Result |   |
+| Product Detail features list responsiveness  | Test Action  |  Expected Outcome |  Test Result |   |
+| Product Detail Add to Bag Button Works  | Test Action  |  Expected Outcome |  Test Result |   |
+| Product Detail Keep Shopping Button Works | Test Action  |  Expected Outcome |  Test Result |   |
+| Product Detail Edit link works  | Test Action  |  Expected Outcome |  Test Result |   |
+| Product Detail Delete link works | Test Action  |  Expected Outcome |  Test Result |   |
+| Sweet Alert Popup Confirm & Cancel Buttons work | Test Action  |  Expected Outcome |  Test Result |   |
+| Product Feature Edit link works | Test Action  |  Expected Outcome |  Test Result |   |
+v
+| Product Feature Delete link works | Test Action  |  Expected Outcome |  Test Result |   |
+| Product Feature Sweet Alert Buttons work | Test Action  |  Expected Outcome |  Test Result |   |
+| Gift Vouchers Page Responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
+| All Products link works | Test Action  |  Expected Outcome |  Test Result |   |
+| Scroll to top button takes user back to top of page| Test Action  |  Expected Outcome |  Test Result |   |
+| Gift Voucher image link works | Test Action  |  Expected Outcome |  Test Result |   |
+| Gallery Page Image Responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
+| Gallery Page Badges populate correct collections | Test Action  |  Expected Outcome |  Test Result |   |
+| Gallery Page 'Looks' link works | Test Action  |  Expected Outcome |  Test Result |   |
+| Gallery Page Edit Link works | Test Action  |  Expected Outcome |  Test Result |   |
+| Gallery Page Delete Link works| Test Action  |  Expected Outcome |  Test Result |   |
+| Sweet Alert Buttons work | Test Action  |  Expected Outcome |  Test Result |   |
+| Scroll to top button takes user back to top of page | Test Action  |  Expected Outcome |  Test Result |   |
+| Contact Page form is responsive | Test Action  |  Expected Outcome |  Test Result |   |
+| Contact form fields required | Test Action  |  Expected Outcome |  Test Result |   |
+| Contact Form errors are displayed| Test Action  |  Expected Outcome |  Test Result |   |
+| Contact Form won't submit unless valid | Test Action  |  Expected Outcome |  Test Result |   |
+| Contact Form email is successfully sent to company Gmail account | Test Action  |  Expected Outcome |  Test Result |   |
+| Contact Form Email displays correct details to site owners once received | Test Action  |  Expected Outcome |  Test Result |   |
+| Thank You Page - user is directed to thank you page on successful contact form send | Test Action  |  Expected Outcome |  Test Result |   |
+| Thank You page responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
+| Thank you Page button takes user back to Gallery Page | Test Action  |  Expected Outcome |  Test Result |   |
+| Profile Page Image is responsive | Test Action  |  Expected Outcome |  Test Result |   |
+| Profile page is responsive | Test Action  |  Expected Outcome |  Test Result |   |
+| Profile Page - users correct order history is displayed | Test Action  |  Expected Outcome |  Test Result |   |
+| Profile Page - users correct default delivery information is displayed | Test Action  |  Expected Outcome |  Test Result |   |
+| Profile Page update info button works | Test Action  |  Expected Outcome |  Test Result |   |
+| Order number link to order confirmation works | Test Action  |  Expected Outcome |  Test Result |   |
+| Order Confirmation displays the correct information for the specified order | Test Action  |  Expected Outcome |  Test Result |   |
+| User's name is displayed at the top of the profile page on the welcome message| Test Action  |  Expected Outcome |  Test Result |   |
+| Shopping Bag Page responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
+| Shopping Bag Page - items in bag are correct | Test Action  |  Expected Outcome |  Test Result |   |
+| Shopping Bag Page - Correct bag total | Test Action  |  Expected Outcome |  Test Result |   |
+| Shopping Bag Page - quantity selector works | Test Action  |  Expected Outcome |  Test Result |   |
+| Shopping Bag Page - Update link works | Test Action  |  Expected Outcome |  Test Result |   |
+| Shopping Bag Page - Remove link works | Test Action  |  Expected Outcome |  Test Result |   |
+| Shopping Bag Page - Keep Shopping Button works | Test Action  |  Expected Outcome |  Test Result |   |
+| Shopping Bag Page - Secure Checkout Button works | Test Action  |  Expected Outcome |  Test Result |   |
+| Checkout Page responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
+| Checkout form fields are required | Test Action  |  Expected Outcome |  Test Result |   |
+| Checkout form field errors are displayed to the user | Test Action  |  Expected Outcome |  Test Result |   |
+| Checkout form will not be submittted unless valid | Test Action  |  Expected Outcome |  Test Result |   |
+| Checkout form card errors are displayed to the user | Test Action  |  Expected Outcome |  Test Result |   |
+| Checkout order items are correct | Test Action  |  Expected Outcome |  Test Result |   |
+| Checkout Page loading spinner appears on form submission | Test Action  |  Expected Outcome |  Test Result |   |
+| Checkout form Adjust bag button works | Test Action  |  Expected Outcome |  Test Result |   |
+| Checkout Form Complete Order button works | Test Action  |  Expected Outcome |  Test Result |   |
+| User is directed to the checkout success page on successful order completion | Test Action  |  Expected Outcome |  Test Result |   |
+| Test webhooks are being sent successfully through Stripe | Test Action  |  Expected Outcome |  Test Result |   |
+| Checkout Success Page - user is alerted via toast success message that the order was successful | Test Action  |  Expected Outcome |  Test Result |   |
+| Checkout Success Page - user is alerted via toast success message that the order confirmation was sent to the user's email | Test Action  |  Expected Outcome |  Test Result |   |
+| Checkout Success Page - order confirmation displays the correct information | Test Action  |  Expected Outcome |  Test Result |   |
+| Checkout Success Page responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
+| Checkout Success Page button takes user to the gallery page | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Product Page responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Product Page - form displayed correct fields | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Product Page - form must be valid to submit successfully | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Product Page - form errors are highlighted for the user | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Product Page - if form is valid product is successfully added to the database | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Product Page - user is alerted via Bootstrap toast that product was added successfully | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Product Page - if form is valid the Add Product button works | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Product Page - form Cancel button works | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product Page responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product Page - form displayed correct fields | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product Page - form is auto populated with the correct product information | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product Page - form must be valid to submit successfully | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product Page - form errors are highlighted for the user | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product Page - if form is valid product is successfully updated in the database | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product  Page - user is alerted via Bootstrap toast that product was updated successfully | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product Page - if form is valid the Edit Product button works | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product Page - form Cancel button works | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Product Feature Page responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Product Feature Page - form displayed correct fields | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Product Feature Page - form must be valid to submit successfully | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Product Feature Page - form errors are highlighted for the user | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Product Feature Page - if form is valid feature is successfully added to the database | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Product Feature Page - user is alerted via Bootstrap toast that feature was added successfully | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Product Feature Page - if form is valid the Add Feature button works | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Product Feature Page - form Cancel button works | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product Feature Page responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product Feature Page - form displayed correct fields | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product Feature Page - form is auto populated with the correct feature information | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product Feature Page - form must be valid to submit successfully | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product Feature Page - form errors are highlighted for the user | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product Feature Page - if form is valid feature is successfully updated in the database | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product Feature Page - user is alerted via Bootstrap toast that feature was updated successfully | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product Feature Page - if form is valid the Edit Feature button works | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Product Feature Page - form Cancel button works | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Image Page responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Image Page - form displayed correct fields | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Image Page - form must be valid to submit successfully | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Image Page - form errors are highlighted for the user | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Image Page - if form is valid image is successfully added to the database | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Image Page - user is alerted via Bootstrap toast that image was added successfully | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Image Page - if form is valid the Add Image button works | Test Action  |  Expected Outcome |  Test Result |   |
+| Add Image Page - form Cancel button works | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Image Page responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Image Page - form displayed correct fields | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Image Page - form is auto populated with the correct feature information | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Image Page - form must be valid to submit successfully | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Image Page - form errors are highlighted for the user | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Image Page - if form is valid image is successfully updated in the database | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Image Page - user is alerted via Bootstrap toast that image was updated successfully | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Image Page - if form is valid the Edit Image button works | Test Action  |  Expected Outcome |  Test Result |   |
+| Edit Image Page - form Cancel button works | Test Action  |  Expected Outcome |  Test Result |   |

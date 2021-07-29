@@ -27,6 +27,7 @@
                 enctype="multipart/form-data">
                 {% csrf_token %}
                 {% for field in form %}
+                {{ field|as_crispy_errors }}
                 {{ field | as_crispy_field }}
                 {% endfor %}
                 <div class="text-center mt-4">

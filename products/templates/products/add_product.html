@@ -27,8 +27,10 @@
                 {% csrf_token %}
                 {% for field in form %}
                 {% if field.name != 'image' %}
+                {{ field|as_crispy_errors }}
                 {{ field | as_crispy_field }}
                 {% else %}
+                {{ field|as_crispy_errors }}
                 {{ field }}
                 {% endif %}
                 {% endfor %}

@@ -32,6 +32,7 @@
             <form method="POST" action="{% url 'send_contact_form' %}"
                 class="form mb-2 logo-font fw-bold text-black rounded-0" enctype="multipart/form-data">
                 {% csrf_token %}
+                {{ contact_form|as_crispy_errors }}
                 {{ contact_form|crispy }}
                 <div class="text-center mt-4">
                     <a class="btn btn-outline-black btn-orange px-3 rounded-0 logo-font fw-bold"

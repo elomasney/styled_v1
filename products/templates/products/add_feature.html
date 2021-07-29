@@ -26,9 +26,8 @@
             <form method="POST" action="{% url 'add_feature' %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% for field in form %}
-                {% if option != 'Gift Voucher'%}
+                {{ field|as_crispy_errors }}
                 {{ field | as_crispy_field }}
-                {% endif %}
                 {% endfor %}
                 <div class="text-center mt-4">
                     <a class="btn btn-outline-black btn-orange rounded-0 logo-font fw-bold"
