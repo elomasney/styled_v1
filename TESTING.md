@@ -1,4 +1,5 @@
 ## **Testing**
+Go Back to [README](README.md)
 
 ### **Tests Carried Out**
 
@@ -8,7 +9,7 @@
 - I tested all HTML pages by either url link or the 'view source code' link on Google DevTools
 - When I first ran my code through the HTML validator, there were a few minor errors
 - I resolved these minor issues and ran all page through the validator again.
-- All HTML pages passed the validation
+- The only remaining issues is a few minor error resulting from the crispy form rendering which I have highlighted in the 'Issues Encountered' section below. All other HTML code elements were validated.
 
 **CSS**
 - I used the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
@@ -374,5 +375,74 @@ iPhone, android, android table and iPad and across a variety of browsers Interne
 | **_Edit Image Page - user is alerted via Bootstrap toast that image was updated successfully_** | Complete the edit image form and click the edit product button  |  Image is updated the database and the user is alerted via Bootstrap toast message that this action was successful | Pass - Toast message is displayed to the user as expected. This test was a success. |   |
 | **_Edit Image Page - if form is valid the Edit Image button works_** | Complete the edit image form and click the edit image button  |  Edit Image form is submitted (if valid) |  Pass - Edit Image button works as expected. |   |
 | **_Edit Image Page - form Cancel button works_** | Complete the edit image form and click the cancel button  |  The user is redirected to the gallery page |  Pass - Cancel button works as expected. |   |
+| **_Responsiveness of footer_** | I used Google Chrome Dev Tools to check that the footer was responsive and was scaling up and down depending on the device being used | The footer is fully responsive and is altered to suit each device size |  Pass - Footer is fully responsive. |   |
 
 ### **Issues Encountered**
+**_DATABASE_URL variable issue when configuring databases after deployment_**
+**Issue**
+- The statement I had originally when configuring the databases for development and production `if "DATABASE_URL" in os.environ:` was not working and I was receiving an error that the databases were improperly configured.
+- The issue seemed to be with the if statement and the DATABASE_URL variable. I ran a test by attempting to connect to the PostgreSQL database from Gitpod using the secret key just to determine where the issue was coming from and I was able to connect to the production database this way.
+- However this was not a solution as it is vital to keep the secret key out of Gitpod so I contacted tutor support for some advice.
+
+**Fix**
+- With the help of tutor support,- I ran some tests and we determined that the DATABASE_URL variable must have somehow been set in Gitpod.
+- I attempted to resolve this by unsetting it but to no avail.
+- I then set a variable `HEROKU_ON` to True in Heroku config vars and used the if statement `if HEROKU_ON in os.environ` and this resolved the issue and I was able to connect to both databases with the DATABASE_URL variable in Heroku.
+- After my final meeting with my mentor we decided to change the if statement to `if DEBUG:` connect to the development database `else` connect to the production database which also works.
+- This issue has been resolved and has caused no further issues for the project.
+
+**_Pricing issue in bag context.py file_**
+**Issue**
+- Initially I had designed my Product model to include an online price and in person price option and wanted the user to be able to purchase the services either as an online service or as an in person service. I was able to get the correct price selection in the bag view, and it was printing the correct option to the terminal. However, I had difficulty trying to get the correct price option in the contexts.py file in the bag app. I needed it to calculate the correct total for the shopping bag available on the navigation bar.
+
+**Fix**
+- Due to time constraints, I was unable to implement the price option feature on the service detail page. I decided it was best to continue building the project, get all the other elements in place,  and  if I had time would come back and try to include this feature. As of now, it is a future goal for this project.
+
+**_Footer not sticking to bottom of page on pages with less content_**
+**Issue**
+- On pages that had less content, the footer was hovering in the middle of the page.
+
+**Fix**
+- After doing some research I found a solution to this issue, I set the body to `display: flex` and `flex-direction: column` and set the footer to have `margin:auto`, `bottom:0` and a negative margin bottom.
+- This resolved the issue and the footer is now staying at the bottom of the page.
+
+**_Bootstrap toasts not showing up_**
+**Issue**
+- Issue with triggering the Bootstrap toasts as they were not showing up on the screen after user actions
+
+**Fix**
+- Using the Bootstrap 5 documentation I was able to resolve this issue using the JS code snippet
+- Code snippet used:
+    ```var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+        var toastList = toastElList.map(function (toastEl) {
+        return new bootstrap.Toast(toastEl)
+        })
+        toastList.forEach(toast => toast.show());```
+
+**_Styling issue with navigation bar and body on larger screens_**
+**Issue**
+- The content was not looking as well as it should on larger screens with the navbar scretched on larger devices when testing on the iMac Pro device.
+
+**Fix**
+- This issue was resolved by adding a max-width of 2000px and margin left and right set to auto.
+
+**_Validation(HTML) issue with crispy forms_**
+**Issue**
+- HTML validator indicating issue with "Element p not allowed as child element(strong) in this context"
+
+**Fix**
+- I was unable to resolve this issue as these HTML elements were being generated by crispy forms and not through my own code.
+
+**_Validation(HTML) issue with crispy forms_**
+**Issue**
+- HTML validator indicating issue with "Duplicate attribute id=id_image"
+
+**Fix**
+- I was unabale to resolve this issue as these HTML elements were being generated by crispy forms and not through my own code and crispy forms had set this id attribute.
+
+**_Validation(HTML) issue with crispy forms_**
+**Issue**
+- HTML validator indicating issue with "Duplicate attribute class"
+
+**Fix**
+- I was unabale to resolve this issue as these HTML elements were being generated by crispy forms and not through my own code and crispy forms.
