@@ -81,15 +81,17 @@
             </div>
         </div>
     </div>
+    {% if products|length >= 5 %}
     <!--Button to allow user to scroll back to the top of the page-->
     <div class="btt-button shadow-sm rounded-1 border border-black text-center col-md-2 offset-md-5 bg-orange">
         <a id="btt-link" class="btt-link h-100">
             <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
         </a>
     </div>
-    <!--Footer-->
-    {% include 'includes/footer.html' %}
+    {% endif %}
 </div>
+<!--Footer-->
+{% include 'includes/footer.html' %}
 {% endblock %}
 
 {% block postloadjs %}
