@@ -198,35 +198,34 @@ iPhone, android, android table and iPad and across a variety of browsers Interne
 | Sign In Form - invalid | Navigate to sign in page and enter incorrect username or password |  User is alerted of the error and directed to the field that requires fixing |  Pass - user cannot log in if form is invalid and is prompted to fix the errors on the specified fields |   |
 | Register Link Works | Click on the Register link under 'My Account' dropdown menu in navbar |  Directs the user to the register page |  Pass - the test was successful and the user is directed to the register page |   |
 | Registration Functionality  | Navigate to the registration page and complete the registration form |  User is able to register account and a success message is displayed telling the user an email has been sent to them to verify their email |  Pass - user is able to register and a success message is displayed as expected. |   |
-| Register Form - invalid | Test Action  |  Expected Outcome |  Test Result |   |
-| Registration email is successfully received | Test Action  |  Expected Outcome |  Test Result |   |
-| Registration verify email link works and directs user to the login page | Test Action  |  Expected Outcome |  Test Result |   |
-| About Page Image Responsiveness  | Test Action  |  Expected Outcome |  Test Result |   |
-| About Page Icons Responsiveness  | Test Action  |  Expected Outcome |  Test Result |   |
-| About Page Icon Links Work  | Test Action  |  Expected Outcome |  Test Result |   |
-| About Page Team Card Responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
-| Product Cards Responsiveness  | Test Action  |  Expected Outcome |  Test Result |   |
-| Products Page - Results Link  | Test Action  |  Expected Outcome |  Test Result |   |
-| Image Link on Producs Page Works | Test Action  |  Expected Outcome |  Test Result |   |
-| Scroll to Top Button Brings User to top of page | Test Action  |  Expected Outcome |  Test Result |   |
-| Product Detail Cards Responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
-| Product Detail Quantity Selector Works | Test Action  |  Expected Outcome |  Test Result |   |
-| Product Detail Link back to Styled Services Category Works | Test Action  |  Expected Outcome |  Test Result |   |
-| Product Detail features list responsiveness  | Test Action  |  Expected Outcome |  Test Result |   |
-| Product Detail Add to Bag Button Works  | Test Action  |  Expected Outcome |  Test Result |   |
-| Product Detail Keep Shopping Button Works | Test Action  |  Expected Outcome |  Test Result |   |
-| Product Detail Edit link works  | Test Action  |  Expected Outcome |  Test Result |   |
-| Product Detail Delete link works | Test Action  |  Expected Outcome |  Test Result |   |
-| Sweet Alert Popup Confirm & Cancel Buttons work | Test Action  |  Expected Outcome |  Test Result |   |
-| Product Feature Edit link works | Test Action  |  Expected Outcome |  Test Result |   |
-v
-| Product Feature Delete link works | Test Action  |  Expected Outcome |  Test Result |   |
-| Product Feature Sweet Alert Buttons work | Test Action  |  Expected Outcome |  Test Result |   |
-| Gift Vouchers Page Responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
-| All Products link works | Test Action  |  Expected Outcome |  Test Result |   |
-| Scroll to top button takes user back to top of page| Test Action  |  Expected Outcome |  Test Result |   |
-| Gift Voucher image link works | Test Action  |  Expected Outcome |  Test Result |   |
-| Gallery Page Image Responsiveness | Test Action  |  Expected Outcome |  Test Result |   |
+| Register Form - invalid | Register for an account and input a username/email already in the database  |  User is alerted that username/email already exists | Pass - User cannot register with same username or email as a registered user. |   |
+| Registration email is successfully received | Register for an account and add a temp email  |  User recieves an email to verify their email address |  Pass - Email was received successfully |   |
+| Registration verify email link works and directs user to the login page | Register for an account and use a temp email  |  Link works and user is directed to the website login page |  Pass - This test was successful and verify email address link works as expected. |   |
+| About Page Image & Content Responsiveness  | Check responsiveness of about page using Chrome DevTools to check if it looks well on all devices. Expand and reduce the screen size to make sure the images and content are responsive on all devices. |  About Page images and content is fully responsive across all devices.  |  Pass - About Page images and content are fully responsive on all devices.|   |
+| About Page Icons Responsiveness  | Check responsiveness of icons using Chrome DevTools to check if they work and look good on all devices. Expand and reduce the screen size to make sure the icons are responsive on all devices.  |  Icons are fully responsive across all devices |  Pass - Icons are fully responsive as expected. |   |
+| About Page Icon Links Work  | Click on each service icon 'More Info' button on About Page |  Each service button link will direct the user to the product detail page for that specific service| Pass - all 'More Info' buttons below each service icon work as expected. |   |
+| About Page Team Card Responsiveness | Check responsiveness of team cards using Chrome DevTools to check if they work and look good on all devices. Expand and reduce the screen size to make sure the images and content are responsive on all devices.  |  Styled Squad team member cards are fully responsive across all devices |  Pass - cards are fully responsive as expected. |   |
+| Product Cards Responsiveness  | Check responsiveness of product cards using Chrome DevTools to check if they work and look good on all devices. Expand and reduce the screen size to make sure the images and content are responsive on all devices.  | Product cards are fully responsive across all devices | Pass - cards are fully responsive as expected. |   |
+| Products Page - Results Link  | Navigate to the products page and click on the link next to the number of results in the top left of the page  | Link directs the user to the Styled Services Page | Pass - link works as expected |   |
+| Image Link on Products Page Works | Navigate to the products page and click on the product image |  User is directed to the product detail page for that specific product. |  Pass - link works as expected. |   |
+| Scroll to Top Button Brings User to top of page | Navigate to the products page and scroll to the bottom and click the arrow button  |  Directs the user back to the top of the products page |  Pass - button works and the user is directed back to the top of the page with ease. |   |
+| Product Detail Cards Responsiveness | Check responsiveness of product cards using Chrome DevTools to check if they work and look good on all devices. Expand and reduce the screen size to make sure the images and content are responsive on all devices.  |  Product cards are fully responsive across all devices | Pass - cards are fully responsive as expected. |   |
+| Product Detail Quantity Selector Works | Navigate to the product detail page and increase and decrease the quantity  |  Quantity will increase and decrease with plus and minus buttons | Pass - quantity selctor input element works as expected. |   |
+| Product Detail Link back to Styled Services Category Works | Navigate to the product detail page and click on the link at the top left of the page beside the number of results  |  Link directs the user back to the Styled Services products page |  Pass - Test was successful and link directs the user to the Styled services products page.|   |
+| Product Detail features list responsiveness  | Check responsiveness of product features lsit using Chrome DevTools to check if they work and look good on all devices. Expand and reduce the screen size to make sure the content are responsive on all devices.  |  Product features section is fully responsive across all devices | Pass - product features are fully responsive as expected. |   |
+| Product Detail Add to Bag Button Works  | Navigate to the product detail page and click on the Add to Bag button  |  Button works and item is successfully added to the user's bag |  Pass - Add to Bag button works as expected. |   |
+| Product Detail Keep Shopping Button Works | Navigate to the product detail page and click on the Keep Shopping button |  Button works and directs the user to the all products page to continue browsing for products |  Pass - Keep Shopping button works as expected. |   |
+| Product Detail Edit link works  | Sign in as Admin user and navigate to product detail page and click the edit link  | User is directed to the edit product page |  Pass - link works as expected|   |
+| Product Detail Delete link works | Sign in as admin user and navigate to the product detail page and click the delete link under the product image  |  The delete link triggers a Sweet Alert popup to ask the user to confirm or cancel the delete action |  Pass - Sweet Alert popup is triggers on delete link click as expected. |   |
+| Sweet Alert Popup Confirm & Cancel Buttons work | Login as admin user and click the delete link under the product image. click the cancel button and then repeat the action but this time click the confirm button. |  Clicking the cancel button on the popup should close the alert and clicking confirm on the popup should successfully delete the product and alert the user of the action undertaken.| Pass - the cancel link closes the popup as expected and the confirm button deletes the product and alerts the user to the successful delete action as expected. |   |
+| Product Feature Edit link works  | Sign in as Admin user and navigate to product detail page and click the edit link  | User is directed to the edit product page |  Pass - link works as expected|   |
+| Product Feature Delete link works | Sign in as admin user and navigate to the product detail page and click the delete link under the product feature |  The delete link triggers a Sweet Alert popup to ask the user to confirm or cancel the delete action |  Pass - Sweet Alert popup is triggers on delete link click as expected. |   
+| Product Feature Sweet Alert Popup Confirm & Cancel Buttons work | Login as admin user and click the delete link under the product feature. click the cancel button and then repeat the action but this time click the confirm button. |  Clicking the cancel button on the popup should close the alert and clicking confirm on the popup should successfully delete the feature and alert the user of the action undertaken.| Pass - the cancel link closes the popup as expected and the confirm button deletes the feature and alerts the user to the successful delete action as expected. |   |
+| Gift Vouchers Page Image & Content Responsiveness  | Check responsiveness of about page using Chrome DevTools to check if it looks well on all devices. Expand and reduce the screen size to make sure the images and content are responsive on all devices. |  Gift Voucher Page images and content are fully responsive across all devices.  |  Pass - Gift Voucher Page images and content are fully responsive on all devices.|   |
+| All Products link works |  Navigate to the giftvoucher page and click on the link at the top left of the page beside the number of results  |  Link directs the user back to the all products page |  Pass - Test was successful and link directs the user to the all products page.|   |
+| Scroll to Top Button Brings User to top of page | Navigate to the products page and scroll to the bottom and click the arrow button  |  Directs the user back to the top of the products page |  Pass - button works and the user is directed back to the top of the page with ease. |   |
+| Gift Voucher image link works | Navigate to the gift vouchers page and click on the gift voucher image |  User is directed to the product detail page for that specific gift voucher. |  Pass - link works as expected. |   |
+| Gallery Page Image Responsiveness | Check responsiveness of gallery page using Chrome DevTools to check if it looks well on all devices. Expand and reduce the screen size to make sure the images and content are responsive on all devices. |  Gallery Page images and content is fully responsive across all devices.  |  Pass - Gallery Page images and content are fully responsive on all devices.|   |
 | Gallery Page Badges populate correct collections | Test Action  |  Expected Outcome |  Test Result |   |
 | Gallery Page 'Looks' link works | Test Action  |  Expected Outcome |  Test Result |   |
 | Gallery Page Edit Link works | Test Action  |  Expected Outcome |  Test Result |   |
@@ -325,3 +324,5 @@ v
 | Edit Image Page - user is alerted via Bootstrap toast that image was updated successfully | Test Action  |  Expected Outcome |  Test Result |   |
 | Edit Image Page - if form is valid the Edit Image button works | Test Action  |  Expected Outcome |  Test Result |   |
 | Edit Image Page - form Cancel button works | Test Action  |  Expected Outcome |  Test Result |   |
+
+### **Issues Encountered**
