@@ -107,12 +107,12 @@
     {% if product.name != 'Gift Voucher' %}
     <hr class="text-black mb-5 mt-5">
     <div class="row">
-        <div class="col-md-8 offset-md-2 text-center text-black logo-font">
+        <div class="col-md-8 p-sm-3 offset-md-2 text-center text-black logo-font">
             <img class="text-justify mb-0 img-fluid h-10" src="{% static 'images/logo_small.jpg' %}" alt="Styled Logo">
             <h3 class="logo-font text-center text-black mb-4 mt-3">Session Includes:</h3>
 
             {% for f in  features %}
-            <div class="bg-orange p-md-2 p-sm-1">
+            <div class="bg-orange p-1">
                 <p>{{f.name}}</p>
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
