@@ -426,6 +426,23 @@ iPhone, android, android table and iPad and across a variety of browsers Interne
 - After doing some research, I found a solution on Slack, a tutor had mentioned that a local variable had been placed in the gitpod full template, to accommodate for the new SQLAlchemy lessons, and was throwing an error due to a conflict with the DATABASE_URL variable.
 - I was able to resolve the issue, by using `unset PGHOSTADDR` to temporarily unset this variable. This worked, and I was able to migrate my data to the new product PostgreSQL database.
 
+**_Product Feature Form throwing error with empty product field_**
+
+**Issue**
+- Initially I had designed the ProductFeature Model without the product field as required. But while developing the project I decided to add a 'Add Feature' Form as part of the CRUD functionality for Admin users. When testing, I attempted to submit the form with an the product select box and it was throwing a Validation error as all form fields are assumed by Django to be required.
+
+**Fix**
+- After contacting tutor support I was able to make a change to the product form by including `self.fields['product'].required = False`, this solved the issue as the product field is not a required field on the model. And now the form will submit as long as the required name field is filled in but the product multiple select box can be empty. 
+- I would like to alter this model in the future, to change the product field to required, but due to time constraints, I was unable to make those changes before my project submission.
+
+**_Delivery Address in email confirmation - not showing_**
+
+**Issue**
+- Initially I had an if statement within the email confirmation txt file, and the checkout success page, that checked `if item.product.name == 'Gift Voucher'`, it would include the user delivery details, however, I had altered the Gift Voucher product name to include the Price in each Gift Voucher name. This caused an issue with the original if statement, and was not displaying the delivery information on the order confirmation, when a gift voucher was purchased.
+
+**Fix**
+- I changed the if statement to `if 'Gift Voucher in item.product.name` and this resolved the issue.
+
 
 **_Pricing issue in bag context.py file_**
 

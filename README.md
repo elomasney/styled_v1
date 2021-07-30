@@ -677,7 +677,7 @@ The CRUD functionality for this website works as follows:
 - This page can only be accessed by an Admin user.
 - The Admin user can navigate to this page through the 'My Account' dropdown menu, by selecting Product  Feature Management link.
 - This link will direct the user to the Add Product Feature page.
-- This page has a **form** layout, and includes fields for product feature name, products (multiple select box field) to select the products to link to this feature.
+- This page has a **form** layout, and includes fields for product feature name(required), products (multiple select box field)(not required) to select the products to link to this feature.
 - At the bottom of the form are two **buttons**: 'Add Feature' and 'Cancel'
 - The Add Feature button, when clicked, will submit the form. If there are any errors on the form, it will not be submitted, and the user will be directed to the fields with errors so they can be fixed. Once the form has all the fields validated, the form is submitted, and the product feature is added to the database.
 - If the form is successful, the user will be alerted through Bootstrap toasts, in the top right hand corner, that the feature was successfully added to the database. The user is redirected back to the add product page, with a clean new add product feature form.
@@ -771,6 +771,10 @@ The CRUD functionality for this website works as follows:
 - A registered user can view their order confirmations via their profile page, by clicking the order number on the order history section. This link will direct them to the order confirmation page, for the specified order number.
 
 ## **_Future Features Left to Implement_**
+- **Make alterations to the Product Feature Model**
+    - Initially I had not set `required = True` on the product field of the Product Feature model, as I wanted to allow Admin to add features even if they had not yet associated these features to any products.
+    - However, when testing my CRUD functionality on my forms, I realised that it would perhaps be a more logical approach to make the product field required, on the Product Feature model. Due to time constraints, I was unable to make these changes before submitting this project, and have decided to implement this at a later stage. This is an additional Admin form and the validation functionality works on the required fields (product feature name field) as per the designed model.
+
 - **Offer Online Services Option via Video Conferencing**
     - Include an online option for the services the company offer. There would be a different price allocated to the online version of the service, and users could select whether they would like to purchase the service as online or in person. This would be implemented through the use of a dropdown menu on price selection.
 - **Oufit Url Links**
