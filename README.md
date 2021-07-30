@@ -559,17 +559,26 @@ The CRUD functionality for this website works as follows:
 - Registered users can sign out using the 'My Account' dropdown link on the navigation bar, and clicking on the logout link.
 
 ### **_Homepage_**
+
+![Homepage](static/user-stories/homepage.jpg "Homepage")
+
 - The homepage layout has three sections, a carousel of images with a callout jumbotron, a brief company intro in the middle section, and a carousel of testimonials at the bottom.
 - The homepage consists of **carousel** of images at the top, which includes a **jumbotron**, clearly stating the purpose of the website, plus a **callout** button 'Let's Get Styled'. This button, when clicked, will direct the user to the products page, where they can view all the products within the 'Style Services' category.
 - The middle section of the homepage is a brief intro about the company, and what we do. This is a plain text section with a white background, and black text, with the 'Styled' name highlighted in orange text.
 - The bottom section of the homepage is a **carousel** of testimonials, which includes a rounded image at the top, and a blockquote directly underneath. These testimonials are populated by the admin, as they are a nice addition but not a fundamental feature to the site at present. For this reason, I have only included a couple, to give the user an idea of how other users experience as clients of the company.
 
 ### **_About Page_**
+
+![About](static/user-stories/about_page.jpg "About page")
+
 - The about page is divided in the three sections: at the top there is a more detailed information about the company and the brand, which consists of an image to the left, and text on the right on medium screens and up, and, on smaller screens a top image, and text underneath.
 - The middle section of the about page 'What We Do', is a list of **icons**, one for each of the services provided, and a **call to action** button located directly below each icon, 'More Info'. This button, when clicked, will direct the user to the product detail page for that specific service.
 - The bottom section of the about page, 'Styled Squad', is information on the Styled team, and consists of a card layout, with top image, and text underneath, that includes the team member's title, name and email address.
 
 ### **_Services Page_**
+
+![Services](static/user-stories/services-page.jpg "Services")
+
 - The services page displays the products and services available to purchase on the website. It consists of a card layout, with product image, and some basic service information like product name, and product price.
 - Each product image acts as a link to the specified product detail page of each product.
 - At the top of the page, on the left hand side, the number of products is displayed for the user.
@@ -577,6 +586,9 @@ The CRUD functionality for this website works as follows:
 - There is a scroll to top button located at the bottom of the page, to allow the user to navigate back to the top of the page easily without scrolling.
 
 ### **_Service Detail Page_**
+
+![Service Detail](static/user-stories/service-detail.jpg "Service Detail")
+
 - The service detail page consists of 2 sections: Product Information, and Product Features
 - The Product Detail section is a **card** layout, with image to the left, and text to the right, on medium screens and up, and top image, and text underneath, on smaller screens.
 - The product information includes name, description, price, and quantity selector field. The quantity selector, allows the user to increase and decrease the quantity of the item they wish to add to their bag.
@@ -591,6 +603,9 @@ The CRUD functionality for this website works as follows:
 - The delete link, will trigger a popup confirmation, using Sweet Alerts, that will ask the user to confirm if they are sure they wish to delete this product feature. The Admin user can then select to cancel the delete request, or confirm the delete. If confirmed, the product feature will be deleted from the database, and the user will be redirected to the all products/services page.
 
 ### **_Look Book Page_**
+
+![Gallery](static/user-stories/gallery-page.jpg "Gallery")
+
 - The Look Book page is a gallery element of the website. The look images are linked to the collections within the database. It has a **card** layout, displaying 3 images per row on larger screens, 2 images per row on medium screens and 1 image per row on smaller screens.
 - At the top of the page, there are **badges** for each collection within the look book gallery. Each badge acts as a link to images within that specific collection.
 - These badges, will show the user which collections are currently being displayed on the the page.
@@ -599,6 +614,9 @@ The CRUD functionality for this website works as follows:
 - The delete link, will trigger a popup confirmation, using Sweet Alerts, that will ask the user to confirm if they are sure they wish to delete this image. The Admin user can then select to cancel the delete request, or confirm the delete. If confirmed, the image will be deleted from the database, and the user will be redirected to the Look Book gallery page, displaying 'All Looks'.
 
 ### **_Gift Voucher Page_**
+
+![Gift](static/user-stories/giftcard-page.jpg "Gift Card page")
+
 - The gift voucher page displays the products within the category 'Gift Vouchers', available to purchase on the website. It consists of a card layout, with gift card image, some basic gift card information and gift card price. The gift card image and description is the same for all gift cards.
 - Each gift card image acts as a link to the gift voucher detail page of each gift card. The gift vouchers range from 100 - 500 euro.
 - At the top of the page, on the left hand side, the number of gift card products is displayed for the user.
@@ -606,6 +624,9 @@ The CRUD functionality for this website works as follows:
 - There is a scroll to top button located at the bottom of the page, to allow the user to navigate back to the top of the page easily without scrolling.
 
 ### **_Contact Page_**
+
+![Contact](static/user-stories/contact-page.jpg "Contact page")
+
 - The contact page consists of a form. This feature is accessible to all users including guest users.
 - The form includes fields for email, subject, and message.
 - This feature allows users to complete the form, and submit it. Once submitted, the form will be sent via Gmail, to the company email account with a message to respond to the user's email.
@@ -806,6 +827,7 @@ The CRUD functionality for this website works as follows:
 - Sweet Alert popups have been implemented on all delete functionality, to alert user, and ask them to confirm the delete action, before proceeding with the delete process.
 - On all Admin CRUD functionality pages, it is designed that if the user is not admin, they will be redirected back to the sign in page.
 - Inbuilt Django validation has been utilised and check , for example, using form and model fields for data type validation and strings contains length validation, emailFields will only allow email input. 
+- Custom 404 & 500 error pages were created and have a 'Back to Home' button, so users can easily navigate back to the Homepage.
 
 ## **Technologies Used**
 ### **_Languages_**

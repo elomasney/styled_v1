@@ -94,10 +94,7 @@ h2.logo-font{
     background: black;
     color: white;
     min-width: 260px;
-    text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
+    border: 1px solid rgb(235, 132, 77);
 }
   
 
