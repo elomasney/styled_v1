@@ -7,7 +7,7 @@ Order Date: {{ order.date }}
 
 Order Total: €{{ order.order_total }}
 {% for item in order.lineitems.all %}
-    {% if item.product.name == 'Gift Voucher'%}
+    {% if 'Gift Voucher' in item.product.name %}
 Your Gift Voucher will be posted to: {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
     {% endif %}
 {% endfor %}
