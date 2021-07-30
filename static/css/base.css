@@ -209,7 +209,7 @@ select#id_product_option.form-control{
     color: rgb(235, 132, 77);
 }
 
-.remove-link:hover{
+.remove-item:hover{
     color: #000;
 }
 
