@@ -90,10 +90,16 @@ h2.logo-font{
 }
 
 .get-styled-button {
+    cursor: pointer;
     background: black;
     color: white;
     min-width: 260px;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
 }
+  
 
 .btn-black {
     background: black;

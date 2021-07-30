@@ -1084,10 +1084,19 @@ os.environ.setdefault("EMAIL_PASS", "secret key here")
 ## **Credits**
 ### **Code**
 **_Code Institute Course Content - Project Boutique Ado_**
-- Code snippets were taken from the [Project Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1) mini project from the course material. Code for Bootstrap layouts for the shopping bag and checkout were used and edited to suit my particular project.
+- Code snippets were taken from the [Project Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1) mini project from the course material and edited including:
+- Code for Bootstrap layouts for the shopping bag and checkout were used and edited.
+- Code for shopping bag refactoring for mobile and edited
+- JS code for stripe-elements.
+- Code snippet for the webhook handlers.
+- Toast messages HTML code
+- Navigation Bar & Mobile Navbar Styling (edited)
 
 **_Favicon_**
 - Code snippet used to generate a favicon for this website. This code was inserted into the html document in the `<head>` section. I have also included the source files for this in the favicon folder. The website used to generate the favicon and associated files was [Favicon](https://favicon.io/)
+
+**_Bootstrap Toasts JavaScript_**
+- Code snippet used to trigger the Bootstrap Toast messages. This code was snippet was taken from the Bootstrap 5 Documentation.
 
 ### **Content**
 - Content for this website was inspired by a variety of different style consultancy websites:

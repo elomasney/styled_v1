@@ -112,7 +112,7 @@
             <h3 class="logo-font text-center text-black mb-4 mt-3">Session Includes:</h3>
 
             {% for f in  features %}
-            <div class="bg-orange pt-2 pb-2">
+            <div class="bg-orange p-md-2 p-sm-1">
                 <p>{{f.name}}</p>
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
