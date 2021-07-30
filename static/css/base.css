@@ -516,6 +516,12 @@ a.dropdown-item{
     font-weight: bolder;
 }
 
+/* -----------404/500 Error Page-------*/
+a#btn-400:hover,
+a#btn-500:hover{
+    color: #fff;
+
+}
 
 /* -------------------------------- Media Queries */
 
