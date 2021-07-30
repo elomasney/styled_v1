@@ -205,6 +205,14 @@ select#id_product_option.form-control{
     cursor: pointer;
 }
 
+.update-link:hover{
+    color: rgb(235, 132, 77);
+}
+
+.remove-link:hover{
+    color: #000;
+}
+
 a.category-badge > span.badge:hover {
     background: #000 !important;
     color: #fff !important;
