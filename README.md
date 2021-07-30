@@ -110,7 +110,7 @@ The site needed to be easy to navigate, so it was necessary to include a search 
 - Having the navigation bar menu displayed at all times, allows the user to navigate to any page at any time, while exploring the site such as profile, login and logout buttons, services, about, contact and gallery pages.
 - The use of vivid images, and minimal text on the product pages, was done so that the user isn't overwhelmed with information, but has the option to get more information about a specific product, if they want.
 - The product info page is where the user can get further more detailed information on each product, which displays the product description, price, and product features. The product features provide the user with information on what is included in the service if purchased.
-- All pages contain buttons or links, that will direct the user back, such as on the product info page,there is a link to direct the user back to the products category page. The bag page, has a button to take the user back to browse further products before purchasing. The checkout page, has a button to redirect the user back if they need to adjust items within their bag, before completing the order. All confirmation pages, such as the thank you page from the contact form submission, or the order confirmation page, provide a button to redirect the user to the Look Book page, to explore outfit inspiration.
+- All pages contain buttons or links, that will direct the user back, such as on the product info page,there is a link to direct the user back to the products category page. The bag page, has a button to take the user back to browse further products before purchasing. The checkout page, has a button to redirect the user back if they need to adjust items within their bag, before completing the order. All confirmation pages, such as the thank you page from the contact form submission, or the order confirmation page, provide a button to redirect the user to the all products page, to explore the services available on the site.
 - It was also essential that registered users have the ability to review any of their past orders, and this is achieved by providing the user's order history, on their profile page. It also includes a link in the form of the order number, which will direct them to the order confirmation, for that specific order.
 - I wanted the site to be accessible to all, but with extra features/benefits for registered users. The products and services can be seen and accessed by everyone who visits the site, and any user can contact the site owners via the contact page form, but only registered users can save their default delivery address, and view their order history.
 - A future goal for this project would be to allow users to upload their own 'outfit inspiration' pics to the the Look Book Page, and possibly use an upvote/like system on these images, with the aim of allowing users to save favourite looks to their profile page. Due to time constraints, this was not achieveable for this project.
@@ -129,7 +129,7 @@ The site needed to be easy to navigate, so it was necessary to include a search 
 - The bottom of the homepage features another carousel, displaying a few customer testimonials, with rounded image and blockquotes. This allows the user to gain insight into some of the experiences of other users.
 - The footer is minimal, displaying copyright information to the left, and two social icon links to the right, the company's Instagram and Facebook pages.
 - The contact page is located within the Home App. The layout is a contact form, with fields for Email(customer's email), subject, and message. The user can complete this form, and submit it, to send an email directly to the site owners. On submitting the form, the email will be sent directly to the site owner's Gmail account, and the user will be directed to a Thank You page.
-- The Thank You page is designed to alert the user that the email was sent successfully, and that they will receive a response as soon as possible. A button is also located on this page, 'Check Out our Looks', which, when clicked, will direct the user to check out the Look Book page, displaying all the outfits for inspiration.
+- The Thank You page is designed to alert the user that the email was sent successfully, and that they will receive a response as soon as possible. A button is also located on this page, 'Check Out Our Styled Services', which, when clicked, will direct the user to check out the all products page, displaying all the services available for purchase.
 
 #### **_About App_**
 - The about page is structured into 3 sections: some information on the company, with an image to the left, and text to the right, a 'what we do' section with icons displaying the services we offer, and a link to each service using a call to action button, 'More Info'. At the bottom of the page, a section on the team 'Style Squad', which is a card layout, with top image, and text underneath, it includes the  employee title, name, and email.
@@ -314,7 +314,7 @@ tablet and mobile devices.
 - Displayed to the user on successful submission of the contact email form.
 - If the form is valid, and it was successful, they will be directed to the Thank You page.
 - Features a basic heading layout, alerting the user that the form was sent successfully, and let's them know that someone will repsond to them as soon as possible.
-- A **call to action** button, is located at the bottom 'Check out our Looks'. This button directs the user to the Look Book gallery page..
+- A **call to action** button, is located at the bottom 'Check out our Styled Services'. This button directs the user to the all products page.
 
 ### **About App**
 #### **_About Page_**
@@ -616,7 +616,7 @@ The CRUD functionality for this website works as follows:
 - This page is displayed to the user on successful submission of the contact email form.
 - If the user has submitted a valid form, and it was successful, they will be directed to the Thank You page.
 - This consists of a basic layout with text, alerting the user that the form was sent successfully, and to let them know that someone will repsond to them as soon as possible.
-- A **call to action** button is located at the bottom of the text, 'Check out our Looks'. This button, when clicked, will direct the user to the Look Book gallery page, where they can check out the outfits within our collections.
+- A **call to action** button is located at the bottom of the text, 'Check out our Styled Services'. This button, when clicked, will direct the user to the all products page, where they can check out the services available.
 
 ### **_Login Page_**
 - The login page is a customised allauth template, which consists of the login form.

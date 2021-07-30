@@ -75,7 +75,7 @@
                 <hr class="text-black">
                 <!--If order has a gift voucher in it provide delivery details in confirmation-->
                 {% for item in order.lineitems.all %}
-                {% if item.product.name == 'Gift Voucher'%}
+                {% if 'Gift Voucher' in item.product.name %}
                 <div class="row">
                     <div class="col">
                         <small class="text-orange ">Delivering To:</small>

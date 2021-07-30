@@ -517,8 +517,7 @@ a.dropdown-item{
 }
 
 /* -----------404/500 Error Page-------*/
-a#btn-400:hover,
-a#btn-500:hover{
+.btn-orange:hover{
     color: #fff;
 
 }
